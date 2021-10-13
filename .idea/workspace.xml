@@ -7,18 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad0d25c-c784-4286-bd66-2395426366b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcy/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcy/demo/TestDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71b9e2f7645167eca664be283a3d449e568e2543" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71b9e2f7645167eca664be283a3d449e568e2543" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/service/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,38 +25,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/controller/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+            <state relative-caret-position="270">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -230,7 +192,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.1725" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -393,7 +355,7 @@
       <updated>1633997954432</updated>
       <workItem from="1633997958900" duration="8217000" />
       <workItem from="1634029741471" duration="245000" />
-      <workItem from="1634095184712" duration="9173000" />
+      <workItem from="1634095184712" duration="10071000" />
     </task>
     <task id="LOCAL-00001" summary="代码更新">
       <created>1634008047744</created>
@@ -430,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634021459841</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="整合了spring以及spring mvc并进行了测试">
+      <created>1634105554814</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634105554814</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -439,11 +408,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10467000" />
+    <option name="totallyTimeSpent" value="11365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25955734" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -458,7 +426,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3045326" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49899396" weight="0.3045326" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -466,7 +434,7 @@
       <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49966466" weight="0.32956153" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49899396" weight="0.32719547" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501006" side_tool="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.501006" side_tool="true" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="SonarLint" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -491,7 +459,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="代码更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码更新" />
+    <MESSAGE value="整合了spring以及spring mvc并进行了测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="整合了spring以及spring mvc并进行了测试" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="0" key="CommitChangelistDialog2" />
@@ -598,8 +567,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/controller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        <state relative-caret-position="270">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
