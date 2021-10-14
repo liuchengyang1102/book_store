@@ -1,5 +1,4 @@
 
-U	java:S106
-"9Replace this use of System.out or System.err by a logger.(©÷éÔ8®†ëö«/
 H
-java:S1168"+Return an empty collection instead of null.(•πÔç8«º›ì«/
+java:S1168"+Return an empty collection instead of null.(•πÔç8ëΩÙ¡«/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(πÉÆ“8ëΩÙ¡«/
