@@ -16,6 +16,6 @@ public class TestDemo {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         //获取bean
         BookService bookService = (BookService) context.getBean("BookService");
-        bookService.queryBookAll();
+//        bookService.queryBookAll();
     }
 }

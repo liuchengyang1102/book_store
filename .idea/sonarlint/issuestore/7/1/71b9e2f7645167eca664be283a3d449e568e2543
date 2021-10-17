@@ -1,4 +1,3 @@
 
-H
-java:S1168"+Return an empty collection instead of null.(¥¹ï8‘½ôÁÇ/
-U	java:S106"9Replace this use of System.out or System.err by a logger.(¹ƒ®Ò8‘½ôÁÇ/
+q
+java:S3252"OUse static access with "com.github.pagehelper.page.PageMethod" for "startPage".(™Î’¦ûÿÿÿÿ8—›°™È/

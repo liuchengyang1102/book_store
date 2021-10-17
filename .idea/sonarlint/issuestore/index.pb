@@ -19,3 +19,11 @@ V
 &src/main/webapp/WEB-INF/pages/test.jsp,5\2\52f15b80260fd22dd4707b77d908a0e5354c2279
 d
 4src/main/java/com/lcy/controller/TestController.java,b\1\b1460fecd6e27ea67ca96020bcafe82a834db0bf
+V
+&src/main/resources/database.properties,a\c\ac67e146dfc808d2c20a560fc45d091524658f02
+M
+src/main/resources/spring.xml,4\b\4b86d68d9207451f32ef315a3249a65b74c949a1
+V
+&src/main/java/com/lcy/util/Result.java,6\2\62d1e4617d4cd5f8befc021d0cff05de3f2b3768
+d
+4src/main/java/com/lcy/controller/BookController.java,c\6\c69f9f7759d292aa5fde5f932eb34172a6c6ee58

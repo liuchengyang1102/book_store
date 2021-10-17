@@ -1,8 +1,7 @@
 package com.lcy.dao;
 
 import com.lcy.po.Book;
-import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -11,8 +10,7 @@ import java.util.List;
  */
 public interface BookDao {
     /**
-     * 查询所有的图书信息
+     * 根据书名查询图书信息
      */
-    @Select("select * from book")
-    List<Book> queryBookAll();
+    List<Book> queryBookByName(@Param(value = "name") String name);
 }

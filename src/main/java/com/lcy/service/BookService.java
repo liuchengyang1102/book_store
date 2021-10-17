@@ -1,15 +1,14 @@
 package com.lcy.service;
 
 import com.lcy.po.Book;
-
-import java.util.List;
+import com.lcy.util.Result;
 
 /**
  * @author 刘呈洋
  */
 public interface BookService {
     /**
-     * 查询所有的图书信息
+     * 根据书名查询图书信息
      */
-    List<Book> queryBookAll();
+    public Result<Book> queryBookByName(String name, Integer page, Integer limit);
 }

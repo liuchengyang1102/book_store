@@ -7,4 +7,12 @@
     <typeAliases>
         <package name="com.lcy.po"/>
     </typeAliases>
+
+    <!-- 配置分页内容 -->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- 使用mysql方言进行分页 -->
+            <property name="helperDialect" value="mysql"/>
+        </plugin>
+    </plugins>
 </configuration>
