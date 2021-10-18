@@ -4,16 +4,26 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Result<T> implements Serializable {
+    private Integer code;
     private Object data;
     private Long total;     //分页信息，总条数
 
-    public Result(Object data, Long total) {
+    public Result(Integer code, Object data, Long total) {
+        this.code = code;
         this.data = data;
         this.total = total;
     }
 
-    public static <T> Result<T> bulid(Long total, List<T> data) {
-        return new Result(data, total);
+    public static <T> Result<T> bulid(Integer code, Long total, List<T> data) {
+        return new Result(code, data, total);
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
     public Object getData() {

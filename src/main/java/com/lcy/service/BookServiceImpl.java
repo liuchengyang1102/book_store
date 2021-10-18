@@ -26,6 +26,6 @@ public class BookServiceImpl implements BookService {
         List<Book> books = bookDao.queryBookByName(name);
         //通过包装获取分页的其它值信息
         PageInfo<Book> pageInfo = new PageInfo<>(books);
-        return Result.bulid(pageInfo.getTotal(), books);
+        return Result.bulid(0,pageInfo.getTotal(), books);
     }
 }
