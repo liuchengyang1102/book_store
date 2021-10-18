@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface BookDao {
     /**
-     * 查询图书信息
+     * 通过书名查询图书信息
      */
-    List<Book> queryBook();
+    List<Book> queryBookByName(String name);
 }

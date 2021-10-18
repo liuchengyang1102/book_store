@@ -8,7 +8,7 @@ import com.lcy.util.Result;
  */
 public interface BookService {
     /**
-     * 查询图书信息
+     * 通过书名查询图书信息
      */
-    public Result<Book> queryBook(Integer page, Integer limit);
+    public Result<Book> queryBookByName(String name,Integer page, Integer limit);
 }

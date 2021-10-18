@@ -18,9 +18,9 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @RequestMapping("/queryBook")
+    @RequestMapping("/queryBookByName")
     @ResponseBody
-    public Result<Book> queryBook(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit) {
-        return bookService.queryBook(page, limit);
+    public Result<Book> queryBookByName(String name,@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit) {
+        return bookService.queryBookByName(name,page, limit);
     }
 }

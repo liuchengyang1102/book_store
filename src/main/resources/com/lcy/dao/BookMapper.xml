@@ -4,8 +4,13 @@
 <mapper namespace="com.lcy.dao.BookDao">
 
     <!-- 查询全部信息 -->
-    <select id="queryBook" resultType="Book">
+    <select id="queryBookByName" resultType="Book">
         select * from book
+        <where>
+            <if test="name!=null">
+                and name like '%${name}%'
+            </if>
+        </where>
     </select>
 
 </mapper>
