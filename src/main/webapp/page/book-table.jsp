@@ -21,7 +21,15 @@
     <div class="layuimini-main">
 
         <div class="demoTable">
-            按书名搜索：
+            <div class="layui-input-inline">
+                <select name="quiz1" id="select" onclick="getSelectValue()">
+                    <option value="">请选择搜索方式</option>
+                    <option value="书名" selected="">书名</option>
+                    <option value="作者">作者</option>
+                    <option value="出版社">出版社</option>
+                </select>
+            </div>
+
             <div class="layui-inline">
                 <input class="layui-input" name="name" id="name" autocomplete="off">
             </div>
@@ -44,6 +52,23 @@
 </div>
 <script src="../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
 <script>
+    var input = document.querySelector('.layui-input');
+
+    function getSelectValue() {
+        var myselect = document.getElementById("select");
+        var index = myselect.selectedIndex; // selectedIndex代表的是你所选中项的index
+        if (myselect.options[index].value == "书名") {
+            input.name = 'name';
+            input.id = 'name';
+        } else if (myselect.options[index].value == "作者") {
+            input.name = 'author';
+            input.id = 'author';
+        } else if (myselect.options[index].value == "出版社") {
+            input.name = 'press';
+            input.id = 'press';
+        }
+    }
+
     layui.use(['form', 'table'], function () {
         var $ = layui.jquery,
             form = layui.form,
@@ -51,7 +76,7 @@
 
         table.render({
             elem: '#currentTableId',
-            url: '<%=basePath%>queryBookByName',
+            url: '<%=basePath%>queryBook',
             toolbar: '#toolbarDemo',
             defaultToolbar: ['filter', 'exports', 'print', {
                 title: '提示',
@@ -82,14 +107,17 @@
         var $ = layui.$, active = {
             reload: function () {
                 var name = $('#name').val();
-                console.log(name);
+                var author = $('#author').val();
+                var press = $('#press').val();
                 //执行重载
                 table.reload('testReload', {
                     page: {
                         curr: 1//重新从第1页开始
                     },
                     where: {
-                            name: name
+                        name: name,
+                        author: author,
+                        press: press
                     }
                 }, 'data');
             }

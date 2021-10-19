@@ -3,12 +3,32 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.lcy.dao.BookDao">
 
-    <!-- 查询全部信息 -->
+    <!-- 按书名查询全部信息 -->
     <select id="queryBookByName" resultType="Book">
         select * from book
         <where>
             <if test="name!=null">
                 and name like '%${name}%'
+            </if>
+        </where>
+    </select>
+
+    <!-- 按作者查询全部信息 -->
+    <select id="queryBookByAuthor" resultType="Book">
+        select * from book
+        <where>
+            <if test="author!=null">
+                and author like '%${author}%'
+            </if>
+        </where>
+    </select>
+
+    <!-- 按出版社查询全部信息 -->
+    <select id="queryBookByPress" resultType="Book">
+        select * from book
+        <where>
+            <if test="press!=null">
+                and press like '%${press}%'
             </if>
         </where>
     </select>
