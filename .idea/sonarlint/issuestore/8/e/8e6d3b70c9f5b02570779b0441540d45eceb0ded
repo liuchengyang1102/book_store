@@ -1,6 +1,13 @@
 
-jWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ8ä´‘É/
-a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ8ä´‘É/
-OWeb:BoldAndItalicTagsCheck5"Replace this <i> tag by <em>.(áÆèÔøÿÿÿÿ8ä´‘É/
-SWeb:ImgWithoutAltCheck;"%Add an "alt" attribute to this image.(şÎ¥ûÿÿÿÿ8ä´‘É/
-_Web:FrameWithoutTitleCheckz"-Add a "title" attribute to this <iframe> tag.(˜„õŸûÿÿÿÿ8ä´‘É/
+IWeb:BoldAndItalicTagsCheckt"Replace this <i> tag by <em>.(â´Æg8âØš’É/
+JWeb:BoldAndItalicTagsCheckE"Replace this <i> tag by <em>.(ùàÖÖ8âØš’É/
+y%Web:ItemTagNotWithinContainerTagCheck}"<Surround this <li> item tag by a <ul> or <ol> container one.(²åæüÿÿÿÿ8âØš’É/
+IWeb:BoldAndItalicTagsCheckH"Replace this <i> tag by <em>.(¢’‡l8âØš’É/
+jWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ8âØš’É/
+JWeb:BoldAndItalicTagsCheckK"Replace this <i> tag by <em>.(éİ‡•8âØš’É/
+a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ8âØš’É/
+OWeb:BoldAndItalicTagsCheck2"Replace this <i> tag by <em>.(˜Ï”ºøÿÿÿÿ8âØš’É/
+y%Web:ItemTagNotWithinContainerTagCheck~"<Surround this <li> item tag by a <ul> or <ol> container one.(…ÂŸıÿÿÿÿ8âØš’É/
+OWeb:BoldAndItalicTagsCheck<"Replace this <i> tag by <em>.(ˆã–†ùÿÿÿÿ8âØš’É/
+JWeb:BoldAndItalicTagsChecka"Replace this <i> tag by <em>.(˜ª¬¿8âØš’É/
+t%Web:ItemTagNotWithinContainerTagCheck"<Surround this <li> item tag by a <ul> or <ol> container one.(èÃ¬ù8âØš’É/

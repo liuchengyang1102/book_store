@@ -20,29 +20,16 @@
 <div class="layuimini-container">
     <div class="layuimini-main">
 
-        <fieldset class="table-search-fieldset">
-            <legend>搜索信息</legend>
-            <div style="margin: 10px 10px 10px 10px">
-                <form class="layui-form layui-form-pane" action="">
-                    <div class="layui-form-item">
-                        <div class="layui-inline">
-                            <label class="layui-form-label">书名</label>
-                            <div class="layui-input-inline">
-                                <input type="text" name="name" autocomplete="off" class="layui-input">
-                            </div>
-                        </div>
-                        <div class="layui-inline">
-                            <button type="submit" class="layui-btn layui-btn-primary"  lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
-                        </div>
-                    </div>
-                </form>
+        <div class="demoTable">
+            按书名搜索：
+            <div class="layui-inline">
+                <input class="layui-input" name="name" id="name" autocomplete="off">
             </div>
-        </fieldset>
+            <button class="layui-btn" data-type="reload">搜索</button>
+        </div>
 
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-<%--                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加 </button>--%>
-<%--                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除 </button>--%>
             </div>
         </script>
 
@@ -82,33 +69,35 @@
                 {field: 'press', width: 160, title: '出版社'},
                 {field: 'impression', width: 80, title: '印次'},
                 {field: 'synopsis', width: 120, title: '内容简介'},
-                {field: 'price', width: 80, title: '价格',sort: true},
+                {field: 'price', width: 80, title: '价格', sort: true},
                 {title: '操作', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
             ]],
             limits: [10, 15, 20, 25, 50, 100],
             limit: 15,
             page: true,
-            skin: 'line'
+            skin: 'line',
+            id: 'testReload'
         });
 
-        // 监听搜索操作
-        form.on('submit(data-search-btn)', function (data) {
-            var result = JSON.stringify(data.field);
-            layer.alert(result, {
-                title: '最终的搜索信息'
-            });
+        var $ = layui.$, active = {
+            reload: function () {
+                var name = $('#name').val();
+                console.log(name);
+                //执行重载
+                table.reload('testReload', {
+                    page: {
+                        curr: 1//重新从第1页开始
+                    },
+                    where: {
+                            name: name
+                    }
+                }, 'data');
+            }
+        };
 
-            //执行搜索重载
-            table.reload('currentTableId', {
-                page: {
-                    curr: 1
-                }
-                , where: {
-                    searchParams: result
-                }
-            }, 'data');
-
-            return false;
+        $('.demoTable .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
         });
 
         /**
@@ -120,7 +109,7 @@
                     title: '添加用户',
                     type: 2,
                     shade: 0.2,
-                    maxmin:true,
+                    maxmin: true,
                     shadeClose: true,
                     area: ['100%', '100%'],
                     content: '../page/table/add.html',
@@ -148,7 +137,7 @@
                     title: '编辑用户',
                     type: 2,
                     shade: 0.2,
-                    maxmin:true,
+                    maxmin: true,
                     shadeClose: true,
                     area: ['100%', '100%'],
                     content: '../page/table/edit.html',

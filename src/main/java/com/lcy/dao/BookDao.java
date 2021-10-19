@@ -1,6 +1,7 @@
 package com.lcy.dao;
 
 import com.lcy.po.Book;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -11,5 +12,5 @@ public interface BookDao {
     /**
      * 通过书名查询图书信息
      */
-    List<Book> queryBookByName(String name);
+    List<Book> queryBookByName(@Param(value = "name") String name);
 }

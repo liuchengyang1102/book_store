@@ -27,17 +27,19 @@ d
 4src/main/java/com/lcy/controller/BookController.java,c\6\c69f9f7759d292aa5fde5f932eb34172a6c6ee58
 >
 book_store.iml,1\8\1868fdb80dd7945cb8f0ff82323cb8c31d18a08a
-K
-src/main/webapp/js/layui.js,b\9\b90ce9afa6c4e15ebfc239a6ebb0b7aaa3d83519
-M
-src/main/webapp/js/script1.js,6\8\6848d64acc7e1f4962f2aa19197bdaa27e2db19d
-L
-src/main/webapp/js/script.js,a\4\a48403258fe4818219eb066d53485a1f30081afd
-R
-"src/main/webapp/js/jquery-3.6.0.js,f\1\f185245161c52859b973fc237a0f8530503ec8d7
-P
- src/main/webapp/js/jquery.min.js,2\f\2f4437478e92f78f1def351d547a7df4ad70c955
-V
-&src/main/webapp/js/jquery-2.1.1.min.js,e\7\e77293688a5a6fd72183088662333577e0f0c635
 N
-src/main/webapp/layui/layui.js,4\b\4bb23097582eea1a4d2cd3d32cfb241f7073e156
+src/main/webapp/api/table.json,2\9\29ea11c34981d6ab9a49bc99de14b7d3eb5df23a
+O
+src/main/webapp/page/table.html,4\f\4f97d882160f35adc9ffb81da65533b20768a64c
+M
+src/main/webapp/api/init.json,6\f\6fa5597a3d3853d1695b0783a34027c99dd883e9
+N
+src/main/webapp/page/table.jsp,a\5\a5fdba09e4e0e078f60b0e2510dd8b3848345078
+O
+src/main/webapp/page/table1.jsp,f\c\fc89493127acc22d285a47a042d1fdd76c1764f8
+O
+src/main/webapp/page/table2.jsp,c\6\c6f7667e603d51f05188f270f79ebeed519953dd
+O
+src/main/webapp/page/table3.jsp,6\5\65c5285272e2753299a0226006dd1f9cc20d09d1
+S
+#src/main/webapp/page/book-table.jsp,9\6\969c1cbbee95113cd66e1e6c45f04ae8805db3ec
