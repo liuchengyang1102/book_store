@@ -15,6 +15,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
     <link rel="stylesheet" href="../css/public.css" media="all">
+    <style>
+        #layui-inline1 {
+            display: inline-block;
+        }
+
+        #layui-inline2 {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <div class="layuimini-container">
@@ -23,16 +32,30 @@
         <div class="demoTable">
             <div class="layui-input-inline">
                 <select name="quiz1" id="select" onclick="getSelectValue()">
-                    <option value="">请选择搜索方式</option>
                     <option value="书名" selected="">书名</option>
                     <option value="作者">作者</option>
                     <option value="出版社">出版社</option>
+                    <option value="价格范围">价格范围</option>
                 </select>
             </div>
 
-            <div class="layui-inline">
+            <div class="layui-inline" id="layui-inline1">
                 <input class="layui-input" name="name" id="name" autocomplete="off">
             </div>
+
+            <div class="layui-inline" id="layui-inline2">
+                <label class="layui-form-label">价格范围</label>
+                <div class="layui-input-inline" style="width: 100px;">
+                    <input type="text" name="price_min" id="price_min" placeholder="￥" autocomplete="off"
+                           class="layui-input">
+                </div>
+                <span>—</span>
+                <div class="layui-input-inline" style="width: 100px;">
+                    <input type="text" name="price_max" id="price_max" placeholder="￥" autocomplete="off"
+                           class="layui-input">
+                </div>
+            </div>
+
             <button class="layui-btn" data-type="reload">搜索</button>
         </div>
 
@@ -53,19 +76,30 @@
 <script src="../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
 <script>
     var input = document.querySelector('.layui-input');
+    var inline1 = document.querySelector('#layui-inline1');
+    var inline2 = document.querySelector('#layui-inline2');
 
     function getSelectValue() {
         var myselect = document.getElementById("select");
         var index = myselect.selectedIndex; // selectedIndex代表的是你所选中项的index
         if (myselect.options[index].value == "书名") {
+            inline1.style.display = 'inline-block';
+            inline2.style.display = 'none';
             input.name = 'name';
             input.id = 'name';
         } else if (myselect.options[index].value == "作者") {
+            inline1.style.display = 'inline-block';
+            inline2.style.display = 'none';
             input.name = 'author';
             input.id = 'author';
         } else if (myselect.options[index].value == "出版社") {
+            inline1.style.display = 'inline-block';
+            inline2.style.display = 'none';
             input.name = 'press';
             input.id = 'press';
+        } else if (myselect.options[index].value == "价格范围") {
+            inline1.style.display = 'none';
+            inline2.style.display = 'inline-block';
         }
     }
 
@@ -109,17 +143,43 @@
                 var name = $('#name').val();
                 var author = $('#author').val();
                 var press = $('#press').val();
-                //执行重载
-                table.reload('testReload', {
-                    page: {
-                        curr: 1//重新从第1页开始
-                    },
-                    where: {
-                        name: name,
-                        author: author,
-                        press: press
-                    }
-                }, 'data');
+                var priceMin = $('#price_min').val();
+                var priceMax = $('#price_max').val();
+                if ((priceMin == '' && priceMax == '')) {
+                    //执行重载
+                    table.reload('testReload', {
+                        page: {
+                            curr: 1//重新从第1页开始
+                        },
+                        where: {
+                            name: name,
+                            author: author,
+                            press: press,
+                            priceMin: priceMin,
+                            priceMax: priceMax
+                        }
+                    }, 'data');
+                } else if (!(priceMin != '' && priceMax != '')) {
+                    alert("范围最大值和最小值都需要输入才能查询");
+                } else if ((parseFloat(priceMin) + '') != priceMin || (parseFloat(priceMax) + '') != priceMax) {
+                    alert("输入错误，请输入数字");
+                } else if (priceMin > priceMax || priceMin < 0 || priceMax < 0) {
+                    alert("价格范围输入错误,请重新输入");
+                } else {
+                    //执行重载
+                    table.reload('testReload', {
+                        page: {
+                            curr: 1//重新从第1页开始
+                        },
+                        where: {
+                            name: name,
+                            author: author,
+                            press: press,
+                            priceMin: priceMin,
+                            priceMax: priceMax
+                        }
+                    }, 'data');
+                }
             }
         };
 

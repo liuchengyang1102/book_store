@@ -23,4 +23,9 @@ public interface BookDao {
      * 通过出版社查询图书信息
      */
     List<Book> queryBookByPress(@Param(value = "press") String press);
+
+    /**
+     * 通过出版社查询图书信息
+     */
+    List<Book> queryBookByPrice(@Param(value = "priceMin") double priceMin, @Param(value = "priceMax") double priceMax);
 }

@@ -15,22 +15,17 @@
 
     <!-- 按作者查询全部信息 -->
     <select id="queryBookByAuthor" resultType="Book">
-        select * from book
-        <where>
-            <if test="author!=null">
-                and author like '%${author}%'
-            </if>
-        </where>
+        select * from book where author like '%${author}%'
     </select>
 
     <!-- 按出版社查询全部信息 -->
     <select id="queryBookByPress" resultType="Book">
-        select * from book
-        <where>
-            <if test="press!=null">
-                and press like '%${press}%'
-            </if>
-        </where>
+        select * from book where press like '%${press}%'
+    </select>
+
+    <!-- 按价格范围查询全部信息 -->
+    <select id="queryBookByPrice" resultType="Book">
+        select * from book where price between '${priceMin}' and '${priceMax}'
     </select>
 
 </mapper>

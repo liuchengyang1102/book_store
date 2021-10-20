@@ -21,4 +21,9 @@ public interface BookService {
      * 通过出版社查询图书信息
      */
     public Result<Book> queryBookByPress(String press, Integer page, Integer limit);
+
+    /**
+     * 通过价格范围查询图书信息
+     */
+    public Result<Book> queryBookByPrice(double priceMin, double priceMax, Integer page, Integer limit);
 }
