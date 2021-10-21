@@ -89,7 +89,7 @@
                             <hr>
                         </dd>
                         <dd>
-                            <a href="javascript:;" class="login-out">退出登录</a>
+                            <a href="javascript:;" class="login-out">登录/切换用户</a>
                         </dd>
                     </dl>
                 </li>
@@ -177,9 +177,7 @@
         });
 
         $('.login-out').on("click", function () {
-            layer.msg('退出登录成功', function () {
-                window.location = 'page/login-3.html';
-            });
+            window.location = 'page/login.jsp';
         });
     });
 </script>

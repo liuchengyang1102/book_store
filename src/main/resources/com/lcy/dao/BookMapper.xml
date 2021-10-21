@@ -25,7 +25,7 @@
 
     <!-- 按价格范围查询全部信息 -->
     <select id="queryBookByPrice" resultType="Book">
-        select * from book where price between '${priceMin}' and '${priceMax}'
+        select * from book where price between #{priceMin} and #{priceMax}
     </select>
 
 </mapper>
