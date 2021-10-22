@@ -23,7 +23,7 @@ public class UserController {
 
     @RequestMapping("userLogin")
     @ResponseBody
-    public Result<User> userLogin(@RequestParam(defaultValue = "lcy")String username,@RequestParam(defaultValue = "1102") String password) {
+    public Result<User> userLogin(String username,String password) {
         logger.debug("username:" + username + ",password:" + password);
         Result<User> user = userService.userLogin(username, password);
         logger.debug("user:" + user.getTotal());
