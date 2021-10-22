@@ -1,4 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -9,6 +16,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -206,7 +214,7 @@
         }
 
         body {
-            background: url(../images/loginbg.png) 0% 0% / cover no-repeat;
+            background: url(../images/userLogin.png) 0% 0% / cover no-repeat;
             position: static;
             font-size: 12px;
         }
@@ -366,15 +374,18 @@
 </div>
 <script src="../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
 <script>
+    var body = document.querySelector('body');
     var btn1 = document.querySelector('.login-main .login-select #btn1');
     var btn2 = document.querySelector('.login-main .login-select #btn2');
 
     function userLogin() {
+        body.style.background = "url(../images/userLogin.png) 0% 0% / cover no-repeat";
         btn1.style.backgroundColor = '#148be4';
         btn2.style.backgroundColor = '#1aa094';
     }
 
     function businessLogin() {
+        body.style.background = "url(../images/businessLogin.png) 0% 0% / cover no-repeat";
         btn1.style.backgroundColor = '#1aa094';
         btn2.style.backgroundColor = '#148be4';
     }
@@ -409,20 +420,27 @@
         // 进行登录操作
         form.on('submit(login)', function (data) {
             data = data.field;
-            if (data.username == '') {
-                layer.msg('用户名不能为空');
+            if (data.captcha.toUpperCase() != 'XSZG') {
+                layer.msg('验证码错误');
                 return false;
             }
-            if (data.password == '') {
-                layer.msg('密码不能为空');
-                return false;
-            }
-            if (data.captcha == '') {
-                layer.msg('验证码不能为空');
-                return false;
-            }
-            layer.msg('登录成功', function () {
-                window.location = '../';
+            $.ajax({
+                type: "post",
+                url: "<%=basePath%>userLogin",
+                dataType: "json",
+                data: {
+                    "username": data.username,
+                    "password": data.password
+                }, success: function (result) {
+                    console.log(result.total);
+                    if (result.total == 1) {
+                        layer.msg('登录成功', function () {
+                            window.location = '../';
+                        });
+                        return false;
+                    }
+                    layer.msg('用户名或密码错误');
+                }
             });
             return false;
         });

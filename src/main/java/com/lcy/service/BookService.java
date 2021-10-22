@@ -2,6 +2,7 @@ package com.lcy.service;
 
 import com.lcy.po.Book;
 import com.lcy.util.Result;
+import org.springframework.stereotype.Service;
 
 /**
  * @author 刘呈洋

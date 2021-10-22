@@ -163,7 +163,7 @@
                     alert("范围最大值和最小值都需要输入才能查询");
                 } else if ((parseFloat(priceMin) + '') != priceMin || (parseFloat(priceMax) + '') != priceMax) {
                     alert("输入错误，请输入数字");
-                } else if (priceMin > priceMax || priceMin < 0 || priceMax < 0) {
+                } else if (parseFloat(priceMin) > parseFloat(priceMax) || parseFloat(priceMin) < 0 || parseFloat(priceMax) < 0) {
                     alert("价格范围输入错误,请重新输入");
                 } else {
                     //执行重载
