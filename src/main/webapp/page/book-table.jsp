@@ -1,9 +1,20 @@
+<%@ page import="com.lcy.po.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
+
+<%
+    User loginUser = (User) request.getSession().getAttribute("loginUser");
+    int id;
+    if (loginUser != null) {
+        id = loginUser.getId();
+    } else {
+        id = 0;
+    }
 %>
 
 <html>
@@ -67,8 +78,8 @@
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
         <script type="text/html" id="currentTableBar">
-            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="edit">编辑</a>
-            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="delete">删除</a>
+            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="add">加入购物车</a>
+            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="buy">购买</a>
         </script>
 
     </div>
@@ -219,27 +230,42 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
-            if (obj.event === 'edit') {
-
-                var index = layer.open({
-                    title: '编辑用户',
-                    type: 2,
-                    shade: 0.2,
-                    maxmin: true,
-                    shadeClose: true,
-                    area: ['100%', '100%'],
-                    content: '../page/table/edit.html',
+            console.log(data);
+            if (obj.event === 'add') {
+                $.ajax({
+                    type: "post",
+                    url: "<%=basePath%>addShoppingCart",
+                    dataType: "json",
+                    data: {
+                        "businessId": data.businessId,
+                        "userId": <%=id%>,
+                        "bookName": data.name,
+                        "price": data.price
+                    }
                 });
-                $(window).on("resize", function () {
-                    layer.full(index);
-                });
-                return false;
-            } else if (obj.event === 'delete') {
-                layer.confirm('真的删除行么', function (index) {
-                    obj.del();
-                    layer.close(index);
-                });
+                layer.msg('成功加入购物车');
             }
+            // if (obj.event === 'edit') {
+            //
+            //     var index = layer.open({
+            //         title: '编辑用户',
+            //         type: 2,
+            //         shade: 0.2,
+            //         maxmin: true,
+            //         shadeClose: true,
+            //         area: ['100%', '100%'],
+            //         content: '../page/table/edit.html',
+            //     });
+            //     $(window).on("resize", function () {
+            //         layer.full(index);
+            //     });
+            //     return false;
+            // } else if (obj.event === 'delete') {
+            //     layer.confirm('真的删除行么', function (index) {
+            //         obj.del();
+            //         layer.close(index);
+            //     });
+            // }
         });
 
     });

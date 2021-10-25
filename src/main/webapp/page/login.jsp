@@ -432,9 +432,7 @@
                     "username": data.username,
                     "password": data.password
                 }, success: function (result) {
-                    console.log(result.total);
-                    console.log(result.data[0]);
-                    if (result.total == 1) {
+                    if (result.data != null) {
                         layer.msg('登录成功', function () {
                             window.location = '../';
                         });

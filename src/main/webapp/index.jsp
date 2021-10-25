@@ -13,6 +13,16 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 
+<%
+    User loginUser = (User) request.getSession().getAttribute("loginUser");
+    String name = "";
+    if (loginUser != null) {
+        name = loginUser.getName();
+    } else {
+        name = "未登录";
+    }
+%>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -76,15 +86,6 @@
                 </li>
                 <li class="layui-nav-item layuimini-setting">
                     <a href="javascript:;">
-                        <%
-                            User loginUser = (User) request.getSession().getAttribute("loginUser");
-                            String name = "";
-                            if (loginUser != null) {
-                                name = loginUser.getName();
-                            } else {
-                                name = "未登录";
-                            }
-                        %>
                         <%=name%>
                     </a>
                     <dl class="layui-nav-child">

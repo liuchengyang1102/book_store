@@ -3,8 +3,6 @@ package com.lcy.dao;
 import com.lcy.po.User;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 /**
  * @author 刘呈洋
  */
