@@ -5,4 +5,8 @@
     <insert id="addShoppingCart" parameterType="Order">
         insert into bookstore.order (businessId, userId, bookName, price, state) values (#{businessId}, #{userId}, #{bookName}, #{price}, '待购买')
     </insert>
+
+    <select id="queryOrder" resultType="Order">
+        select * from bookstore.order where userId = #{userId}
+    </select>
 </mapper>

@@ -7,7 +7,7 @@ public class Order {
     private int id;
     private int businessId;
     private int userId;
-    private String books;
+    private String bookName;
     private double price;
     private String state;
     private String ext;
@@ -36,12 +36,12 @@ public class Order {
         this.userId = userId;
     }
 
-    public String getBooks() {
-        return books;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setBooks(String books) {
-        this.books = books;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
     public double getPrice() {
