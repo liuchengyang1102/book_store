@@ -20,8 +20,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Result<User> userLogin(String username, String password) {
-        List<User> user = userDao.userLogin(username, password);
-        PageInfo<User> pageInfo = new PageInfo<>(user);
-        return Result.bulid(0, pageInfo.getTotal(), user);
+        User user = userDao.userLogin(username, password);
+        return Result.bulid2(0, 1L, user);
     }
 }

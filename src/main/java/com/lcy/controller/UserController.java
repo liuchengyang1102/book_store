@@ -8,8 +8,10 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author 刘呈洋
@@ -23,10 +25,14 @@ public class UserController {
 
     @RequestMapping("userLogin")
     @ResponseBody
-    public Result<User> userLogin(String username,String password) {
+    public Result<User> userLogin(String username, String password, HttpServletRequest request) {
         logger.debug("username:" + username + ",password:" + password);
-        Result<User> user = userService.userLogin(username, password);
-        logger.debug("user:" + user.getTotal());
-        return user;
+        Result<User> userResult = userService.userLogin(username, password);
+        logger.debug("userResult:" + userResult.getTotal());
+        if (userResult != null) {
+            User user = (User) userResult.getData();
+            request.getSession().setAttribute("loginUser", user);
+        }
+        return userResult;
     }
 }

@@ -1,13 +1,13 @@
 
-OWeb:BoldAndItalicTagsCheck2"Replace this <i> tag by <em>.(Ο”Ίψÿÿÿÿ8βΨ’Ι/
-IWeb:BoldAndItalicTagsCheckt"Replace this <i> tag by <em>.(β΄Ζg8βΨ’Ι/
-JWeb:BoldAndItalicTagsChecka"Replace this <i> tag by <em>.(ª¬Ώ8βΨ’Ι/
-t%Web:ItemTagNotWithinContainerTagCheck"<Surround this <li> item tag by a <ul> or <ol> container one.(θΓ¬ω8βΨ’Ι/
-IWeb:BoldAndItalicTagsCheckH"Replace this <i> tag by <em>.(Ά’‡l8βΨ’Ι/
-JWeb:BoldAndItalicTagsCheckE"Replace this <i> tag by <em>.(ωΰΦΦ8βΨ’Ι/
-y%Web:ItemTagNotWithinContainerTagCheck}"<Surround this <li> item tag by a <ul> or <ol> container one.(²εζόÿÿÿÿ8βΨ’Ι/
-jWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(χΓϋÿÿÿÿ8βΨ’Ι/
-a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(χΓϋÿÿÿÿ8βΨ’Ι/
-JWeb:BoldAndItalicTagsCheckK"Replace this <i> tag by <em>.(ιέ‡•8βΨ’Ι/
-y%Web:ItemTagNotWithinContainerTagCheck~"<Surround this <li> item tag by a <ul> or <ol> container one.(…Βύÿÿÿÿ8βΨ’Ι/
-OWeb:BoldAndItalicTagsCheck<"Replace this <i> tag by <em>.(γ–†ωÿÿÿÿ8βΨ’Ι/
+y%Web:ItemTagNotWithinContainerTagCheck~"<Surround this <li> item tag by a <ul> or <ol> container one.(…Βύÿÿÿÿ8‰εδ¶Κ/
+OWeb:BoldAndItalicTagsCheck2"Replace this <i> tag by <em>.(Ο”Ίψÿÿÿÿ8‰εδ¶Κ/
+y%Web:ItemTagNotWithinContainerTagCheck}"<Surround this <li> item tag by a <ul> or <ol> container one.(²εζόÿÿÿÿ8‰εδ¶Κ/
+JWeb:BoldAndItalicTagsChecka"Replace this <i> tag by <em>.(ª¬Ώ8‰εδ¶Κ/
+jWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(χΓϋÿÿÿÿ8‰εδ¶Κ/
+IWeb:BoldAndItalicTagsCheckt"Replace this <i> tag by <em>.(β΄Ζg8‰εδ¶Κ/
+JWeb:BoldAndItalicTagsCheckK"Replace this <i> tag by <em>.(ιέ‡•8‰εδ¶Κ/
+IWeb:BoldAndItalicTagsCheckH"Replace this <i> tag by <em>.(Ά’‡l8‰εδ¶Κ/
+t%Web:ItemTagNotWithinContainerTagCheck"<Surround this <li> item tag by a <ul> or <ol> container one.(θΓ¬ω8‰εδ¶Κ/
+JWeb:BoldAndItalicTagsCheckE"Replace this <i> tag by <em>.(ωΰΦΦ8‰εδ¶Κ/
+OWeb:BoldAndItalicTagsCheck<"Replace this <i> tag by <em>.(γ–†ωÿÿÿÿ8‰εδ¶Κ/
+a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(χΓϋÿÿÿÿ8‰εδ¶Κ/

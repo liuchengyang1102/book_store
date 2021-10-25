@@ -1,11 +1,11 @@
 
-C
-java:S1948"&Make "data" transient or serializable.(¼éñ8Ä©•™È/
-I
-java:S1172)",Remove this unused method parameter "count".(€ä„‘8•«™È/
 7
 java:S2326"T is not used in the class.(†Ã'8¤Àº™È/
+C
+java:S1948"&Make "data" transient or serializable.(¼éñ8Ä©•™È/
 €
 java:S4165*"cRemove this useless assignment; "total" already holds the assigned value along all execution paths.(Ä¿è±8•«™È/
 Q
 java:S3740"/Provide the parametrized type for this generic.(÷Ôƒ¾ùÿÿÿÿ8¤Àº™È/
+I
+java:S1172)",Remove this unused method parameter "count".(€ä„‘8•«™È/

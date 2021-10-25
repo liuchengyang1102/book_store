@@ -18,6 +18,10 @@ public class Result<T> implements Serializable {
         return new Result(code, data, total);
     }
 
+    public static <T> Result<T> bulid2(Integer code, Long total, Object data) {
+        return new Result(code, data, total);
+    }
+
     public Integer getCode() {
         return code;
     }

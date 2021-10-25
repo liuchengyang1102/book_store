@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.lcy.po.User" %><%--
   Created by IntelliJ IDEA.
   User: 刘呈洋
   Date: 2021/10/13
@@ -75,7 +75,18 @@
                     <a href="javascript:;" data-check-screen="full"><i class="fa fa-arrows-alt"></i></a>
                 </li>
                 <li class="layui-nav-item layuimini-setting">
-                    <a href="javascript:;">admin</a>
+                    <a href="javascript:;">
+                        <%
+                            User loginUser = (User) request.getSession().getAttribute("loginUser");
+                            String name = "";
+                            if (loginUser != null) {
+                                name = loginUser.getName();
+                            } else {
+                                name = "未登录";
+                            }
+                        %>
+                        <%=name%>
+                    </a>
                     <dl class="layui-nav-child">
                         <dd>
                             <a href="javascript:;" layuimini-content-href="page/user-setting.html" data-title="基本资料"

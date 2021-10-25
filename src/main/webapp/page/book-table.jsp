@@ -161,7 +161,7 @@
                     }, 'data');
                 } else if (!(priceMin != '' && priceMax != '')) {
                     alert("范围最大值和最小值都需要输入才能查询");
-                } else if ((parseFloat(priceMin) + '') != priceMin || (parseFloat(priceMax) + '') != priceMax) {
+                } else if (((parseFloat(priceMin) + '') != priceMin && parseFloat(priceMin) != parseInt(priceMin)) || ((parseFloat(priceMax) + '') != priceMax && parseFloat(priceMax) != parseInt(priceMax))) {
                     alert("输入错误，请输入数字");
                 } else if (parseFloat(priceMin) > parseFloat(priceMax) || parseFloat(priceMin) < 0 || parseFloat(priceMax) < 0) {
                     alert("价格范围输入错误,请重新输入");
