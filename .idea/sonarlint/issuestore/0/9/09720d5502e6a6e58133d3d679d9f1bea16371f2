@@ -1,7 +1,11 @@
 
 S
-java:S3416"1Update this logger to use "UserController.class".(›¹ÿ†üÿÿÿÿ8¦ôî·Ê/
-s
-java:S1128"QRemove this unused import 'org.springframework.web.bind.annotation.RequestParam'.(Â¬À·ùÿÿÿÿ8ÃÏ‘ºÊ/
+java:S3416"1Update this logger to use "UserController.class".(›¹ÿ†üÿÿÿÿ8îçòªË/
+T
+java:S2589 "7Remove this expression which always evaluates to "true"(ÿ¤şñ8Æ¿¯Ë/
+X
+java:S1128";Remove this unused import 'javax.servlet.http.HttpSession'.(í¨ô8È÷²«Ë/
+\
+java:S2441"":Make "User" serializable or don't store it in the session.(Ü…çıÿÿÿÿ8ÑÜ¿¯Ë/
 g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(›¹ÿ†üÿÿÿÿ8¦ôî·Ê/
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(›¹ÿ†üÿÿÿÿ8îçòªË/

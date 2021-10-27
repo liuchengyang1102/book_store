@@ -7,6 +7,6 @@
     </insert>
 
     <select id="queryOrder" resultType="Order">
-        select * from bookstore.order where userId = #{userId}
+        select * from bookstore.order where userId = #{userId} and state = '待购买'
     </select>
 </mapper>

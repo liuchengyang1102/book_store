@@ -4,49 +4,49 @@
     "href": "page/book-table.jsp"
   },
   "logoInfo": {
-    "title": "图书商城",
+    "title": "店铺管理",
     "image": "images/logo1.png",
     "href": ""
   },
   "menuInfo": [
     {
-      "title": "界面管理",
+      "title": "页面管理",
       "icon": "fa fa-address-book",
       "href": "",
       "target": "_self",
       "child": [
         {
-          "title": "商城",
+          "title": "店铺",
           "href": "page/book-table.jsp",
           "icon": "fa fa-home",
           "target": "_self"
         },
         {
-          "title": "购物车",
+          "title": "商品",
           "href": "page/table.jsp",
-          "icon": "fa fa-shopping-cart",
+          "icon": "fa fa-book",
           "target": "_self"
         },
         {
-          "title": "待处理订单",
+          "title": "订单",
           "href": "",
           "icon": "fa fa-th-list",
           "target": "_self",
           "child": [
             {
-              "title": "待付款订单",
-              "href": "page/table1.jsp",
-              "icon": "fa fa-list-ul",
-              "target": "_self"
-            },
-            {
-              "title": "待收货订单",
+              "title": "全部订单",
               "href": "page/table2.jsp",
               "icon": "fa fa-list-ul",
               "target": "_self"
             },
             {
-              "title": "待评论订单",
+              "title": "待发货订单",
+              "href": "page/table1.jsp",
+              "icon": "fa fa-list-ul",
+              "target": "_self"
+            },
+            {
+              "title": "订单评论",
               "href": "page/table3.jsp",
               "icon": "fa fa-list-ul",
               "target": "_self"
