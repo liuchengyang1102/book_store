@@ -1,4 +1,4 @@
-<%@ page import="com.lcy.po.User" %>
+<%@ page import="com.lcy.po.Business" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -9,10 +9,10 @@
 %>
 
 <%
-    User loginUser = (User) request.getSession().getAttribute("loginUser");
+    Business loginBusiness = (Business) request.getSession().getAttribute("loginBusiness");
     String name = "";
-    if (loginUser != null) {
-        name = loginUser.getName();
+    if (loginBusiness != null) {
+        name = loginBusiness.getName();
     } else {
         name = "未登录";
     }

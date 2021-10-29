@@ -261,8 +261,9 @@
             cursor: pointer;
         }
 
-        .login-main .login-bottom .tip .forget-password {
+        .login-main .login-bottom .tip .register {
             font-stretch: normal;
+            font-size: 15px;
             letter-spacing: 0;
             color: #1391ff;
             text-decoration: none;
@@ -361,7 +362,7 @@
 
             </div>
             <div class="tip">
-                <a href="javascript:" class="forget-password">忘记密码？</a>
+                <a href="javascript:" class="register" onclick="userRegister()">还没有账号？点这注册</a>
             </div>
             <div class="layui-form-item" style="text-align:center; width:100%;height:100%;margin:0px;">
                 <button class="login-btn" lay-submit="" lay-filter="login">立即登录</button>
@@ -377,17 +378,32 @@
     var body = document.querySelector('body');
     var btn1 = document.querySelector('.login-main .login-select #btn1');
     var btn2 = document.querySelector('.login-main .login-select #btn2');
+    var register = document.querySelector('.login-main .login-bottom .tip .register');
+    console.log(register);
+    var loginButton = 'userLogin';
 
     function userLogin() {
         body.style.background = "url(../images/userLogin.png) 0% 0% / cover no-repeat";
         btn1.style.backgroundColor = '#148be4';
         btn2.style.backgroundColor = '#1aa094';
+        loginButton = 'userLogin';
+        register.onclick = Function("userRegister()");
     }
 
     function businessLogin() {
         body.style.background = "url(../images/businessLogin.png) 0% 0% / cover no-repeat";
         btn1.style.backgroundColor = '#1aa094';
         btn2.style.backgroundColor = '#148be4';
+        loginButton = 'businessLogin';
+        register.onclick =  Function("businessRegister()");
+    }
+
+    function userRegister() {
+        console.log('用户注册');
+    }
+
+    function businessRegister() {
+        console.log('商家注册');
     }
 </script>
 <script>
@@ -426,7 +442,7 @@
             }
             $.ajax({
                 type: "post",
-                url: "<%=basePath%>userLogin",
+                url: "<%=basePath%>" + loginButton,
                 dataType: "json",
                 data: {
                     "username": data.username,
@@ -434,7 +450,11 @@
                 }, success: function (result) {
                     if (result.data != null) {
                         layer.msg('登录成功', function () {
-                            window.location = '../';
+                            if (loginButton == 'userLogin') {
+                                window.location = '../';
+                            } else {
+                                window.location = '../business';
+                            }
                         });
                         return false;
                     }

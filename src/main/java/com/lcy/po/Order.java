@@ -1,9 +1,11 @@
 package com.lcy.po;
 
+import java.io.Serializable;
+
 /**
  * @author 刘呈洋
  */
-public class Order {
+public class Order implements Serializable {
     private int id;
     private int businessId;
     private int userId;
