@@ -8,7 +8,13 @@ import com.lcy.util.Result;
  */
 public interface BusinessService {
     /**
-     * 用户登录
+     * 商家登录
      */
     public Result<Business> businessLogin(String username, String password);
+
+    /**
+     * 商家注册
+     */
+    public void addBusiness(String userName, String password, String name, String address, String type,
+                               double registeredCapital, String logPicture);
 }

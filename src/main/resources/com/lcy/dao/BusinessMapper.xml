@@ -3,7 +3,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.lcy.dao.BusinessDao">
     <select id="businessLogin" resultType="Business">
-        select * from business where username like #{username} and password like #{password}
+        select * from business where username like #{username} and password like #{password} and state != '待审核'
     </select>
 
+    <insert id="addBusiness" parameterType="Business">
+        insert into business (userName,password,name,address,type,registeredCapital,logPicture,balance,state) values
+        (#{userName},#{password},#{name},#{address},#{type},#{registeredCapital},#{logPicture},#{registeredCapital},'待审核')
+    </insert>
 </mapper>

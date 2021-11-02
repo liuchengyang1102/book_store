@@ -171,29 +171,6 @@
 
     });
 
-    function addUser() {
-        var form = layui.form;
-        var addFormValue = form.val("addFormFilter");
-        var addUserValue = JSON.stringify(addFormValue);
-        $.ajax({
-            type: "post",
-            url: "${pageContext.request.contextPath}/user?method=addUser",
-            dataType: "json",
-            data: {
-                "addUserValue": addUserValue
-            },
-            success: function (result) {
-                if (result.status) {
-                    alert("注册成功，即将跳转至登录界面");
-                    location.href = "login.jsp"
-                } else {
-                    alert("注册失败，请联系管理员，系统错误");
-                    location.reload()
-                }
-            }
-        })
-    }
-
     function getTypeValue() {
         var select = document.getElementById("type");
         var index = select.selectedIndex;
@@ -225,19 +202,29 @@
         var name = document.querySelector('.name').value;
         var address = province + city + county;
         var registeredCapital = document.querySelector('.registeredCapital').value;
-        console.log(userName);
-        console.log(password1);
-        console.log(name);
-        console.log(address);
-        console.log(type);
-        console.log(registeredCapital);
-        console.log(logPicture);
         if (password1 != password2) {
             alert('两次输入的密码不一样！');
-        } else if (userName == '' || password1 == '' || password2 == '' || name == '' || registeredCapital == '') {
+        } else if (userName == '' || password1 == '' || name == '' || registeredCapital == '' || province == ''
+            || city == '' || county == '' || type == '' || Object.is(province, undefined) || Object.is(city, undefined)
+            || Object.is(county, undefined) || Object.is(type, undefined) || Object.is(logPicture, undefined)) {
             alert('注册信息不全');
         } else {
             //这里跳转到后端
+            $.ajax({
+                type: "post",
+                url: "<%=basePath%>addBusiness",
+                dataType: "json",
+                data: {
+                    "userName": userName,
+                    "password": password1,
+                    "name": name,
+                    "address": address,
+                    "type": type,
+                    "registeredCapital": registeredCapital,
+                    "logPicture": logPicture
+                }
+            });
+            layer.msg('注册成功,等待区域运营方审核');
         }
     }
 

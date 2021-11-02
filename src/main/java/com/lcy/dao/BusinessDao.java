@@ -8,7 +8,12 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface BusinessDao {
     /**
-     * 用户登录
+     * 商家登录
      */
     public Business businessLogin(@Param(value = "username") String username, @Param(value = "password") String password);
+
+    public void addBusiness(@Param(value = "userName") String userName, @Param(value = "password") String password,
+                            @Param(value = "name") String name, @Param(value = "address") String address,
+                            @Param(value = "type") String type, @Param(value = "registeredCapital") double registeredCapital,
+                            @Param(value = "logPicture") String logPicture);
 }

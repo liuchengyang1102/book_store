@@ -20,4 +20,10 @@ public class BusinessServiceImpl implements BusinessService {
         Business business = businessDao.businessLogin(username, password);
         return Result.bulid2(0, 1L, business);
     }
+
+    @Override
+    public void addBusiness(String userName, String password, String name, String address, String type,
+                            double registeredCapital, String logPicture) {
+        businessDao.addBusiness(userName, password, name, address, type, registeredCapital, logPicture);
+    }
 }

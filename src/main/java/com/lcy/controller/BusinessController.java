@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -75,7 +74,15 @@ public class BusinessController {
         if (n != size) {
             return "文件上传失败! ";
         } else {
-            return savePath;
+            return newFlieName;
         }
+    }
+
+    @RequestMapping("addBusiness")
+    public void addBusiness(String userName, String password, String name, String address, String type,
+                               double registeredCapital, String logPicture) {
+        logger.debug("userName:" + userName + ",password:" + password + ",name:" + name + ",address:" + address
+                + ",type:" + type + ",registeredCapital:" + registeredCapital + ",logPicture:" + logPicture);
+        businessService.addBusiness(userName, password, name, address, type, registeredCapital, logPicture);
     }
 }
