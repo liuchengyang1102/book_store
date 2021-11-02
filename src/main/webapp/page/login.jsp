@@ -379,7 +379,6 @@
     var btn1 = document.querySelector('.login-main .login-select #btn1');
     var btn2 = document.querySelector('.login-main .login-select #btn2');
     var register = document.querySelector('.login-main .login-bottom .tip .register');
-    console.log(register);
     var loginButton = 'userLogin';
 
     function userLogin() {
@@ -403,7 +402,7 @@
     }
 
     function businessRegister() {
-        console.log('商家注册');
+        window.location='../businessRegister';
     }
 </script>
 <script>
