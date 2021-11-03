@@ -15,6 +15,6 @@ public interface BusinessService {
     /**
      * 商家注册
      */
-    public void addBusiness(String userName, String password, String name, String address, String type,
-                               double registeredCapital, String logPicture);
+    public int addBusiness(String userName, String password, String name, String address, String type,
+                           double registeredCapital, String logPicture);
 }

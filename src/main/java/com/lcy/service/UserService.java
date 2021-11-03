@@ -11,4 +11,9 @@ public interface UserService {
      * 用户登录
      */
     public Result<User> userLogin(String username, String password);
+
+    /**
+     * 用户注册
+     */
+    public int addUser(String username, String password, String name);
 }

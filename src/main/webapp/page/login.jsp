@@ -398,7 +398,7 @@
     }
 
     function userRegister() {
-        console.log('用户注册');
+        window.location='../userRegister';
     }
 
     function businessRegister() {

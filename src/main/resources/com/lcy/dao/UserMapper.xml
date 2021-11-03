@@ -6,4 +6,9 @@
         select * from user where username like #{username} and password like #{password}
     </select>
 
+    <insert id="addUser" parameterType="User">
+        insert into user (username,password,name,balance) select #{username},#{password},#{name},0 where not exists
+        (select * from user where username = #{username})
+    </insert>
+
 </mapper>

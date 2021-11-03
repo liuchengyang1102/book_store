@@ -113,3 +113,5 @@ P
  src/main/webapp/page/upload.html,d\7\d7b959d467eec05084898d4591d8f5fb16a78f99
 b
 2src/main/webapp/WEB-INF/pages/businessRegister.jsp,c\f\cf792cadcdc34191126ee1b2706b089935d50aa9
+P
+ src/main/resources/springmvc.xml,c\8\c86b56867cdaee0bad1f2b9b4ad4ee1f328c548d

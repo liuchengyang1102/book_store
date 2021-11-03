@@ -22,8 +22,8 @@ public class BusinessServiceImpl implements BusinessService {
     }
 
     @Override
-    public void addBusiness(String userName, String password, String name, String address, String type,
-                            double registeredCapital, String logPicture) {
-        businessDao.addBusiness(userName, password, name, address, type, registeredCapital, logPicture);
+    public int addBusiness(String userName, String password, String name, String address, String type,
+                           double registeredCapital, String logPicture) {
+        return businessDao.addBusiness(userName, password, name, address, type, registeredCapital, logPicture);
     }
 }

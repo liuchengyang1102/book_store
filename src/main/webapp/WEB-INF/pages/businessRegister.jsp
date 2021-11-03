@@ -222,9 +222,15 @@
                     "type": type,
                     "registeredCapital": registeredCapital,
                     "logPicture": logPicture
+                },success:function (result) {
+                    if(result==1){
+                        layer.msg('注册成功，即将跳转登陆界面');
+                        window.setTimeout('window.location = \'page/login.jsp\'',1500);
+                    }else {
+                        layer.msg('注册失败，该用户名已存在');
+                    }
                 }
             });
-            layer.msg('注册成功,等待区域运营方审核');
         }
     }
 

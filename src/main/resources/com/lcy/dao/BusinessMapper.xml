@@ -7,7 +7,8 @@
     </select>
 
     <insert id="addBusiness" parameterType="Business">
-        insert into business (userName,password,name,address,type,registeredCapital,logPicture,balance,state) values
-        (#{userName},#{password},#{name},#{address},#{type},#{registeredCapital},#{logPicture},#{registeredCapital},'待审核')
+        insert into business (userName,password,name,address,type,registeredCapital,logPicture,balance,state) select
+        #{userName},#{password},#{name},#{address},#{type},#{registeredCapital},#{logPicture},#{registeredCapital},'待审核'
+        where not exists (select * from business where userName = #{userName})
     </insert>
 </mapper>

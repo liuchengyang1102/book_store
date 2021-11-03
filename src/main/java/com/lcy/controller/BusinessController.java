@@ -79,10 +79,11 @@ public class BusinessController {
     }
 
     @RequestMapping("addBusiness")
-    public void addBusiness(String userName, String password, String name, String address, String type,
-                               double registeredCapital, String logPicture) {
+    @ResponseBody
+    public int addBusiness(String userName, String password, String name, String address, String type,
+                           double registeredCapital, String logPicture) {
         logger.debug("userName:" + userName + ",password:" + password + ",name:" + name + ",address:" + address
                 + ",type:" + type + ",registeredCapital:" + registeredCapital + ",logPicture:" + logPicture);
-        businessService.addBusiness(userName, password, name, address, type, registeredCapital, logPicture);
+        return businessService.addBusiness(userName, password, name, address, type, registeredCapital, logPicture);
     }
 }
