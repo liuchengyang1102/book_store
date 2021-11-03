@@ -10,11 +10,11 @@
 
 <%
     Business loginBusiness = (Business) request.getSession().getAttribute("loginBusiness");
-    String name = "";
+    String name = "未登录";
+    String logPicture = "logo1.png";
     if (loginBusiness != null) {
         name = loginBusiness.getName();
-    } else {
-        name = "未登录";
+        logPicture = loginBusiness.getLogPicture();
     }
 %>
 
@@ -81,6 +81,7 @@
                 </li>
                 <li class="layui-nav-item layuimini-setting">
                     <a href="javascript:;">
+                        <img src="<%=basePath%>images/<%=logPicture%>" width="30px" height="30px">
                         <%=name%>
                     </a>
                     <dl class="layui-nav-child">

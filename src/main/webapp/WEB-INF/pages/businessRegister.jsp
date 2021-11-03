@@ -42,29 +42,29 @@
 <div>
     <label>用&nbsp;户&nbsp;名：</label>
     <div>
-        <input type="text" name="userName" required lay-verify="required" placeholder="用户名/账号" autocomplete="off"
-               class="userName">
+        <input type="text" name="userName" required lay-verify="required" placeholder="用户名/账号(不超过12位)" autocomplete="off"
+               class="userName" maxlength="12">
     </div>
 </div>
 <div>
     <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
     <div>
-        <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
-               autocomplete="off" class="password1">
+        <input type="password" name="password" required lay-verify="required" placeholder="请输入密码(不超过16位)"
+               autocomplete="off" class="password1" maxlength="16">
     </div>
 </div>
 <div>
     <label>确认密码：</label>
     <div>
-        <input type="password" name="password" required lay-verify="required" placeholder="请再次输入密码"
-               autocomplete="off" class="password2">
+        <input type="password" name="password" required lay-verify="required" placeholder="请再次输入密码(不超过16位)"
+               autocomplete="off" class="password2" maxlength="16">
     </div>
 </div>
 <div>
     <label>书店店名：</label>
     <div>
-        <input type="text" name="name" required lay-verify="required" placeholder="店名" autocomplete="off"
-               class="name">
+        <input type="text" name="name" required lay-verify="required" placeholder="店名(不超过12位)" autocomplete="off"
+               class="name" maxlength="12">
     </div>
 </div>
 <div>
@@ -100,7 +100,7 @@
     <label>注册资金：</label>
     <div>
         <input type="text" name="registeredCapital" required lay-verify="required" placeholder="注册资金"
-               autocomplete="off" class="registeredCapital">
+               autocomplete="off" class="registeredCapital" maxlength="10">
     </div>
 </div>
 <div>

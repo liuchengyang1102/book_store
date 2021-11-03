@@ -10,11 +10,9 @@
 
 <%
     User loginUser = (User) request.getSession().getAttribute("loginUser");
-    String name = "";
+    String name = "未登录";
     if (loginUser != null) {
         name = loginUser.getName();
-    } else {
-        name = "未登录";
     }
 %>
 

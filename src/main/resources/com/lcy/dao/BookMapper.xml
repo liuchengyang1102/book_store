@@ -5,27 +5,70 @@
 
     <!-- 按书名查询全部信息 -->
     <select id="queryBookByName" resultType="Book">
-        select * from book
-        <where>
-            <if test="name!=null">
-                and name like '%${name}%'
-            </if>
-        </where>
+        select book.id,
+        business.name as "businessName",
+        book.number,
+        book.count,
+        book.name,
+        book.author,
+        book.press,
+        book.impression,
+        book.synopsis,
+        book.price
+        from book,business
+        where book.name like '%${name}%'
+        and book.businessId=business.id
     </select>
 
     <!-- 按作者查询全部信息 -->
     <select id="queryBookByAuthor" resultType="Book">
-        select * from book where author like '%${author}%'
+        select book.id,
+        business.name as "businessName",
+        book.number,
+        book.count,
+        book.name,
+        book.author,
+        book.press,
+        book.impression,
+        book.synopsis,
+        book.price
+        from book,business
+        where author like '%${author}%'
+        and book.businessId=business.id
     </select>
 
     <!-- 按出版社查询全部信息 -->
     <select id="queryBookByPress" resultType="Book">
-        select * from book where press like '%${press}%'
+        select book.id,
+        business.name as "businessName",
+        book.number,
+        book.count,
+        book.name,
+        book.author,
+        book.press,
+        book.impression,
+        book.synopsis,
+        book.price
+        from book,business
+        where press like '%${press}%'
+        and book.businessId=business.id
     </select>
 
     <!-- 按价格范围查询全部信息 -->
     <select id="queryBookByPrice" resultType="Book">
-        select * from book where price between #{priceMin} and #{priceMax}
+        select book.id,
+        business.name as "businessName",
+        book.number,
+        book.count,
+        book.name,
+        book.author,
+        book.press,
+        book.impression,
+        book.synopsis,
+        book.price
+        from book,business
+        where price between #{priceMin} and #{priceMax}
+        and book.businessId=business.id
     </select>
 
 </mapper>

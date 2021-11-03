@@ -346,17 +346,17 @@
             <div class="center">
                 <div class="item">
                     <span class="icon icon-2"></span>
-                    <input type="text" name="username" lay-verify="required" placeholder="请输入登录账号" maxlength="24"/>
+                    <input type="text" name="username" lay-verify="required" placeholder="请输入登录账号(不超过12位)" maxlength="12" autocomplete="off"/>
                 </div>
 
                 <div class="item">
                     <span class="icon icon-3"></span>
-                    <input type="password" name="password" lay-verify="required" placeholder="请输入密码" maxlength="20">
+                    <input type="password" name="password" lay-verify="required" placeholder="请输入密码(不超过16位)" maxlength="16" autocomplete="off">
                     <span class="bind-password icon icon-4"></span>
                 </div>
 
                 <div id="validatePanel" class="item" style="width: 137px;">
-                    <input type="text" name="captcha" placeholder="请输入验证码" maxlength="4">
+                    <input type="text" name="captcha" placeholder="请输入验证码" maxlength="4" autocomplete="off">
                     <img id="refreshCaptcha" class="validateImg" src="../images/captcha.jpg">
                 </div>
 

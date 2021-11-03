@@ -39,29 +39,29 @@
 <div>
     <label>用&nbsp;户&nbsp;名：</label>
     <div>
-        <input type="text" name="username" required lay-verify="required" placeholder="用户名/账号" autocomplete="off"
-               class="username">
+        <input type="text" name="username" required lay-verify="required" placeholder="用户名/账号(不超过12位)" autocomplete="off"
+               class="username" maxlength="12">
     </div>
 </div>
 <div>
     <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
     <div>
-        <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
-               autocomplete="off" class="password1">
+        <input type="password" name="password" required lay-verify="required" placeholder="请输入密码(不超过16位)"
+               autocomplete="off" class="password1" maxlength="16">
     </div>
 </div>
 <div>
     <label>确认密码：</label>
     <div>
-        <input type="password" name="password" required lay-verify="required" placeholder="请再次输入密码"
-               autocomplete="off" class="password2">
+        <input type="password" name="password" required lay-verify="required" placeholder="请再次输入密码(不超过16位)"
+               autocomplete="off" class="password2" maxlength="16">
     </div>
 </div>
 <div>
     <label>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label>
     <div>
-        <input type="text" name="name" required lay-verify="required" placeholder="请输入您的昵称" autocomplete="off"
-               class="name">
+        <input type="text" name="name" required lay-verify="required" placeholder="请输入您的昵称(不超过12位)" autocomplete="off"
+               class="name"maxlength="12">
     </div>
 </div>
 <div style="height: 50px;width: 100%"></div>

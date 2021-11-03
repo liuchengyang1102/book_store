@@ -94,21 +94,28 @@
         var myselect = document.getElementById("select");
         var index = myselect.selectedIndex; // selectedIndex代表的是你所选中项的index
         if (myselect.options[index].value == "书名") {
+            document.querySelector('#price_min').value = '';
+            document.querySelector('#price_max').value = '';
             inline1.style.display = 'inline-block';
             inline2.style.display = 'none';
             input.name = 'name';
             input.id = 'name';
         } else if (myselect.options[index].value == "作者") {
+            document.querySelector('#price_min').value = '';
+            document.querySelector('#price_max').value = '';
             inline1.style.display = 'inline-block';
             inline2.style.display = 'none';
             input.name = 'author';
             input.id = 'author';
         } else if (myselect.options[index].value == "出版社") {
+            document.querySelector('#price_min').value = '';
+            document.querySelector('#price_max').value = '';
             inline1.style.display = 'inline-block';
             inline2.style.display = 'none';
             input.name = 'press';
             input.id = 'press';
         } else if (myselect.options[index].value == "价格范围") {
+            input.value = '';
             inline1.style.display = 'none';
             inline2.style.display = 'inline-block';
         }
@@ -130,12 +137,12 @@
             }],
             cols: [[
                 {type: "checkbox", width: 50},
-                {field: 'id', width: 80, title: 'ID', sort: true},
-                {field: 'businessId', width: 80, title: '商家id'},
+                {field: 'id', width: 60, title: 'ID', sort: true},
+                {field: 'businessName', width: 120, title: '商家店名'},
                 {field: 'number', width: 80, title: '书号'},
                 {field: 'count', width: 80, title: '数量'},
                 {field: 'name', width: 120, title: '书名'},
-                {field: 'author', width: 80, title: '作者'},
+                {field: 'author', width: 100, title: '作者'},
                 {field: 'press', width: 160, title: '出版社'},
                 {field: 'impression', width: 80, title: '印次'},
                 {field: 'synopsis', width: 120, title: '内容简介'},
