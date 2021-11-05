@@ -29,10 +29,11 @@ public class OrderController {
 
     @RequestMapping("queryOrder")
     @ResponseBody
-    public Result<Order> queryOrder(@RequestParam(defaultValue = "-1") int userId, @RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit) {
+    public Result<Order> queryOrder(@RequestParam(defaultValue = "-1") int userId, @RequestParam(defaultValue = "1") Integer page,
+                                    @RequestParam(defaultValue = "15") Integer limit, String state) {
         logger.debug("userId:" + userId);
         Result<Order> orders = null;
-        orders = orderService.queryOrder(userId, page, limit);
+        orders = orderService.queryOrder(userId, page, limit, state);
         return orders;
     }
 }

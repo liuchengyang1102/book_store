@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 public class Order implements Serializable {
     private int id;
-    private int businessId;
+    private String businessName;
     private int userId;
     private String bookName;
     private double price;
@@ -22,12 +22,12 @@ public class Order implements Serializable {
         this.id = id;
     }
 
-    public int getBusinessId() {
-        return businessId;
+    public String getBusinessName() {
+        return businessName;
     }
 
-    public void setBusinessId(int businessId) {
-        this.businessId = businessId;
+    public void setBusinessName(String businessId) {
+        this.businessName = businessId;
     }
 
     public int getUserId() {

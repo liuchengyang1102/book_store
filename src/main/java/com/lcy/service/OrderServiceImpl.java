@@ -25,10 +25,10 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Result<Order> queryOrder(int userId, Integer page, Integer limit) {
+    public Result<Order> queryOrder(int userId, Integer page, Integer limit, String state) {
         //传入参数，当前页、每页条数
         PageHelper.startPage(page, limit);
-        List<Order> orders = orderDao.queryOrder(userId, page, limit);
+        List<Order> orders = orderDao.queryOrder(userId, page, limit, state);
         //通过包装获取分页的其它值信息
         PageInfo<Order> pageInfo = new PageInfo<>(orders);
         return Result.bulid(0, pageInfo.getTotal(), orders);

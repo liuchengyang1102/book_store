@@ -7,6 +7,13 @@
     </insert>
 
     <select id="queryOrder" resultType="Order">
-        select * from bookstore.order where userId = #{userId} and state = '待购买'
+        select bookstore.order.id,
+        business.name as "businessName",
+        bookstore.order.bookName,
+        bookstore.order.price
+        from bookstore.order,business
+        where bookstore.order.userId = #{userId}
+        and bookstore.order.businessId = business.id
+        and bookstore.order.state = #{state}
     </select>
 </mapper>

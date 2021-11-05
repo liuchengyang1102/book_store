@@ -115,3 +115,9 @@ b
 2src/main/webapp/WEB-INF/pages/businessRegister.jsp,c\f\cf792cadcdc34191126ee1b2706b089935d50aa9
 P
  src/main/resources/springmvc.xml,c\8\c86b56867cdaee0bad1f2b9b4ad4ee1f328c548d
+]
+-src/main/resources/com/lcy/dao/UserMapper.xml,2\7\271188ee6fd7b34d36d8481f005f278dd4f3ab91
+a
+1src/main/resources/com/lcy/dao/BusinessMapper.xml,d\a\da9a2c33fb2198134100ff38f63db2d689237a41
+^
+.src/main/webapp/WEB-INF/pages/userRegister.jsp,1\4\148dabcfe3a920ec5770ed22bd7a45a47720b23f

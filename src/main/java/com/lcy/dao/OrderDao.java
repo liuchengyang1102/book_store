@@ -18,5 +18,6 @@ public interface OrderDao {
     /**
      * 查询购物车订单
      */
-    List<Order> queryOrder(@Param(value = "userId") int userId, @Param(value = "page") Integer page, @Param(value = "limit") Integer limit);
+    List<Order> queryOrder(@Param(value = "userId") int userId, @Param(value = "page") Integer page,
+                           @Param(value = "limit") Integer limit, @Param(value = "state") String state);
 }

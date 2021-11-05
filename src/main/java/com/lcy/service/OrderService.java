@@ -15,5 +15,5 @@ public interface OrderService {
     /**
      * 查询购物车订单
      */
-    public Result<Order> queryOrder(int userId, Integer page, Integer limit);
+    public Result<Order> queryOrder(int userId, Integer page, Integer limit, String state);
 }
