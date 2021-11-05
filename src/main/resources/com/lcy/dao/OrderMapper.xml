@@ -6,8 +6,21 @@
         insert into bookstore.order (businessId, userId, bookName, price, state) values (#{businessId}, #{userId}, #{bookName}, #{price}, '待购买')
     </insert>
 
+    <delete id="deleteShoppingCart">
+        delete from bookstore.order where id = #{id}
+    </delete>
+
+    <insert id="addBuy" parameterType="Order">
+        insert into bookstore.order (businessId, userId, bookName, price, state) values (#{businessId}, #{userId}, #{bookName}, #{price}, '待付款')
+    </insert>
+
+    <update id="shoppingCartToBuy">
+        update bookstore.order set state = '待付款' where id = #{id}
+    </update>
+
     <select id="queryOrder" resultType="Order">
         select bookstore.order.id,
+        bookstore.order.businessId,
         business.name as "businessName",
         bookstore.order.bookName,
         bookstore.order.price

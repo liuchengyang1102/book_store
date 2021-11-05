@@ -9,11 +9,9 @@
 
 <%
     User loginUser = (User) request.getSession().getAttribute("loginUser");
-    int id;
+    int id = 0;
     if (loginUser != null) {
         id = loginUser.getId();
-    } else {
-        id = 0;
     }
 %>
 
@@ -138,8 +136,9 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 60, title: 'ID', sort: true},
+                {field: 'businessId', width: 80, title: '商家Id'},
                 {field: 'businessName', width: 120, title: '商家店名'},
-                {field: 'number', width: 80, title: '书号'},
+                {field: 'number', width: 60, title: '书号'},
                 {field: 'count', width: 80, title: '数量'},
                 {field: 'name', width: 120, title: '书名'},
                 {field: 'author', width: 100, title: '作者'},
@@ -251,6 +250,19 @@
                     }
                 });
                 layer.msg('成功加入购物车');
+            } else if (obj.event === 'buy') {
+                $.ajax({
+                    type: "post",
+                    url: "<%=basePath%>addBuy",
+                    dataType: "json",
+                    data: {
+                        "businessId": data.businessId,
+                        "userId": <%=id%>,
+                        "bookName": data.name,
+                        "price": data.price
+                    }
+                });
+                layer.msg('购买成功，请前往订单列表完成付款');
             }
         });
 

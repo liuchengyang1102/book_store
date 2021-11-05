@@ -16,6 +16,22 @@ public interface OrderDao {
                          @Param(value = "bookName") String bookName, @Param(value = "price") double price);
 
     /**
+     * 删除购物车
+     */
+    void deleteShoppingCart(@Param(value = "id") int id);
+
+    /**
+     * 添加待付款订单
+     */
+    void addBuy(@Param(value = "businessId") int businessId, @Param(value = "userId") int userId,
+                         @Param(value = "bookName") String bookName, @Param(value = "price") double price);
+
+    /**
+     * 从购物车添加待付款订单
+     */
+    void shoppingCartToBuy(@Param(value = "id") int id);
+
+    /**
      * 查询购物车订单
      */
     List<Order> queryOrder(@Param(value = "userId") int userId, @Param(value = "page") Integer page,

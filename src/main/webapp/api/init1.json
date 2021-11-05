@@ -35,13 +35,13 @@
           "child": [
             {
               "title": "全部订单",
-              "href": "page/table2.jsp",
+              "href": "page/table4.jsp",
               "icon": "fa fa-list-ul",
               "target": "_self"
             },
             {
               "title": "待发货订单",
-              "href": "page/table1.jsp",
+              "href": "page/table5.jsp",
               "icon": "fa fa-list-ul",
               "target": "_self"
             },

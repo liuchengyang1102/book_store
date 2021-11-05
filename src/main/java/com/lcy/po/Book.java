@@ -7,6 +7,7 @@ import java.io.Serializable;
  */
 public class Book implements Serializable {
     private int id;
+    private int businessId;
     private String businessName;
     private int number;
     private int count;
@@ -27,6 +28,14 @@ public class Book implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getBusinessId() {
+        return businessId;
+    }
+
+    public void setBusinessId(int businessId) {
+        this.businessId = businessId;
     }
 
     public String getBusinessName() {

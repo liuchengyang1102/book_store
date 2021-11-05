@@ -18,7 +18,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>购物车</title>
+    <title>代发货订单</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -46,8 +46,8 @@
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
         <script type="text/html" id="currentTableBar">
-            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="delete">删除购物车</a>
-            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="buy">购买</a>
+<%--            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="delete">删除购物车</a>--%>
+<%--            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="buy">购买</a>--%>
         </script>
 
     </div>
@@ -71,7 +71,7 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 60, title: 'ID', sort: true},
-                {field: 'businessId', width: 80, title: '商家Id'},
+                {field: 'businessId', width: 60, title: '商家Id'},
                 {field: 'businessName', width: 120, title: '商家店名'},
                 {field: 'bookName', width: 120, title: '书名'},
                 {field: 'price', width: 80, title: '价格', sort: true},
@@ -91,7 +91,7 @@
             },
             where: {
                 userId: <%=id%>,
-                state: '待购买'
+                state: '待付款'
             }
         }, 'data');
 
@@ -127,48 +127,22 @@
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
             console.log(data);
-            if (obj.event === 'delete') {
+            if (obj.event === 'add') {
                 $.ajax({
                     type: "post",
-                    url: "<%=basePath%>deleteShoppingCart",
+                    url: "<%=basePath%>addShoppingCart",
                     dataType: "json",
                     data: {
-                        "id": data.id
+                        "businessId": data.businessId,
+                        "userId":<%=id%>,
+                        "bookName": data.name,
+                        "price": data.price
                     }
                 });
-                layer.msg('成功删除购物车');
-                //执行重载
-                table.reload('testReload', {
-                    page: {
-                        curr: 1//重新从第1页开始
-                    },
-                    where: {
-                        userId: <%=id%>,
-                        state: '待购买'
-                    }
-                }, 'data');
-            } else if (obj.event === 'buy') {
-                $.ajax({
-                    type: "post",
-                    url: "<%=basePath%>shoppingCartToBuy",
-                    dataType: "json",
-                    data: {
-                        "id": data.id
-                    }
-                });
-                layer.msg('购买成功，请前往订单列表完成付款');
-                //执行重载
-                table.reload('testReload', {
-                    page: {
-                        curr: 1//重新从第1页开始
-                    },
-                    where: {
-                        userId: <%=id%>,
-                        state: '待购买'
-                    }
-                }, 'data');
+                layer.msg('成功加入购物车');
             }
         });
+
     });
 </script>
 

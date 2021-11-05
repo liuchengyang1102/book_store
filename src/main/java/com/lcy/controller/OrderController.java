@@ -27,6 +27,24 @@ public class OrderController {
         orderService.addShoppingCart(businessId, userId, bookName, price);
     }
 
+    @RequestMapping("deleteShoppingCart")
+    public void deleteShoppingCart(int id) {
+        logger.debug("id:" + id);
+        orderService.deleteShoppingCart(id);
+    }
+
+    @RequestMapping("shoppingCartToBuy")
+    public void shoppingCartToBuy(int id) {
+        logger.debug("id:" + id);
+        orderService.shoppingCartToBuy(id);
+    }
+
+    @RequestMapping("addBuy")
+    public void addBuy(int businessId, int userId, String bookName, double price) {
+        logger.debug("businessId:" + businessId + ",userId:" + userId + ",bookName:" + bookName + ",price:" + price);
+        orderService.addBuy(businessId, userId, bookName, price);
+    }
+
     @RequestMapping("queryOrder")
     @ResponseBody
     public Result<Order> queryOrder(@RequestParam(defaultValue = "-1") int userId, @RequestParam(defaultValue = "1") Integer page,

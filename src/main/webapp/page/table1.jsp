@@ -9,11 +9,9 @@
 
 <%
     User loginUser = (User) request.getSession().getAttribute("loginUser");
-    int id;
+    int id = 0;
     if (loginUser != null) {
         id = loginUser.getId();
-    } else {
-        id = 0;
     }
 %>
 
@@ -48,8 +46,8 @@
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
         <script type="text/html" id="currentTableBar">
-<%--            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="delete">删除购物车</a>--%>
-<%--            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="buy">购买</a>--%>
+            <%--            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="delete">删除购物车</a>--%>
+            <%--            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="buy">购买</a>--%>
         </script>
 
     </div>
@@ -73,6 +71,7 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 60, title: 'ID', sort: true},
+                {field: 'businessId', width: 80, title: '商家Id'},
                 {field: 'businessName', width: 120, title: '商家店名'},
                 {field: 'bookName', width: 120, title: '书名'},
                 {field: 'price', width: 80, title: '价格', sort: true},

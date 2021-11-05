@@ -9,11 +9,9 @@
 
 <%
     User loginUser = (User) request.getSession().getAttribute("loginUser");
-    int id;
+    int id = 0;
     if (loginUser != null) {
         id = loginUser.getId();
-    } else {
-        id = 0;
     }
 %>
 
@@ -73,6 +71,7 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 60, title: 'ID', sort: true},
+                {field: 'businessId', width: 80, title: '商家Id'},
                 {field: 'businessName', width: 120, title: '商家店名'},
                 {field: 'bookName', width: 120, title: '书名'},
                 {field: 'price', width: 80, title: '价格', sort: true},

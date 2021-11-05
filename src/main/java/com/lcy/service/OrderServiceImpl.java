@@ -25,6 +25,21 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public void deleteShoppingCart(int id) {
+        orderDao.deleteShoppingCart(id);
+    }
+
+    @Override
+    public void addBuy(int businessId, int userId, String bookName, double price) {
+        orderDao.addBuy(businessId, userId, bookName, price);
+    }
+
+    @Override
+    public void shoppingCartToBuy(int id) {
+        orderDao.shoppingCartToBuy(id);
+    }
+
+    @Override
     public Result<Order> queryOrder(int userId, Integer page, Integer limit, String state) {
         //传入参数，当前页、每页条数
         PageHelper.startPage(page, limit);
