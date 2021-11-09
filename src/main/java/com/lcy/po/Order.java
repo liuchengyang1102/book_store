@@ -10,6 +10,7 @@ public class Order implements Serializable {
     private int businessId;
     private String businessName;
     private int userId;
+    private String userName;
     private String bookName;
     private double price;
     private String state;
@@ -45,6 +46,14 @@ public class Order implements Serializable {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getBookName() {

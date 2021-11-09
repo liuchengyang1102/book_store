@@ -24,15 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
     <link rel="stylesheet" href="../css/public.css" media="all">
-    <style>
-        #layui-inline1 {
-            display: inline-block;
-        }
-
-        #layui-inline2 {
-            display: none;
-        }
-    </style>
 </head>
 <body>
 <div class="layuimini-container">
@@ -126,7 +117,6 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
-            console.log(data);
             if (obj.event === 'delete') {
                 $.ajax({
                     type: "post",

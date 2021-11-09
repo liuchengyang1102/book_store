@@ -24,7 +24,7 @@ public interface OrderDao {
      * 添加待付款订单
      */
     void addBuy(@Param(value = "businessId") int businessId, @Param(value = "userId") int userId,
-                         @Param(value = "bookName") String bookName, @Param(value = "price") double price);
+                @Param(value = "bookName") String bookName, @Param(value = "price") double price);
 
     /**
      * 从购物车添加待付款订单
@@ -32,8 +32,38 @@ public interface OrderDao {
     void shoppingCartToBuy(@Param(value = "id") int id);
 
     /**
-     * 查询购物车订单
+     * 待付款订单付款
+     *
+     * @param id
      */
-    List<Order> queryOrder(@Param(value = "userId") int userId, @Param(value = "page") Integer page,
-                           @Param(value = "limit") Integer limit, @Param(value = "state") String state);
+    void pay(@Param(value = "id") int id);
+
+    /**
+     * 订单发货
+     *
+     * @param id
+     */
+    void sendGoods(@Param(value = "id") int id);
+
+    /**
+     * 订单收货
+     *
+     * @param id
+     */
+    void receive(@Param(value = "id") int id);
+
+    /**
+     * 查询订单
+     */
+    List<Order> queryOrder(@Param(value = "userId") int userId, @Param(value = "state") String state);
+
+    /**
+     * 商家查看订单
+     */
+    List<Order> businessQueryOrderAll(@Param(value = "businessId") int businessId);
+
+    /**
+     * 待发货订单
+     */
+    List<Order> businessQueryOrder(@Param(value = "businessId") int businessId, @Param(value = "state") String state);
 }

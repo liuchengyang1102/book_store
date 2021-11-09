@@ -24,15 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
     <link rel="stylesheet" href="../css/public.css" media="all">
-    <style>
-        #layui-inline1 {
-            display: inline-block;
-        }
-
-        #layui-inline2 {
-            display: none;
-        }
-    </style>
 </head>
 <body>
 <div class="layuimini-container">
@@ -46,8 +37,7 @@
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
         <script type="text/html" id="currentTableBar">
-<%--            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="delete">删除购物车</a>--%>
-<%--            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="buy">购买</a>--%>
+            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="comment">添加评论</a>
         </script>
 
     </div>
@@ -126,20 +116,16 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
-            console.log(data);
-            if (obj.event === 'add') {
-                $.ajax({
-                    type: "post",
-                    url: "<%=basePath%>addShoppingCart",
-                    dataType: "json",
-                    data: {
-                        "businessId": data.businessId,
-                        "userId":<%=id%>,
-                        "bookName": data.name,
-                        "price": data.price
-                    }
+            if (obj.event === 'comment') {
+                var index = layer.open({
+                    title: '添加评论',
+                    type: 2,
+                    shade: 0.2,
+                    maxmin: true,
+                    shadeClose: true,
+                    area: ['35%', '70%'],
+                    content: '../page/table/comment.jsp'
                 });
-                layer.msg('成功加入购物车');
             }
         });
 

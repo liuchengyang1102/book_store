@@ -24,15 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
     <link rel="stylesheet" href="../css/public.css" media="all">
-    <style>
-        #layui-inline1 {
-            display: inline-block;
-        }
-
-        #layui-inline2 {
-            display: none;
-        }
-    </style>
 </head>
 <body>
 <div class="layuimini-container">
@@ -46,8 +37,7 @@
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
         <script type="text/html" id="currentTableBar">
-            <%--            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="delete">删除购物车</a>--%>
-            <%--            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="buy">购买</a>--%>
+            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="pay">付款</a>
         </script>
 
     </div>
@@ -126,23 +116,32 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
-            console.log(data);
-            if (obj.event === 'add') {
+            if (obj.event === 'pay') {
                 $.ajax({
                     type: "post",
-                    url: "<%=basePath%>addShoppingCart",
-                    dataType: "json",
+                    url: "<%=basePath%>pay",
                     data: {
-                        "businessId": data.businessId,
-                        "userId":<%=id%>,
-                        "bookName": data.name,
+                        "id": data.id,
+                        "userId": <%=id%>,
                         "price": data.price
+                    }, success: function () {
+                            layer.msg('付款成功');
+                            //执行重载
+                            table.reload('testReload', {
+                                page: {
+                                    curr: 1//重新从第1页开始
+                                },
+                                where: {
+                                    userId: <%=id%>,
+                                    state: '待付款'
+                                }
+                            }, 'data');
+                    }, error: function () {
+                        layer.msg('付款失败，余额不足');
                     }
                 });
-                layer.msg('成功加入购物车');
             }
         });
-
     });
 </script>
 

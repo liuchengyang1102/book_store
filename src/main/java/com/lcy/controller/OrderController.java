@@ -22,24 +22,49 @@ public class OrderController {
     private OrderService orderService;
 
     @RequestMapping("addShoppingCart")
+    @ResponseBody
     public void addShoppingCart(int businessId, int userId, String bookName, double price) {
         logger.debug("businessId:" + businessId + ",userId:" + userId + ",bookName:" + bookName + ",price:" + price);
         orderService.addShoppingCart(businessId, userId, bookName, price);
     }
 
     @RequestMapping("deleteShoppingCart")
+    @ResponseBody
     public void deleteShoppingCart(int id) {
         logger.debug("id:" + id);
         orderService.deleteShoppingCart(id);
     }
 
     @RequestMapping("shoppingCartToBuy")
+    @ResponseBody
     public void shoppingCartToBuy(int id) {
         logger.debug("id:" + id);
         orderService.shoppingCartToBuy(id);
     }
 
+    @RequestMapping("pay")
+    @ResponseBody
+    public void pay(int id, int userId, double price) {
+        logger.debug("id:" + id + ",userId:" + userId + ",price:" + price);
+        orderService.pay(id, userId, price);
+    }
+
+    @RequestMapping("sendGoods")
+    @ResponseBody
+    public void sendGoods(int id) {
+        logger.debug("id:" + id);
+        orderService.sendGoods(id);
+    }
+
+    @RequestMapping("receive")
+    @ResponseBody
+    public void receive(int id, int businessId, double price) {
+        logger.debug("id:" + id + ",businessId:" + businessId + ",price:" + price);
+        orderService.receive(id, businessId, price);
+    }
+
     @RequestMapping("addBuy")
+    @ResponseBody
     public void addBuy(int businessId, int userId, String bookName, double price) {
         logger.debug("businessId:" + businessId + ",userId:" + userId + ",bookName:" + bookName + ",price:" + price);
         orderService.addBuy(businessId, userId, bookName, price);
@@ -52,6 +77,26 @@ public class OrderController {
         logger.debug("userId:" + userId);
         Result<Order> orders = null;
         orders = orderService.queryOrder(userId, page, limit, state);
+        return orders;
+    }
+
+    @RequestMapping("businessQueryOrderAll")
+    @ResponseBody
+    public Result<Order> businessQueryOrderAll(@RequestParam(defaultValue = "-1") int businessId, @RequestParam(defaultValue = "1") Integer page,
+                                               @RequestParam(defaultValue = "15") Integer limit) {
+        logger.debug("businessId:" + businessId);
+        Result<Order> orders = null;
+        orders = orderService.businessQueryOrderAll(businessId, page, limit);
+        return orders;
+    }
+
+    @RequestMapping("businessQueryOrder")
+    @ResponseBody
+    public Result<Order> businessQueryOrder(@RequestParam(defaultValue = "-1") int businessId, @RequestParam(defaultValue = "1") Integer page,
+                                               @RequestParam(defaultValue = "15") Integer limit, String state) {
+        logger.debug("businessId:" + businessId);
+        Result<Order> orders = null;
+        orders = orderService.businessQueryOrder(businessId, page, limit,state);
         return orders;
     }
 }

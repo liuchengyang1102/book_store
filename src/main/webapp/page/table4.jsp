@@ -1,4 +1,4 @@
-<%@ page import="com.lcy.po.User" %>
+<%@ page import="com.lcy.po.Business" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
@@ -8,10 +8,10 @@
 %>
 
 <%
-    User loginUser = (User) request.getSession().getAttribute("loginUser");
+    Business loginBusiness = (Business) request.getSession().getAttribute("loginBusiness");
     int id = 0;
-    if (loginUser != null) {
-        id = loginUser.getId();
+    if (loginBusiness != null) {
+        id = loginBusiness.getId();
     }
 %>
 
@@ -24,15 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
     <link rel="stylesheet" href="../css/public.css" media="all">
-    <style>
-        #layui-inline1 {
-            display: inline-block;
-        }
-
-        #layui-inline2 {
-            display: none;
-        }
-    </style>
 </head>
 <body>
 <div class="layuimini-container">
@@ -45,10 +36,7 @@
 
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
-        <script type="text/html" id="currentTableBar">
-<%--            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="delete">删除购物车</a>--%>
-<%--            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="buy">购买</a>--%>
-        </script>
+        <script type="text/html" id="currentTableBar"></script>
 
     </div>
 </div>
@@ -61,7 +49,7 @@
 
         table.render({
             elem: '#currentTableId',
-            url: '<%=basePath%>queryOrder',
+            url: '<%=basePath%>businessQueryOrderAll',
             toolbar: '#toolbarDemo',
             defaultToolbar: ['filter', 'exports', 'print', {
                 title: '提示',
@@ -70,12 +58,12 @@
             }],
             cols: [[
                 {type: "checkbox", width: 50},
-                {field: 'id', width: 60, title: 'ID', sort: true},
-                {field: 'businessId', width: 60, title: '商家Id'},
-                {field: 'businessName', width: 120, title: '商家店名'},
-                {field: 'bookName', width: 120, title: '书名'},
+                {field: 'id', width: 80, title: 'ID', sort: true},
+                {field: 'userName', width: 140, title: '购买用户'},
+                {field: 'bookName', width: 160, title: '书名'},
+                {field: 'state', width: 120, title: '订单状态'},
                 {field: 'price', width: 80, title: '价格', sort: true},
-                {title: '操作', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
+                {title: '', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
             ]],
             limits: [10, 15, 20, 25, 50, 100],
             limit: 15,
@@ -90,8 +78,7 @@
                 curr: 1//重新从第1页开始
             },
             where: {
-                userId: <%=id%>,
-                state: '待付款'
+                businessId: <%=id%>
             }
         }, 'data');
 
@@ -126,21 +113,6 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
-            console.log(data);
-            if (obj.event === 'add') {
-                $.ajax({
-                    type: "post",
-                    url: "<%=basePath%>addShoppingCart",
-                    dataType: "json",
-                    data: {
-                        "businessId": data.businessId,
-                        "userId":<%=id%>,
-                        "bookName": data.name,
-                        "price": data.price
-                    }
-                });
-                layer.msg('成功加入购物车');
-            }
         });
 
     });

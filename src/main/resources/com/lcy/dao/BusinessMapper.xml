@@ -11,4 +11,8 @@
         #{userName},#{password},#{name},#{address},#{type},#{registeredCapital},#{logPicture},#{registeredCapital},'待审核'
         where not exists (select * from business where userName = #{userName})
     </insert>
+
+    <update id="receive">
+        update business set balance = (balance + #{price}) where id = #{businessId}
+    </update>
 </mapper>

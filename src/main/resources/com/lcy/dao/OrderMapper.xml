@@ -18,6 +18,18 @@
         update bookstore.order set state = '待付款' where id = #{id}
     </update>
 
+    <update id="pay">
+        update bookstore.order set state = '待发货' where id = #{id}
+    </update>
+
+    <update id="sendGoods">
+        update bookstore.order set state = '待收货' where id = #{id}
+    </update>
+
+    <update id="receive">
+        update bookstore.order set state = '待评论' where id = #{id}
+    </update>
+
     <select id="queryOrder" resultType="Order">
         select bookstore.order.id,
         bookstore.order.businessId,
@@ -27,6 +39,29 @@
         from bookstore.order,business
         where bookstore.order.userId = #{userId}
         and bookstore.order.businessId = business.id
+        and bookstore.order.state = #{state}
+    </select>
+
+    <select id="businessQueryOrderAll" resultType="Order">
+        select bookstore.order.id,
+        bookstore.user.name as "userName",
+        bookstore.order.bookName,
+        bookstore.order.state,
+        bookstore.order.price
+        from bookstore.order,bookstore.user
+        where bookstore.order.businessId = #{businessId}
+        and bookstore.order.userId = bookstore.user.id
+        and state != '待购买'
+    </select>
+
+    <select id="businessQueryOrder" resultType="Order">
+        select bookstore.order.id,
+        bookstore.user.name as "userName",
+        bookstore.order.bookName,
+        bookstore.order.price
+        from bookstore.order,bookstore.user
+        where bookstore.order.businessId = #{businessId}
+        and bookstore.order.userId = bookstore.user.id
         and bookstore.order.state = #{state}
     </select>
 </mapper>

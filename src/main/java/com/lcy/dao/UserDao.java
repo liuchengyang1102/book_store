@@ -16,5 +16,13 @@ public interface UserDao {
      * 商家注册
      */
     public int addUser(@Param(value = "username") String username, @Param(value = "password") String password,
-                        @Param(value = "name") String name);
+                       @Param(value = "name") String name);
+
+    /**
+     * 用户支付
+     * @param userId
+     * @param price
+     * @return
+     */
+    public int pay(@Param(value = "userId") int userId, @Param(value = "price") double price);
 }
