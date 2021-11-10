@@ -53,7 +53,17 @@ public class BookServiceImpl implements BookService {
     public Result<Book> queryBookByPrice(double priceMin, double priceMax, Integer page, Integer limit) {
         //传入参数，当前页、每页条数
         PageHelper.startPage(page, limit);
-        List<Book> books = bookDao.queryBookByPrice(priceMin,priceMax);
+        List<Book> books = bookDao.queryBookByPrice(priceMin, priceMax);
+        //通过包装获取分页的其它值信息
+        PageInfo<Book> pageInfo = new PageInfo<>(books);
+        return Result.bulid(0, pageInfo.getTotal(), books);
+    }
+
+    @Override
+    public Result<Book> businessQueryBook(int businessId, Integer page, Integer limit) {
+        //传入参数，当前页、每页条数
+        PageHelper.startPage(page, limit);
+        List<Book> books = bookDao.businessQueryBook(businessId);
         //通过包装获取分页的其它值信息
         PageInfo<Book> pageInfo = new PageInfo<>(books);
         return Result.bulid(0, pageInfo.getTotal(), books);

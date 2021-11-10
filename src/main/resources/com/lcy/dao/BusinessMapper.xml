@@ -15,4 +15,8 @@
     <update id="receive">
         update business set balance = (balance + #{price}) where id = #{businessId}
     </update>
+
+    <select id="queryBusiness" resultType="Business">
+        select * from business
+    </select>
 </mapper>

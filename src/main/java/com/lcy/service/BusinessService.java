@@ -17,4 +17,9 @@ public interface BusinessService {
      */
     public int addBusiness(String userName, String password, String name, String address, String type,
                            double registeredCapital, String logPicture);
+
+    /**
+     * 查询待审核商家
+     */
+    public Result<Business> queryBusiness(String area, Integer page, Integer limit);
 }

@@ -28,4 +28,9 @@ public interface BookDao {
      * 通过出版社查询图书信息
      */
     List<Book> queryBookByPrice(@Param(value = "priceMin") double priceMin, @Param(value = "priceMax") double priceMax);
+
+    /**
+     * 商家查询该店图书信息
+     */
+    List<Book> businessQueryBook(@Param(value = "businessId") int businessId);
 }

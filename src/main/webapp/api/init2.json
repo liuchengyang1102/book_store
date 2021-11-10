@@ -1,0 +1,27 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "page/business-table.jsp"
+  },
+  "logoInfo": {
+    "title": "区域运营方管理",
+    "image": "images/logo1.png",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "页面管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "待审核商家",
+          "href": "page/business-table.jsp",
+          "icon": "fa fa-home",
+          "target": "_self"
+        }
+      ]
+    }
+  ]
+}

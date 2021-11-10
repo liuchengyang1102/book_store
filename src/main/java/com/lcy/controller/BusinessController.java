@@ -86,4 +86,12 @@ public class BusinessController {
                 + ",type:" + type + ",registeredCapital:" + registeredCapital + ",logPicture:" + logPicture);
         return businessService.addBusiness(userName, password, name, address, type, registeredCapital, logPicture);
     }
+
+    @RequestMapping("/queryBusiness")
+    @ResponseBody
+    public Result<Business> queryBusiness(String area, @RequestParam(defaultValue = "1") Integer page,
+                                          @RequestParam(defaultValue = "15") Integer limit) {
+        logger.debug("area:" + area);
+        return businessService.queryBusiness(area, page, limit);
+    }
 }

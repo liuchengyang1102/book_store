@@ -39,4 +39,12 @@ public class BookController {
         }
         return books;
     }
+
+    @RequestMapping("/businessQueryBook")
+    @ResponseBody
+    public Result<Book> businessQueryBook(int businessId, @RequestParam(defaultValue = "1") Integer page,
+                                          @RequestParam(defaultValue = "15") Integer limit) {
+        logger.debug("businessId:" + businessId);
+        return bookService.businessQueryBook(businessId, page, limit);
+    }
 }

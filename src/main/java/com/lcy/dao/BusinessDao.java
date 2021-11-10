@@ -1,7 +1,10 @@
 package com.lcy.dao;
 
+import com.lcy.po.Book;
 import com.lcy.po.Business;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * @author 刘呈洋
@@ -27,4 +30,9 @@ public interface BusinessDao {
      * @return
      */
     public int receive(@Param(value = "businessId") int businessId, @Param(value = "price") double price);
+
+    /**
+     * 查询待审核商家
+     */
+    List<Business> queryBusiness(@Param(value = "area")String area);
 }

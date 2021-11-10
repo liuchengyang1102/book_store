@@ -7,18 +7,9 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 
-<%
-    Business loginBusiness = (Business) request.getSession().getAttribute("loginBusiness");
-    int id = 0;
-    if (loginBusiness != null) {
-        id = loginBusiness.getId();
-    }
-%>
-
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>全部订单</title>
+    <title>待审核商家</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +40,7 @@
 
         table.render({
             elem: '#currentTableId',
-            url: '<%=basePath%>businessQueryOrderAll',
+            url: '<%=basePath%>queryBusiness',
             toolbar: '#toolbarDemo',
             defaultToolbar: ['filter', 'exports', 'print', {
                 title: '提示',
@@ -59,10 +50,15 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 80, title: 'ID', sort: true},
-                {field: 'userName', width: 140, title: '购买用户'},
-                {field: 'bookName', width: 160, title: '书名'},
-                {field: 'state', width: 120, title: '订单状态'},
-                {field: 'price', width: 80, title: '价格', sort: true},
+                {
+                    field: 'logPicture', width: 80, title: '商家log',
+                    templet: function (data) {
+                        return '<div><img  src="/images/businesslog/' + data.logPicture + '" style="height: 35px;width: 30px"></div>';
+                    }
+                },
+                {field: 'name', width: 140, title: '店名'},
+                {field: 'type', width: 160, title: '经营类型'},
+                {field: 'registeredCapital', width: 120, title: '注册资金'},
                 {title: '', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
             ]],
             limits: [10, 15, 20, 25, 50, 100],
@@ -78,7 +74,7 @@
                 curr: 1//重新从第1页开始
             },
             where: {
-                businessId: <%=id%>
+                area: '湖南省长沙市开福区'
             }
         }, 'data');
 

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 public class UserController {
-    private final static Log logger = LogFactory.getLog(BookController.class);
+    private final static Log logger = LogFactory.getLog(UserController.class);
 
     @Autowired
     private UserService userService;

@@ -27,4 +27,9 @@ public interface BookService {
      * 通过价格范围查询图书信息
      */
     public Result<Book> queryBookByPrice(double priceMin, double priceMax, Integer page, Integer limit);
+
+    /**
+     * 商家查询该店图书信息
+     */
+    public Result<Book> businessQueryBook(int businessId, Integer page, Integer limit);
 }

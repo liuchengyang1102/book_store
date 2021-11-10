@@ -79,4 +79,8 @@
         and book.businessId=business.id
     </select>
 
+    <select id="businessQueryBook" resultType="Book">
+        select * from book where businessId = #{businessId}
+    </select>
+
 </mapper>
