@@ -5,4 +5,17 @@
     <insert id="addComment" parameterType="Comment">
         insert into comment (userId,businessId,orderId,level,content) values (#{userId},#{businessId},#{orderId},#{level},#{content})
     </insert>
+
+    <select id="queryComment" resultType="Comment">
+        select comment.id,
+        bookstore.user.name as "userName",
+        bookstore.order.bookName,
+        comment.level,
+        comment.content
+        from comment,bookstore.user,bookstore.order
+        where comment.businessId = #{businessId}
+        and comment.userId = bookstore.user.id
+        and comment.orderId = bookstore.order.id
+        and bookstore.order.userId = bookstore.user.id
+    </select>
 </mapper>

@@ -136,17 +136,23 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 60, title: 'ID', sort: true},
-                {field: 'businessId', width: 80, title: '商家Id'},
+                {field: 'businessId', width: 60, title: '商家Id'},
                 {field: 'businessName', width: 120, title: '商家店名'},
                 {field: 'number', width: 60, title: '书号'},
-                {field: 'count', width: 80, title: '数量'},
-                {field: 'name', width: 120, title: '书名'},
+                {field: 'count', width: 60, title: '数量'},
+                {
+                    field: 'ext',
+                    width: 100,
+                    title: '书籍图片',
+                    templet: '<div><img  src="<%=basePath%>images/bookImages/Java从入门到放弃.png" style="height: 35px;width: 30px"></div>'
+                },
+                {field: 'name', width: 100, title: '书名'},
                 {field: 'author', width: 100, title: '作者'},
-                {field: 'press', width: 160, title: '出版社'},
+                {field: 'press', width: 120, title: '出版社'},
                 {field: 'impression', width: 80, title: '印次'},
                 {field: 'synopsis', width: 120, title: '内容简介'},
                 {field: 'price', width: 80, title: '价格', sort: true},
-                {title: '操作', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
+                {title: '操作', minWidth: 120, toolbar: '#currentTableBar', align: "center"}
             ]],
             limits: [10, 15, 20, 25, 50, 100],
             limit: 15,

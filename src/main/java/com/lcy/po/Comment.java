@@ -8,8 +8,10 @@ import java.io.Serializable;
 public class Comment implements Serializable {
     int id;
     int userId;
+    String userName;
     int businessId;
     int orderId;
+    String bookName;
     int level;
     String content;
     String ext;
@@ -30,6 +32,14 @@ public class Comment implements Serializable {
         this.userId = userId;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public int getBusinessId() {
         return businessId;
     }
@@ -44,6 +54,14 @@ public class Comment implements Serializable {
 
     public void setOrderId(int orderId) {
         this.orderId = orderId;
+    }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
     public int getLevel() {
