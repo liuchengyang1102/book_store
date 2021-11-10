@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad0d25c-c784-4286-bd66-2395426366b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/bookImages/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0af0b361c247c0a1e823c28a0e1feaf7d649d024" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lcy/dao/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lcy/dao/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/book-table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/book-table.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,13 +58,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/page/book-table.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="150" column="18" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="18" />
+            <state relative-caret-position="242">
+              <caret line="149" column="21" lean-forward="true" selection-start-line="149" selection-start-column="21" selection-end-line="149" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="84" column="33" lean-forward="true" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -229,11 +232,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/dao/CommentDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/lcy/dao/CommentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/controller/CommentController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/table6.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/com/lcy/dao/BookMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/controller/BookController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/book-table.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp" />
       </list>
     </option>
   </component>
@@ -661,7 +664,7 @@
       <workItem from="1635914630545" duration="11682000" />
       <workItem from="1636088591988" duration="10683000" />
       <workItem from="1636430555867" duration="16230000" />
-      <workItem from="1636512859137" duration="13758000" />
+      <workItem from="1636512859137" duration="14058000" />
     </task>
     <task id="LOCAL-00001" summary="代码更新">
       <created>1634008047744</created>
@@ -929,7 +932,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636525326367</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="配置了虚拟路径解决了上传图片后访问不到的bug">
+      <created>1636529294401</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1636529294401</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -938,7 +948,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207974000" />
+    <option name="totallyTimeSpent" value="208274000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -953,7 +963,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49390244" visible="true" weight="0.19919518" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49390244" visible="true" weight="0.19919518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -964,7 +974,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48826292" visible="true" weight="0.30311614" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48826292" visible="true" weight="0.30311614" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1075,7 +1085,8 @@
     <MESSAGE value="完成订单到待评论部分的功能" />
     <MESSAGE value="完成用户评论订单功能" />
     <MESSAGE value="实现书籍图片展示的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现书籍图片展示的功能" />
+    <MESSAGE value="配置了虚拟路径解决了上传图片后访问不到的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置了虚拟路径解决了上传图片后访问不到的bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="0" key="CommitChangelistDialog2" />
@@ -1362,13 +1373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/images/bookImages/中学英语导读.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1480,10 +1484,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="84" column="33" lean-forward="true" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/page/book-table.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="150" column="18" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="18" />
+        <state relative-caret-position="242">
+          <caret line="149" column="21" lean-forward="true" selection-start-line="149" selection-start-column="21" selection-end-line="149" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

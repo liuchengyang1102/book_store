@@ -25,7 +25,7 @@ import java.util.UUID;
 @Controller
 public class BusinessController {
     private final static Log logger = LogFactory.getLog(BusinessController.class);
-    private final String filePathDir = "D:\\JAVA\\IDEA\\java_code\\ssm_code\\book_store\\src\\main\\webapp\\images\\";
+    private final String filePathDir = "D:\\JAVA\\IDEA\\java_code\\ssm_code\\book_store\\src\\main\\webapp\\images\\businesslog\\";
 
     @Autowired
     private BusinessService businessService;
