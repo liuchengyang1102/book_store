@@ -42,10 +42,7 @@
 </div>
 <div style="float: left;width: 100%;height: 150px">
     评价内容：
-    <textarea name="comment" class="comment"></textarea>
-</div>
-<div align="center">
-    <button class="layui-btn" onclick="submitComment()">提交</button>
+    <textarea name="content" class="content"></textarea>
 </div>
 <script src="<%=basePath%>lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
 <script>
@@ -73,9 +70,15 @@
     score("score1", "on");
 
     function submitComment() {
-        var comment = document.querySelector('.comment').value;
-        console.log("i:" + i);
-        console.log(comment);
+        var content = document.querySelector('.content').value;
+        var data = {
+            level: i,
+            content: content
+        };
+        var index = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(index);//关闭当前页
+        window.parent.location.reload();//刷新父页面
+        return data;
     }
 </script>
 

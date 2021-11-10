@@ -124,7 +124,23 @@
                     maxmin: true,
                     shadeClose: true,
                     area: ['35%', '70%'],
-                    content: '../page/table/comment.jsp'
+                    content: '../page/table/comment.jsp',
+                    btn: ['提交评论'],
+                    yes: function (index, layero) {
+                        var arr = $(layero).find("iframe")[0].contentWindow.submitComment();
+                        $.ajax({
+                            type: "post",
+                            url: "<%=basePath%>addComment",
+                            dataType: "json",
+                            data: {
+                                "userId": <%=id%>,
+                                "businessId": data.businessId,
+                                "orderId": data.id,
+                                "level": arr.level,
+                                "content": arr.content
+                            }
+                        });
+                    }
                 });
             }
         });

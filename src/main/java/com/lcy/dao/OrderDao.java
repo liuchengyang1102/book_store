@@ -53,6 +53,13 @@ public interface OrderDao {
     void receive(@Param(value = "id") int id);
 
     /**
+     * 订单评论
+     *
+     * @param id
+     */
+    void comment(@Param(value = "id") int id);
+
+    /**
      * 查询订单
      */
     List<Order> queryOrder(@Param(value = "userId") int userId, @Param(value = "state") String state);

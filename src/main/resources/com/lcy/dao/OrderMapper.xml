@@ -30,6 +30,10 @@
         update bookstore.order set state = '待评论' where id = #{id}
     </update>
 
+    <update id="comment">
+        update bookstore.order set state = '已评论' where id = #{id}
+    </update>
+
     <select id="queryOrder" resultType="Order">
         select bookstore.order.id,
         bookstore.order.businessId,
