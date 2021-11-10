@@ -7,31 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad0d25c-c784-4286-bd66-2395426366b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcy/controller/RegionalOperatorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/regionalOperator.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/api/init2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/business-table.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/controller/BusinessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/controller/BusinessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/dao/BusinessDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/dao/BusinessDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/service/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lcy/dao/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lcy/dao/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lcy/dao/BusinessMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lcy/dao/BusinessMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/book-table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/book-table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/book-table1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/book-table1.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/table1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/table1.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/table2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/table2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/table3.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/table3.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/table4.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/table4.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/table5.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/table5.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/table6.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/table6.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/businesslog/27ffe822-ed84-4c25-ba6e-708ea3fa6ade.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/businesslog/281cee9f-cd1f-410d-89e6-7ebeb90d1b3f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/businesslog/ac5e6d4d-1b51-41e8-9e82-763584574174.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/businessLog/ac5e6d4d-1b51-41e8-9e82-763584574174.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/businesslog/logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/businessLog/logo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/business-table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/business-table.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,8 +65,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/page/business-table.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="71" column="20" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="20" />
+            <state relative-caret-position="244">
+              <caret line="55" column="65" lean-forward="true" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/page/book-table.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="148" column="21" lean-forward="true" selection-start-line="148" selection-start-column="21" selection-end-line="148" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/controller/BusinessController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="94" column="39" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
+            <state relative-caret-position="132">
+              <caret line="27" column="125" selection-start-line="27" selection-start-column="125" selection-end-line="27" selection-end-column="125" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+            <state>
+              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/dao/CommentDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/lcy/dao/CommentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/controller/CommentController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/book-table.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/table4.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/table5.jsp" />
@@ -244,12 +241,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/service/BookServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/controller/BookController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/controller/RegionalOperatorController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/page/business-table.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lcy/controller/BusinessController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lcy/dao/BusinessDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/lcy/dao/BusinessMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/page/business-table.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lcy/controller/BusinessController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp" />
       </list>
     </option>
   </component>
@@ -414,7 +412,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="businesslog" type="462c0819:PsiDirectoryNode" />
+              <item name="businessLog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="book_store" type="b2602c69:ProjectViewProjectNode" />
@@ -685,7 +683,7 @@
       <workItem from="1635914630545" duration="11682000" />
       <workItem from="1636088591988" duration="10683000" />
       <workItem from="1636430555867" duration="16230000" />
-      <workItem from="1636512859137" duration="18696000" />
+      <workItem from="1636512859137" duration="19021000" />
     </task>
     <task id="LOCAL-00001" summary="代码更新">
       <created>1634008047744</created>
@@ -967,7 +965,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636529432300</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="做了区域运营商的界面">
+      <created>1636534176347</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1636534176347</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -976,7 +981,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212912000" />
+    <option name="totallyTimeSpent" value="213237000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -989,6 +994,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49390244" visible="true" weight="0.19919518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1088,7 +1094,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="代码更新" />
     <MESSAGE value="整合了spring以及spring mvc并进行了测试" />
     <MESSAGE value="整合了mybatis" />
     <MESSAGE value="模拟前后端交互" />
@@ -1113,7 +1118,8 @@
     <MESSAGE value="完成用户评论订单功能" />
     <MESSAGE value="实现书籍图片展示的功能" />
     <MESSAGE value="配置了虚拟路径解决了上传图片后访问不到的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置了虚拟路径解决了上传图片后访问不到的bug" />
+    <MESSAGE value="做了区域运营商的界面" />
+    <option name="LAST_COMMIT_MESSAGE" value="做了区域运营商的界面" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="0" key="CommitChangelistDialog2" />
@@ -1126,23 +1132,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1386" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/po/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/po/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1276">
@@ -1306,13 +1295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="84" column="33" lean-forward="true" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/page/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-858" />
@@ -1425,16 +1407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/book-table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2046">
-          <caret line="219" selection-start-line="219" selection-end-line="219" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/lcy/dao/BookMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -1500,26 +1472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/controller/BusinessController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="94" column="39" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -1541,10 +1493,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/service/BusinessService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lcy/controller/BusinessController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="27" column="125" selection-start-line="27" selection-start-column="125" selection-end-line="27" selection-end-column="125" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/book-table.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="148" column="21" lean-forward="true" selection-start-line="148" selection-start-column="21" selection-end-line="148" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/businessLog/27ffe822-ed84-4c25-ba6e-708ea3fa6ade.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/businessLog/ac5e6d4d-1b51-41e8-9e82-763584574174.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/business.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="83" column="51" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/page/business-table.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="71" column="20" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="20" />
+        <state relative-caret-position="244">
+          <caret line="55" column="65" lean-forward="true" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

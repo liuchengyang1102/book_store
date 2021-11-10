@@ -53,7 +53,7 @@
                 {
                     field: 'logPicture', width: 80, title: '商家log',
                     templet: function (data) {
-                        return '<div><img  src="/images/businesslog/' + data.logPicture + '" style="height: 35px;width: 30px"></div>';
+                        return '<div><img  src="/images/businessLog/' + data.logPicture + '" style="height: 35px;width: 30px"></div>';
                     }
                 },
                 {field: 'name', width: 140, title: '店名'},
