@@ -81,7 +81,7 @@
                 </li>
                 <li class="layui-nav-item layuimini-setting">
                     <a href="javascript:;">
-                        <img src="<%=basePath%>images/businesslog/<%=logPicture%>" width="30px" height="30px">
+                        <img src="/images/businesslog/<%=logPicture%>" width="30px" height="30px">
                         <%=name%>
                     </a>
                     <dl class="layui-nav-child">

@@ -23,7 +23,9 @@ public class BookController {
 
     @RequestMapping("/queryBook")
     @ResponseBody
-    public Result<Book> queryBook(@RequestParam(defaultValue = "") String name, String author, String press, @RequestParam(defaultValue = "-1") double priceMin, @RequestParam(defaultValue = "-1") double priceMax, @RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit) {
+    public Result<Book> queryBook(@RequestParam(defaultValue = "") String name, String author, String press,
+                                  @RequestParam(defaultValue = "-1") double priceMin, @RequestParam(defaultValue = "-1") double priceMax,
+                                  @RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit) {
         logger.debug("name:" + name + ",author:" + author + ",press:" + press + ",priceMin:" + priceMin + ",priceMax:" + priceMax);
         Result<Book> books = null;
         if (priceMin != -1 && priceMax != -1) {

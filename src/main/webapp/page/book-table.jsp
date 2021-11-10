@@ -1,4 +1,5 @@
 <%@ page import="com.lcy.po.User" %>
+<%@ page import="com.lcy.po.Book" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
@@ -136,7 +137,7 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 60, title: 'ID', sort: true},
-                {field: 'businessId', width: 60, title: '商家Id'},
+                {field: 'businessId', width: 70, title: '商家Id'},
                 {field: 'businessName', width: 120, title: '商家店名'},
                 {field: 'number', width: 60, title: '书号'},
                 {field: 'count', width: 60, title: '数量'},
@@ -144,11 +145,13 @@
                     field: 'ext',
                     width: 100,
                     title: '书籍图片',
-                    templet: '<div><img  src="<%=basePath%>images/bookImages/Java从入门到放弃.png" style="height: 35px;width: 30px"></div>'
+                    templet: function (data) {
+                        return '<div><img  src="/images/bookImages/' + data.ext + '" style="height: 35px;width: 30px"></div>';
+                    }
                 },
                 {field: 'name', width: 100, title: '书名'},
-                {field: 'author', width: 100, title: '作者'},
-                {field: 'press', width: 120, title: '出版社'},
+                {field: 'author', width: 90, title: '作者'},
+                {field: 'press', width: 100, title: '出版社'},
                 {field: 'impression', width: 80, title: '印次'},
                 {field: 'synopsis', width: 120, title: '内容简介'},
                 {field: 'price', width: 80, title: '价格', sort: true},

@@ -15,7 +15,8 @@
         book.press,
         book.impression,
         book.synopsis,
-        book.price
+        book.price,
+        book.ext
         from book,business
         where book.name like '%${name}%'
         and book.businessId=business.id
@@ -33,7 +34,8 @@
         book.press,
         book.impression,
         book.synopsis,
-        book.price
+        book.price,
+        book.ext
         from book,business
         where author like '%${author}%'
         and book.businessId=business.id
@@ -51,7 +53,8 @@
         book.press,
         book.impression,
         book.synopsis,
-        book.price
+        book.price,
+        book.ext
         from book,business
         where press like '%${press}%'
         and book.businessId=business.id
@@ -69,7 +72,8 @@
         book.press,
         book.impression,
         book.synopsis,
-        book.price
+        book.price,
+        book.ext
         from book,business
         where price between #{priceMin} and #{priceMax}
         and book.businessId=business.id
