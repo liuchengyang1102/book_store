@@ -20,6 +20,7 @@
         from book,business
         where book.name like '%${name}%'
         and book.businessId=business.id
+        and book.count > 0
     </select>
 
     <!-- 按作者查询全部信息 -->
@@ -39,6 +40,7 @@
         from book,business
         where author like '%${author}%'
         and book.businessId=business.id
+        and book.count > 0
     </select>
 
     <!-- 按出版社查询全部信息 -->
@@ -58,6 +60,7 @@
         from book,business
         where press like '%${press}%'
         and book.businessId=business.id
+        and book.count > 0
     </select>
 
     <!-- 按价格范围查询全部信息 -->
@@ -77,10 +80,14 @@
         from book,business
         where price between #{priceMin} and #{priceMax}
         and book.businessId=business.id
+        and book.count > 0
     </select>
 
     <select id="businessQueryBook" resultType="Book">
         select * from book where businessId = #{businessId}
     </select>
 
+    <update id="sendGoods">
+        update book set book.count = (book.count - 1) where id = #{id}
+    </update>
 </mapper>

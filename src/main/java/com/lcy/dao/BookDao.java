@@ -33,4 +33,6 @@ public interface BookDao {
      * 商家查询该店图书信息
      */
     List<Book> businessQueryBook(@Param(value = "businessId") int businessId);
+
+    int sendGoods(@Param(value = "id") int id);
 }

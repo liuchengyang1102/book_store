@@ -235,6 +235,7 @@
                     data: {
                         "businessId": data.businessId,
                         "userId": <%=id%>,
+                        "bookId": data.id,
                         "bookName": data.name,
                         "price": data.price
                     }
@@ -248,6 +249,7 @@
                     data: {
                         "businessId": data.businessId,
                         "userId": <%=id%>,
+                        "bookId": data.id,
                         "bookName": data.name,
                         "price": data.price
                     }

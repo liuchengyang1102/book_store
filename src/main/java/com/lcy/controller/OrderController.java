@@ -23,9 +23,9 @@ public class OrderController {
 
     @RequestMapping("addShoppingCart")
     @ResponseBody
-    public void addShoppingCart(int businessId, int userId, String bookName, double price) {
-        logger.debug("businessId:" + businessId + ",userId:" + userId + ",bookName:" + bookName + ",price:" + price);
-        orderService.addShoppingCart(businessId, userId, bookName, price);
+    public void addShoppingCart(int businessId, int userId, int bookId, String bookName, double price) {
+        logger.debug("businessId:" + businessId + ",userId:" + userId + ",bookId:" + bookId + ",bookName:" + bookName + ",price:" + price);
+        orderService.addShoppingCart(businessId, userId, bookId, bookName, price);
     }
 
     @RequestMapping("deleteShoppingCart")
@@ -65,9 +65,9 @@ public class OrderController {
 
     @RequestMapping("addBuy")
     @ResponseBody
-    public void addBuy(int businessId, int userId, String bookName, double price) {
-        logger.debug("businessId:" + businessId + ",userId:" + userId + ",bookName:" + bookName + ",price:" + price);
-        orderService.addBuy(businessId, userId, bookName, price);
+    public void addBuy(int businessId, int userId, int bookId, String bookName, double price) {
+        logger.debug("businessId:" + businessId + ",userId:" + userId + ",bookId:" + bookId + ",bookName:" + bookName + ",price:" + price);
+        orderService.addBuy(businessId, userId, bookId, bookName, price);
     }
 
     @RequestMapping("queryOrder")
@@ -82,7 +82,7 @@ public class OrderController {
 
     @RequestMapping("businessQueryOrderAll")
     @ResponseBody
-    public Result<Order> businessQueryOrderAll(@RequestParam(defaultValue = "-1") int businessId, @RequestParam(defaultValue = "1") Integer page,
+    public Result<Order> businessQueryOrderAll(int businessId, @RequestParam(defaultValue = "1") Integer page,
                                                @RequestParam(defaultValue = "15") Integer limit) {
         logger.debug("businessId:" + businessId);
         Result<Order> orders = null;
@@ -93,10 +93,10 @@ public class OrderController {
     @RequestMapping("businessQueryOrder")
     @ResponseBody
     public Result<Order> businessQueryOrder(@RequestParam(defaultValue = "-1") int businessId, @RequestParam(defaultValue = "1") Integer page,
-                                               @RequestParam(defaultValue = "15") Integer limit, String state) {
+                                            @RequestParam(defaultValue = "15") Integer limit, String state) {
         logger.debug("businessId:" + businessId);
         Result<Order> orders = null;
-        orders = orderService.businessQueryOrder(businessId, page, limit,state);
+        orders = orderService.businessQueryOrder(businessId, page, limit, state);
         return orders;
     }
 }

@@ -12,7 +12,7 @@ public interface OrderDao {
     /**
      * 添加购物车
      */
-    void addShoppingCart(@Param(value = "businessId") int businessId, @Param(value = "userId") int userId,
+    void addShoppingCart(@Param(value = "businessId") int businessId, @Param(value = "userId") int userId, @Param(value = "bookId") int bookId,
                          @Param(value = "bookName") String bookName, @Param(value = "price") double price);
 
     /**
@@ -23,7 +23,7 @@ public interface OrderDao {
     /**
      * 添加待付款订单
      */
-    void addBuy(@Param(value = "businessId") int businessId, @Param(value = "userId") int userId,
+    void addBuy(@Param(value = "businessId") int businessId, @Param(value = "userId") int userId, @Param(value = "bookId") int bookId,
                 @Param(value = "bookName") String bookName, @Param(value = "price") double price);
 
     /**
@@ -44,6 +44,13 @@ public interface OrderDao {
      * @param id
      */
     void sendGoods(@Param(value = "id") int id);
+
+    /**
+     * 通过订单id查询图书id
+     * @param id
+     * @return
+     */
+    int queryBookId(@Param(value = "id") int id);
 
     /**
      * 订单收货

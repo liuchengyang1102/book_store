@@ -121,8 +121,6 @@ O
 src/main/webapp/page/table5.jsp,d\6\d6da83451b4a882288fd6190e86f0cce5df77597
 S
 #src/main/webapp/page/table/add.html,e\6\e6debdf3748799ada2b047de53d6c913220035fe
-]
--src/main/resources/com/lcy/dao/UserMapper.xml,2\7\271188ee6fd7b34d36d8481f005f278dd4f3ab91
 T
 $src/main/webapp/page/book-table1.jsp,7\f\7fea7a0950c2e2b604d600dbc9bf30764ea51439
 V
@@ -145,8 +143,6 @@ g
 7src/main/java/com/lcy/controller/CommentController.java,0\6\06f4bf96b51cb618ed93b2601ad04f8d73a0ec8a
 p
 @src/main/java/com/lcy/controller/RegionalOperatorController.java,4\d\4d5c63a48f7767816eb520a25452c08a4e12487d
-]
--src/main/resources/com/lcy/dao/BookMapper.xml,0\a\0af0b361c247c0a1e823c28a0e1feaf7d649d024
 N
 src/main/webapp/api/init2.json,e\2\e2446c9f96267aeec06522bc72fa44f6be7b246b
 O

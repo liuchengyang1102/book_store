@@ -10,7 +10,7 @@ public interface OrderService {
     /**
      * 添加购物车
      */
-    public void addShoppingCart(int businessId, int userId, String bookName, double price);
+    public void addShoppingCart(int businessId, int userId, int bookId, String bookName, double price);
 
     /**
      * 删除购物车
@@ -20,7 +20,7 @@ public interface OrderService {
     /**
      * 添加待付款订单
      */
-    public void addBuy(int businessId, int userId, String bookName, double price);
+    public void addBuy(int businessId, int userId, int bookId, String bookName, double price);
 
     /**
      * 从购物车添加待付款订单

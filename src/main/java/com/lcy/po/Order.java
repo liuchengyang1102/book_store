@@ -11,6 +11,7 @@ public class Order implements Serializable {
     private String businessName;
     private int userId;
     private String userName;
+    private int bookId;
     private String bookName;
     private double price;
     private String state;
@@ -54,6 +55,14 @@ public class Order implements Serializable {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
     }
 
     public String getBookName() {

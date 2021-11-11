@@ -2,6 +2,7 @@ package com.lcy.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.lcy.dao.BookDao;
 import com.lcy.dao.BusinessDao;
 import com.lcy.dao.OrderDao;
 import com.lcy.dao.UserDao;
@@ -24,10 +25,12 @@ public class OrderServiceImpl implements OrderService {
     private UserDao userDao;
     @Autowired
     private BusinessDao businessDao;
+    @Autowired
+    private BookDao bookDao;
 
     @Override
-    public void addShoppingCart(int businessId, int userId, String bookName, double price) {
-        orderDao.addShoppingCart(businessId, userId, bookName, price);
+    public void addShoppingCart(int businessId, int userId, int bookId, String bookName, double price) {
+        orderDao.addShoppingCart(businessId, userId, bookId, bookName, price);
     }
 
     @Override
@@ -36,8 +39,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void addBuy(int businessId, int userId, String bookName, double price) {
-        orderDao.addBuy(businessId, userId, bookName, price);
+    public void addBuy(int businessId, int userId, int bookId, String bookName, double price) {
+        orderDao.addBuy(businessId, userId, bookId, bookName, price);
     }
 
     @Override
@@ -54,7 +57,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void sendGoods(int id) {
-        orderDao.sendGoods(id);
+        //通过订单id查询图书id
+        int bookId = orderDao.queryBookId(id);
+        if (bookDao.sendGoods(bookId) == 1) {
+            orderDao.sendGoods(id);
+        }
     }
 
     @Override

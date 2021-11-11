@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.lcy.dao.OrderDao">
     <insert id="addShoppingCart" parameterType="Order">
-        insert into bookstore.order (businessId, userId, bookName, price, state) values (#{businessId}, #{userId}, #{bookName}, #{price}, '待购买')
+        insert into bookstore.order (businessId,userId,bookId,bookName,price,state) values (#{businessId},#{userId},#{bookId},#{bookName},#{price},'待购买')
     </insert>
 
     <delete id="deleteShoppingCart">
@@ -11,7 +11,7 @@
     </delete>
 
     <insert id="addBuy" parameterType="Order">
-        insert into bookstore.order (businessId, userId, bookName, price, state) values (#{businessId}, #{userId}, #{bookName}, #{price}, '待付款')
+        insert into bookstore.order (businessId,userId,bookId,bookName,price,state) values (#{businessId},#{userId},#{bookId},#{bookName},#{price}, '待付款')
     </insert>
 
     <update id="shoppingCartToBuy">
@@ -25,6 +25,10 @@
     <update id="sendGoods">
         update bookstore.order set state = '待收货' where id = #{id}
     </update>
+
+    <select id="queryBookId" resultType="int">
+        select bookId from bookstore.order where id = #{id}
+    </select>
 
     <update id="receive">
         update bookstore.order set state = '待评论' where id = #{id}

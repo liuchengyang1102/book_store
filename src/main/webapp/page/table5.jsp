@@ -105,19 +105,22 @@
                     dataType: "json",
                     data: {
                         "id": data.id
+                    }, success: function () {
+                        layer.msg('该订单已完成发货');
+                        //执行重载
+                        table.reload('testReload', {
+                            page: {
+                                curr: 1//重新从第1页开始
+                            },
+                            where: {
+                                businessId: <%=id%>,
+                                state: '待发货'
+                            }
+                        }, 'data');
+                    }, error: function () {
+                        layer.msg('发货失败，请检查您是否忘记修改库存量');
                     }
                 });
-                layer.msg('该订单已完成发货');
-                //执行重载
-                table.reload('testReload', {
-                    page: {
-                        curr: 1//重新从第1页开始
-                    },
-                    where: {
-                        businessId: <%=id%>,
-                        state: '待发货'
-                    }
-                }, 'data');
             }
         });
 
