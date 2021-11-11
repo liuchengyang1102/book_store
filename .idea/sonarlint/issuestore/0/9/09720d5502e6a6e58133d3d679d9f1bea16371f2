@@ -1,9 +1,7 @@
 
-g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(›Ήÿ†όÿÿÿÿ8Ο…ΦΆΞ/
-T
-java:S2589%"7Remove this expression which always evaluates to "true"(ÿ¤ώρ8Ο…ΦΆΞ/
-S
-java:S3416"1Update this logger to use "UserController.class".(›Ήÿ†όÿÿÿÿ8Ο…ΦΆΞ/
 \
 java:S2441'":Make "User" serializable or don't store it in the session.(ά…ηύÿÿÿÿ8Ο…ΦΆΞ/
+T
+java:S2589%"7Remove this expression which always evaluates to "true"(ÿ¤ώρ8Ο…ΦΆΞ/
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(‘δµαϊÿÿÿÿ8Ο…ΦΆΞ/

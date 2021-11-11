@@ -1,4 +1,5 @@
 <%@ page import="com.lcy.po.Business" %>
+<%@ page import="com.lcy.po.RegionalOperator" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -9,7 +10,11 @@
 %>
 
 <%
-    String name = "未登录";
+    RegionalOperator loginRegionalOperator = (RegionalOperator) request.getSession().getAttribute("loginRegionalOperator");
+    String area = "未登录";
+    if (loginRegionalOperator != null) {
+        area = loginRegionalOperator.getArea();
+    }
 %>
 
 <html>
@@ -75,7 +80,7 @@
                 </li>
                 <li class="layui-nav-item layuimini-setting">
                     <a href="javascript:;">
-                        <%=name%>
+                        运营方：<%=area%>
                     </a>
                     <dl class="layui-nav-child">
                         <dd>

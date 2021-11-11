@@ -1,10 +1,19 @@
 <%@ page import="com.lcy.po.Business" %>
+<%@ page import="com.lcy.po.RegionalOperator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
+
+<%
+    RegionalOperator loginRegionalOperator = (RegionalOperator) request.getSession().getAttribute("loginRegionalOperator");
+    String area = "未登录";
+    if (loginRegionalOperator != null) {
+        area = loginRegionalOperator.getArea();
+    }
 %>
 
 <html>
@@ -74,7 +83,7 @@
                 curr: 1//重新从第1页开始
             },
             where: {
-                area: '湖南省长沙市开福区'
+                area: "<%=area%>"
             }
         }, 'data');
 

@@ -1,9 +1,11 @@
 package com.lcy.po;
 
+import java.io.Serializable;
+
 /**
  * @author 刘呈洋
  */
-public class Business {
+public class Business implements Serializable {
     private int id;
     private String userName;
     private String password;

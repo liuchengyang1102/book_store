@@ -132,7 +132,7 @@
             text-align: center;
         }
 
-        .login-main .login-select #btn2 {
+        .login-main .login-select #btn2, .login-main .login-select #btn3 {
             background-color: #1aa094;
             border-radius: 12px 12px 0 0;
             height: 40px;
@@ -336,6 +336,7 @@
         <div class="login-select">
             <button id="btn1" onclick="userLogin()">用户登录</button>
             <button id="btn2" onclick="businessLogin()">商家登录</button>
+            <button id="btn3" onclick="regionalOperatorLogin()">运营方</button>
         </div>
         <div class="login-top">
             <span>登录</span>
@@ -346,12 +347,14 @@
             <div class="center">
                 <div class="item">
                     <span class="icon icon-2"></span>
-                    <input type="text" name="username" lay-verify="required" placeholder="请输入登录账号(不超过12位)" maxlength="12" autocomplete="off"/>
+                    <input type="text" name="username" lay-verify="required" placeholder="请输入登录账号(不超过12位)"
+                           maxlength="12" autocomplete="off"/>
                 </div>
 
                 <div class="item">
                     <span class="icon icon-3"></span>
-                    <input type="password" name="password" lay-verify="required" placeholder="请输入密码(不超过16位)" maxlength="16" autocomplete="off">
+                    <input type="password" name="password" lay-verify="required" placeholder="请输入密码(不超过16位)"
+                           maxlength="16" autocomplete="off">
                     <span class="bind-password icon icon-4"></span>
                 </div>
 
@@ -378,6 +381,7 @@
     var body = document.querySelector('body');
     var btn1 = document.querySelector('.login-main .login-select #btn1');
     var btn2 = document.querySelector('.login-main .login-select #btn2');
+    var btn3 = document.querySelector('.login-main .login-select #btn3');
     var register = document.querySelector('.login-main .login-bottom .tip .register');
     var loginButton = 'userLogin';
 
@@ -385,7 +389,9 @@
         body.style.background = "url(../images/userLogin.png) 0% 0% / cover no-repeat";
         btn1.style.backgroundColor = '#148be4';
         btn2.style.backgroundColor = '#1aa094';
+        btn3.style.backgroundColor = '#1aa094';
         loginButton = 'userLogin';
+        register.style.display = 'inline-block';
         register.onclick = Function("userRegister()");
     }
 
@@ -393,16 +399,27 @@
         body.style.background = "url(../images/businessLogin.png) 0% 0% / cover no-repeat";
         btn1.style.backgroundColor = '#1aa094';
         btn2.style.backgroundColor = '#148be4';
+        btn3.style.backgroundColor = '#1aa094';
         loginButton = 'businessLogin';
-        register.onclick =  Function("businessRegister()");
+        register.style.display = 'inline-block';
+        register.onclick = Function("businessRegister()");
+    }
+
+    function regionalOperatorLogin() {
+        body.style.background = "url(/images/优秀的人.jpg) 0% 0% / cover no-repeat";
+        btn1.style.backgroundColor = '#1aa094';
+        btn2.style.backgroundColor = '#1aa094';
+        btn3.style.backgroundColor = '#148be4';
+        loginButton = 'regionalOperatorLogin';
+        register.style.display = 'none';
     }
 
     function userRegister() {
-        window.location='../userRegister';
+        window.location = '../userRegister';
     }
 
     function businessRegister() {
-        window.location='../businessRegister';
+        window.location = '../businessRegister';
     }
 </script>
 <script>
@@ -451,8 +468,10 @@
                         layer.msg('登录成功', function () {
                             if (loginButton == 'userLogin') {
                                 window.location = '../';
-                            } else {
+                            } else if (loginButton == 'businessLogin') {
                                 window.location = '../business';
+                            }else {
+                                window.location = '../aaa';
                             }
                         });
                         return false;

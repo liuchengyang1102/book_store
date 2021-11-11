@@ -17,6 +17,6 @@
     </update>
 
     <select id="queryBusiness" resultType="Business">
-        select * from business
+        select * from business where address = #{area} and state = '待审核'
     </select>
 </mapper>
