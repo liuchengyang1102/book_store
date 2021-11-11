@@ -19,4 +19,12 @@
     <select id="queryBusiness" resultType="Business">
         select * from business where address = #{area} and state = '待审核'
     </select>
+
+    <update id="pass">
+        update business set state = '营业中' where id = #{id}
+    </update>
+
+    <delete id="failed">
+        delete from business where id = #{id}
+    </delete>
 </mapper>

@@ -227,7 +227,6 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
-            console.log(data);
             if (obj.event === 'add') {
                 $.ajax({
                     type: "post",

@@ -99,7 +99,6 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
-            console.log(data);
             if (obj.event === 'receive') {
                 $.ajax({
                     type: "post",

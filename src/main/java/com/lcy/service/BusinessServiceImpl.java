@@ -41,4 +41,14 @@ public class BusinessServiceImpl implements BusinessService {
         PageInfo<Business> pageInfo = new PageInfo<>(businesses);
         return Result.bulid(0, pageInfo.getTotal(), businesses);
     }
+
+    @Override
+    public void pass(int id) {
+        businessDao.pass(id);
+    }
+
+    @Override
+    public void failed(int id) {
+        businessDao.failed(id);
+    }
 }

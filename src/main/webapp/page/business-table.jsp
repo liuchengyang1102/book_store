@@ -36,7 +36,10 @@
 
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
-        <script type="text/html" id="currentTableBar"></script>
+        <script type="text/html" id="currentTableBar">
+            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="pass">审核通过</a>
+            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="failed">审核不通过</a>
+        </script>
 
     </div>
 </div>
@@ -101,6 +104,45 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
+            if (obj.event === 'pass') {
+                $.ajax({
+                    type: "post",
+                    url: "<%=basePath%>pass",
+                    dataType: "json",
+                    data: {
+                        "id": data.id
+                    }
+                });
+                //执行重载
+                table.reload('testReload', {
+                    page: {
+                        curr: 1//重新从第1页开始
+                    },
+                    where: {
+                        area: "<%=area%>"
+                    }
+                }, 'data');
+                layer.msg('审核成功，该商家审核通过，已可正常登录');
+            } else if (obj.event === 'failed') {
+                $.ajax({
+                    type: "post",
+                    url: "<%=basePath%>failed",
+                    dataType: "json",
+                    data: {
+                        "id": data.id
+                    }
+                });
+                //执行重载
+                table.reload('testReload', {
+                    page: {
+                        curr: 1//重新从第1页开始
+                    },
+                    where: {
+                        area: "<%=area%>"
+                    }
+                }, 'data');
+                layer.msg('审核成功，该商家审核不通过，已删除');
+            }
         });
 
     });

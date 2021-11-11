@@ -19,12 +19,13 @@ public interface BusinessDao {
      * 商家注册
      */
     public int addBusiness(@Param(value = "userName") String userName, @Param(value = "password") String password,
-                            @Param(value = "name") String name, @Param(value = "address") String address,
-                            @Param(value = "type") String type, @Param(value = "registeredCapital") double registeredCapital,
-                            @Param(value = "logPicture") String logPicture);
+                           @Param(value = "name") String name, @Param(value = "address") String address,
+                           @Param(value = "type") String type, @Param(value = "registeredCapital") double registeredCapital,
+                           @Param(value = "logPicture") String logPicture);
 
     /**
      * 商家收款
+     *
      * @param businessId
      * @param price
      * @return
@@ -34,5 +35,15 @@ public interface BusinessDao {
     /**
      * 查询待审核商家
      */
-    List<Business> queryBusiness(@Param(value = "area")String area);
+    List<Business> queryBusiness(@Param(value = "area") String area);
+
+    /**
+     * 审核通过
+     */
+    void pass(@Param(value = "id") int id);
+
+    /**
+     * 审核不通过
+     */
+    void failed(@Param(value = "id") int id);
 }

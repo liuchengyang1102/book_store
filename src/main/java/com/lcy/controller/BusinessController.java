@@ -94,4 +94,18 @@ public class BusinessController {
         logger.debug("area:" + area);
         return businessService.queryBusiness(area, page, limit);
     }
+
+    @RequestMapping("/pass")
+    @ResponseBody
+    public void pass(int id){
+        logger.debug("id:" + id);
+        businessService.pass(id);
+    }
+
+    @RequestMapping("/failed")
+    @ResponseBody
+    public void failed(int id){
+        logger.debug("id:" + id);
+        businessService.failed(id);
+    }
 }

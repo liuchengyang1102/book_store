@@ -22,4 +22,14 @@ public interface BusinessService {
      * 查询待审核商家
      */
     public Result<Business> queryBusiness(String area, Integer page, Integer limit);
+
+    /**
+     * 审核通过
+     */
+    public void pass(int id);
+
+    /**
+     * 审核不通过
+     */
+    public void failed(int id);
 }
