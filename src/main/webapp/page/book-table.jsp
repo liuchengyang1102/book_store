@@ -228,33 +228,43 @@
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
             if (obj.event === 'add') {
-                $.ajax({
-                    type: "post",
-                    url: "<%=basePath%>addShoppingCart",
-                    dataType: "json",
-                    data: {
-                        "businessId": data.businessId,
-                        "userId": <%=id%>,
-                        "bookId": data.id,
-                        "bookName": data.name,
-                        "price": data.price
-                    }
-                });
-                layer.msg('成功加入购物车');
+                var isLogin =<%=id%>;
+                if (isLogin == '0') {
+                    layer.msg('尚未登陆，无法添加购物车');
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "<%=basePath%>addShoppingCart",
+                        dataType: "json",
+                        data: {
+                            "businessId": data.businessId,
+                            "userId": <%=id%>,
+                            "bookId": data.id,
+                            "bookName": data.name,
+                            "price": data.price
+                        }
+                    });
+                    layer.msg('成功加入购物车');
+                }
             } else if (obj.event === 'buy') {
-                $.ajax({
-                    type: "post",
-                    url: "<%=basePath%>addBuy",
-                    dataType: "json",
-                    data: {
-                        "businessId": data.businessId,
-                        "userId": <%=id%>,
-                        "bookId": data.id,
-                        "bookName": data.name,
-                        "price": data.price
-                    }
-                });
-                layer.msg('购买成功，请前往订单列表完成付款');
+                var isLogin =<%=id%>;
+                if (isLogin == '0') {
+                    layer.msg('尚未登陆，无法下订单购买');
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "<%=basePath%>addBuy",
+                        dataType: "json",
+                        data: {
+                            "businessId": data.businessId,
+                            "userId": <%=id%>,
+                            "bookId": data.id,
+                            "bookName": data.name,
+                            "price": data.price
+                        }
+                    });
+                    layer.msg('购买成功，请前往订单列表完成付款');
+                }
             }
         });
 
