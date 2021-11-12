@@ -92,6 +92,10 @@
                             </a>
                         </dd>
                         <dd>
+                            <a href="javascript:;" layuimini-content-href="page/business-manage.jsp" data-title="管理店铺"
+                               data-icon="fa fa-gears">管理店铺</a>
+                        </dd>
+                        <dd>
                             <hr>
                         </dd>
                         <dd>

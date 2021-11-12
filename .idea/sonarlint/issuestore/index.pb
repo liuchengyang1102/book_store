@@ -161,5 +161,3 @@ n
 >src/main/java/com/lcy/service/RegionalOperatorServiceImpl.java,b\c\bce4756130ba176ca98da2a61070289d54a175f4
 i
 9src/main/resources/com/lcy/dao/RegionalOperatorMapper.xml,c\d\cd2306b80fe793d6503f7df427cede8e8f169092
-]
--src/main/resources/com/lcy/dao/BookMapper.xml,0\a\0af0b361c247c0a1e823c28a0e1feaf7d649d024

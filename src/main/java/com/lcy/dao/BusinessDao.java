@@ -46,4 +46,14 @@ public interface BusinessDao {
      * 审核不通过
      */
     void failed(@Param(value = "id") int id);
+
+    /**
+     * 查询商家当前状态
+     */
+    List<Business> queryState(@Param(value = "id") int id);
+
+    /**
+     * 管理商家当前状态
+     */
+    public int businessManage(@Param(value = "state") String state, @Param(value = "id") int id);
 }

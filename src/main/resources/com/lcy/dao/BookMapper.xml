@@ -21,6 +21,7 @@
         where book.name like '%${name}%'
         and book.businessId=business.id
         and book.count > 0
+        and business.state = '营业中'
     </select>
 
     <!-- 按作者查询全部信息 -->
@@ -41,6 +42,7 @@
         where author like '%${author}%'
         and book.businessId=business.id
         and book.count > 0
+        and business.state = '营业中'
     </select>
 
     <!-- 按出版社查询全部信息 -->
@@ -61,6 +63,7 @@
         where press like '%${press}%'
         and book.businessId=business.id
         and book.count > 0
+        and business.state = '营业中'
     </select>
 
     <!-- 按价格范围查询全部信息 -->
@@ -81,6 +84,7 @@
         where price between #{priceMin} and #{priceMax}
         and book.businessId=business.id
         and book.count > 0
+        and business.state = '营业中'
     </select>
 
     <select id="businessQueryBook" resultType="Book">

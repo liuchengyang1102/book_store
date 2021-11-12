@@ -27,4 +27,12 @@
     <delete id="failed">
         delete from business where id = #{id}
     </delete>
+
+    <select id="queryState" resultType="Business">
+        select * from business where id = #{id}
+    </select>
+
+    <update id="businessManage">
+        update business set state = #{state} where id = #{id} and state != #{state}
+    </update>
 </mapper>

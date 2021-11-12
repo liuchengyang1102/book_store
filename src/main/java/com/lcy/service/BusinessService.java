@@ -32,4 +32,14 @@ public interface BusinessService {
      * 审核不通过
      */
     public void failed(int id);
+
+    /**
+     * 查询商家当前状态
+     */
+    public Result<Business> queryState(int id, Integer page, Integer limit);
+
+    /**
+     * 管理商家当前状态
+     */
+    public int businessManage(String state, int id);
 }

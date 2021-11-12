@@ -51,4 +51,19 @@ public class BusinessServiceImpl implements BusinessService {
     public void failed(int id) {
         businessDao.failed(id);
     }
+
+    @Override
+    public Result<Business> queryState(int id, Integer page, Integer limit) {
+        //传入参数，当前页、每页条数
+        PageHelper.startPage(page, limit);
+        List<Business> businesses = businessDao.queryState(id);
+        //通过包装获取分页的其它值信息
+        PageInfo<Business> pageInfo = new PageInfo<>(businesses);
+        return Result.bulid(0, pageInfo.getTotal(), businesses);
+    }
+
+    @Override
+    public int businessManage(String state, int id) {
+        return businessDao.businessManage(state, id);
+    }
 }

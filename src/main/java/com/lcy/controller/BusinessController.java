@@ -97,15 +97,30 @@ public class BusinessController {
 
     @RequestMapping("/pass")
     @ResponseBody
-    public void pass(int id){
+    public void pass(int id) {
         logger.debug("id:" + id);
         businessService.pass(id);
     }
 
     @RequestMapping("/failed")
     @ResponseBody
-    public void failed(int id){
+    public void failed(int id) {
         logger.debug("id:" + id);
         businessService.failed(id);
+    }
+
+    @RequestMapping("/queryState")
+    @ResponseBody
+    public Result<Business> queryState(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit,
+                                       @RequestParam(defaultValue = "-1") int id) {
+        logger.debug("id:" + id);
+        return businessService.queryState(id, page, limit);
+    }
+
+    @RequestMapping("/businessManage")
+    @ResponseBody
+    public int businessManage(String state, int id) {
+        logger.debug("state:" + state + ",id:" + id);
+        return businessService.businessManage(state, id);
     }
 }
