@@ -16,4 +16,17 @@ public interface UserService {
      * 用户注册
      */
     public int addUser(String username, String password, String name);
+
+    /**
+     * 查询余额
+     *
+     * @param id
+     * @return
+     */
+    public Result<User> queryBalance(int id, Integer page, Integer limit);
+
+    /**
+     * 用户充值
+     */
+    public void recharge(int id, int money);
 }

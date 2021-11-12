@@ -12,9 +12,11 @@
     Business loginBusiness = (Business) request.getSession().getAttribute("loginBusiness");
     String name = "未登录";
     String logPicture = "logo1.png";
+    double balance = 0;
     if (loginBusiness != null) {
         name = loginBusiness.getName();
         logPicture = loginBusiness.getLogPicture();
+        balance = loginBusiness.getBalance();
     }
 %>
 
@@ -86,12 +88,8 @@
                     </a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" layuimini-content-href="page/user-setting.html" data-title="基本资料"
-                               data-icon="fa fa-gears">基本资料<span class="layui-badge-dot"></span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" layuimini-content-href="page/user-password.html" data-title="修改密码"
-                               data-icon="fa fa-gears">修改密码</a>
+                            <a href="javascript:;">余额钱包:<%=balance%>
+                            </a>
                         </dd>
                         <dd>
                             <hr>

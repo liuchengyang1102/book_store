@@ -151,3 +151,15 @@ b
 2src/main/webapp/WEB-INF/pages/regionalOperator.jsp,a\0\a0fabb6e0ec6c079229a666630568dbb6b44411b
 W
 'src/main/webapp/page/business-table.jsp,9\0\9090164b8a5d358fe8cff0a727601f88887c4411
+b
+2src/main/java/com/lcy/dao/RegionalOperatorDao.java,d\c\dc66c4523cee9e06c56505344adba13149c9949d
+^
+.src/main/java/com/lcy/po/RegionalOperator.java,1\4\146a56ba0f89bcd7a0d9984161abf1bfd359f99b
+j
+:src/main/java/com/lcy/service/RegionalOperatorService.java,2\6\266fac3401c67dc69a58a66ac54a2a30343f09b4
+n
+>src/main/java/com/lcy/service/RegionalOperatorServiceImpl.java,b\c\bce4756130ba176ca98da2a61070289d54a175f4
+i
+9src/main/resources/com/lcy/dao/RegionalOperatorMapper.xml,c\d\cd2306b80fe793d6503f7df427cede8e8f169092
+]
+-src/main/resources/com/lcy/dao/BookMapper.xml,0\a\0af0b361c247c0a1e823c28a0e1feaf7d649d024

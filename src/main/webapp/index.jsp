@@ -11,8 +11,10 @@
 <%
     User loginUser = (User) request.getSession().getAttribute("loginUser");
     String name = "未登录";
+    double balance = 0;
     if (loginUser != null) {
         name = loginUser.getName();
+        balance = loginUser.getBalance();
     }
 %>
 
@@ -83,12 +85,9 @@
                     </a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" layuimini-content-href="page/user-setting.html" data-title="基本资料"
-                               data-icon="fa fa-gears">基本资料<span class="layui-badge-dot"></span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" layuimini-content-href="page/user-password.html" data-title="修改密码"
-                               data-icon="fa fa-gears">修改密码</a>
+                            <a href="javascript:;" layuimini-content-href="page/user-balance.jsp" data-title="余额钱包"
+                               data-icon="fa fa-gears">余额钱包:<%=balance%>
+                            </a>
                         </dd>
                         <dd>
                             <hr>

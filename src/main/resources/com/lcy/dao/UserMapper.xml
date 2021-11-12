@@ -15,4 +15,11 @@
         update user set balance = (balance - #{price}) where id = #{userId}
     </update>
 
+    <select id="queryBalance" resultType="User">
+        select * from user where id = #{id}
+    </select>
+
+    <update id="recharge">
+        update user set balance = (balance + #{money}) where id = #{id}
+    </update>
 </mapper>
