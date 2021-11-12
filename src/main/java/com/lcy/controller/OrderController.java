@@ -82,8 +82,8 @@ public class OrderController {
 
     @RequestMapping("businessQueryOrderAll")
     @ResponseBody
-    public Result<Order> businessQueryOrderAll(int businessId, @RequestParam(defaultValue = "1") Integer page,
-                                               @RequestParam(defaultValue = "15") Integer limit) {
+    public Result<Order> businessQueryOrderAll(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit,
+                                               @RequestParam(defaultValue = "-1") Integer businessId) {
         logger.debug("businessId:" + businessId);
         Result<Order> orders = null;
         orders = orderService.businessQueryOrderAll(businessId, page, limit);
