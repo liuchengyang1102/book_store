@@ -68,4 +68,14 @@ public class BookServiceImpl implements BookService {
         PageInfo<Book> pageInfo = new PageInfo<>(books);
         return Result.bulid(0, pageInfo.getTotal(), books);
     }
+
+    @Override
+    public void deleteBook(int id) {
+        bookDao.deleteBook(id);
+    }
+
+    @Override
+    public void editPrice(int id, double price) {
+        bookDao.editPrice(id, price);
+    }
 }

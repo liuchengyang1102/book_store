@@ -105,15 +105,17 @@
                     btn: ['确认充值'],
                     yes: function (index, layero) {
                         var money = $(layero).find("iframe")[0].contentWindow.getInput();
-                        $.ajax({
-                            type: "post",
-                            url: "<%=basePath%>recharge",
-                            dataType: "json",
-                            data: {
-                                "id":<%=id%>,
-                                "money": money
-                            }
-                        });
+                        if (typeof (money) != 'undefined') {
+                            $.ajax({
+                                type: "post",
+                                url: "<%=basePath%>recharge",
+                                dataType: "json",
+                                data: {
+                                    "id":<%=id%>,
+                                    "money": money
+                                }
+                            });
+                        }
                     }
                 });
             }

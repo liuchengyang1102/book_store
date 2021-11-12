@@ -35,7 +35,10 @@
 
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
-        <script type="text/html" id="currentTableBar"></script>
+        <script type="text/html" id="currentTableBar">
+            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="edit">修改价格</a>
+            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="delete">删除</a>
+        </script>
 
     </div>
 </div>
@@ -107,6 +110,56 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
+            if (obj.event === 'edit') {
+                var index = layer.open({
+                    title: '修改价格',
+                    type: 2,
+                    shade: 0.2,
+                    maxmin: true,
+                    shadeClose: true,
+                    area: ['25%', '35%'],
+                    content: '../page/table/edit-price.jsp',
+                    btn: ['确认充值'],
+                    yes: function (index, layero) {
+                        var price = $(layero).find("iframe")[0].contentWindow.getInput();
+                        if (typeof (price) != 'undefined') {
+                            $.ajax({
+                                type: "post",
+                                url: "<%=basePath%>editPrice",
+                                dataType: "json",
+                                data: {
+                                    "id": data.id,
+                                    "price": price
+                                }
+                            });
+                        }
+                    }
+                });
+            } else if (obj.event === 'delete') {
+                layer.confirm('确定删除该图书吗？', function (index) {
+                    $.ajax({
+                        type: "post",
+                        url: "<%=basePath%>deleteBook",
+                        dataType: "json",
+                        data: {
+                            "id": data.id
+                        }, success: function () {
+                            layer.msg('删除该图书成功');
+                            //执行重载
+                            table.reload('testReload', {
+                                page: {
+                                    curr: 1//重新从第1页开始
+                                },
+                                where: {
+                                    businessId: <%=id%>
+                                }
+                            }, 'data');
+                        }
+                    });
+                    obj.del();
+                    layer.close(index);
+                });
+            }
         });
 
     });

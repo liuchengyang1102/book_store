@@ -34,5 +34,18 @@ public interface BookDao {
      */
     List<Book> businessQueryBook(@Param(value = "businessId") int businessId);
 
+    /**
+     * 商家发货
+     */
     int sendGoods(@Param(value = "id") int id);
+
+    /**
+     * 删除图书
+     */
+    public void deleteBook(@Param(value = "id") int id);
+
+    /**
+     * 修改图书价格
+     */
+    public void editPrice(@Param(value = "id") int id, @Param(value = "price") double price);
 }

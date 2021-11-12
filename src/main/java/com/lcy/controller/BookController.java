@@ -42,9 +42,23 @@ public class BookController {
 
     @RequestMapping("/businessQueryBook")
     @ResponseBody
-    public Result<Book> businessQueryBook(@RequestParam(defaultValue = "-1")int businessId, @RequestParam(defaultValue = "1") Integer page,
+    public Result<Book> businessQueryBook(@RequestParam(defaultValue = "-1") int businessId, @RequestParam(defaultValue = "1") Integer page,
                                           @RequestParam(defaultValue = "15") Integer limit) {
         logger.debug("businessId:" + businessId);
         return bookService.businessQueryBook(businessId, page, limit);
+    }
+
+    @RequestMapping("/deleteBook")
+    @ResponseBody
+    public void deleteBook(@RequestParam(defaultValue = "-1") int id) {
+        logger.debug("id:" + id);
+        bookService.deleteBook(id);
+    }
+
+    @RequestMapping("/editPrice")
+    @ResponseBody
+    public void editPrice(@RequestParam(defaultValue = "-1") int id, double price) {
+        logger.debug("id:" + id + ",price" + price);
+        bookService.editPrice(id,price);
     }
 }

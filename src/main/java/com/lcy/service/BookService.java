@@ -32,4 +32,14 @@ public interface BookService {
      * 商家查询该店图书信息
      */
     public Result<Book> businessQueryBook(int businessId, Integer page, Integer limit);
+
+    /**
+     * 删除图书
+     */
+    public void deleteBook(int id);
+
+    /**
+     * 修改图书价格
+     */
+    public void editPrice(int id, double price);
 }

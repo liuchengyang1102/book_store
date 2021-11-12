@@ -94,4 +94,12 @@
     <update id="sendGoods">
         update book set book.count = (book.count - 1) where id = #{id}
     </update>
+
+    <delete id="deleteBook">
+        delete from book where id = #{id}
+    </delete>
+
+    <update id="editPrice">
+        update book set price = #{price} where id = #{id}
+    </update>
 </mapper>
