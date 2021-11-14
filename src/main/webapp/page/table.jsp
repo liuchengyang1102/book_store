@@ -62,7 +62,6 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 60, title: 'ID', sort: true},
-                {field: 'businessId', width: 80, title: '商家Id'},
                 {field: 'businessName', width: 120, title: '商家店名'},
                 {field: 'bookName', width: 120, title: '书名'},
                 {field: 'price', width: 80, title: '价格', sort: true},

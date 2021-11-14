@@ -47,6 +47,7 @@ public interface OrderDao {
 
     /**
      * 通过订单id查询图书id
+     *
      * @param id
      * @return
      */
@@ -65,6 +66,13 @@ public interface OrderDao {
      * @param id
      */
     void comment(@Param(value = "id") int id);
+
+    /**
+     * 通过订单id查询商家id
+     *
+     * @param id
+     */
+    int queryBusinessId(@Param(value = "id") int id);
 
     /**
      * 查询订单

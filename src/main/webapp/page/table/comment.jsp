@@ -31,7 +31,7 @@
 </head>
 <body>
 <div style="float: left;width: 100%;height: 40px">
-    评价等级：
+    评价等级（不选择默认为五星）：
     <span id="score1">
           <i></i>
           <i></i>
@@ -46,7 +46,7 @@
 </div>
 <script src="<%=basePath%>lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
 <script>
-    var i = 0;
+    var i = 5;
 
     function score(scoreId, extentStr) {
         scoreId = "#" + scoreId;

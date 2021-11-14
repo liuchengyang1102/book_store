@@ -29,7 +29,8 @@ public class OrderServiceImpl implements OrderService {
     private BookDao bookDao;
 
     @Override
-    public void addShoppingCart(int businessId, int userId, int bookId, String bookName, double price) {
+    public void addShoppingCart(int userId, int bookId, String bookName, double price) {
+        int businessId = bookDao.queryBusinessId(bookId);
         orderDao.addShoppingCart(businessId, userId, bookId, bookName, price);
     }
 
@@ -39,7 +40,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void addBuy(int businessId, int userId, int bookId, String bookName, double price) {
+    public void addBuy(int userId, int bookId, String bookName, double price) {
+        int businessId = bookDao.queryBusinessId(bookId);
         orderDao.addBuy(businessId, userId, bookId, bookName, price);
     }
 
@@ -65,7 +67,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void receive(int id, int businessId, double price) {
+    public void receive(int id, double price) {
+        int businessId = orderDao.queryBusinessId(id);
         businessDao.receive(businessId, price);
         orderDao.receive(id);
     }

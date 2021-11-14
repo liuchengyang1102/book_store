@@ -23,9 +23,9 @@ public class CommentController {
 
     @RequestMapping("addComment")
     @ResponseBody
-    public void addComment(int userId, int businessId, int orderId, int level, String content) {
-        logger.debug("userId:" + userId + ",businessId:" + businessId + ",orderId:" + orderId + ",level:" + level + ",content:" + content);
-        commentService.addComment(userId, businessId, orderId, level, content);
+    public void addComment(int userId, int orderId, @RequestParam(defaultValue = "5") int level, String content) {
+        logger.debug("userId:" + userId + ",orderId:" + orderId + ",level:" + level + ",content:" + content);
+        commentService.addComment(userId, orderId, level, content);
     }
 
     @RequestMapping("queryComment")

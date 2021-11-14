@@ -23,7 +23,8 @@ public class CommentServiceImpl implements CommentService {
     private OrderDao orderDao;
 
     @Override
-    public void addComment(int userId, int businessId, int orderId, int level, String content) {
+    public void addComment(int userId, int orderId, int level, String content) {
+        int businessId = orderDao.queryBusinessId(orderId);
         commentDao.addComment(userId, businessId, orderId, level, content);
         orderDao.comment(orderId);
     }

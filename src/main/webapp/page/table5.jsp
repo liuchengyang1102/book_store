@@ -102,7 +102,6 @@
                 $.ajax({
                     type: "post",
                     url: "<%=basePath%>sendGoods",
-                    dataType: "json",
                     data: {
                         "id": data.id
                     }, success: function () {

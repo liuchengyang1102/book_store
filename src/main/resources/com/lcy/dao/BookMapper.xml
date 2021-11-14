@@ -147,6 +147,10 @@
         and business.state = '营业中'
     </select>
 
+    <select id="queryBusinessId" resultType="int">
+        select businessId from book where id = #{id}
+    </select>
+
     <select id="businessQueryBook" resultType="Book">
         select * from book where businessId = #{businessId}
     </select>

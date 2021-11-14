@@ -298,7 +298,6 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 60, title: 'ID', sort: true},
-                {field: 'businessId', width: 70, title: '商家Id'},
                 {field: 'businessName', width: 120, title: '商家店名'},
                 {field: 'number', width: 60, title: '书号'},
                 {field: 'count', width: 60, title: '数量'},
@@ -399,7 +398,6 @@
                         url: "<%=basePath%>addShoppingCart",
                         dataType: "json",
                         data: {
-                            "businessId": data.businessId,
                             "userId": <%=id%>,
                             "bookId": data.id,
                             "bookName": data.name,
@@ -418,7 +416,6 @@
                         url: "<%=basePath%>addBuy",
                         dataType: "json",
                         data: {
-                            "businessId": data.businessId,
                             "userId": <%=id%>,
                             "bookId": data.id,
                             "bookName": data.name,

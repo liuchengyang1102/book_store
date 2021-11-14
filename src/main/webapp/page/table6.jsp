@@ -60,7 +60,11 @@
                 {field: 'id', width: 80, title: 'ID', sort: true},
                 {field: 'userName', width: 140, title: '购买用户'},
                 {field: 'bookName', width: 160, title: '所购书籍'},
-                {field: 'level', width: 120, title: '评论星级'},
+                {
+                    field: 'level', width: 180, title: '评论星级', templet: function (data) {
+                        return '<div><img  src="/images/level' + data.level + '.png " style="height: 40px;width: 160px"></div>';
+                    }
+                },
                 {field: 'content', width: 200, title: '评论内容'},
                 {title: '', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
             ]],

@@ -23,9 +23,9 @@ public class OrderController {
 
     @RequestMapping("addShoppingCart")
     @ResponseBody
-    public void addShoppingCart(int businessId, int userId, int bookId, String bookName, double price) {
-        logger.debug("businessId:" + businessId + ",userId:" + userId + ",bookId:" + bookId + ",bookName:" + bookName + ",price:" + price);
-        orderService.addShoppingCart(businessId, userId, bookId, bookName, price);
+    public void addShoppingCart(int userId, int bookId, String bookName, double price) {
+        logger.debug("userId:" + userId + ",bookId:" + bookId + ",bookName:" + bookName + ",price:" + price);
+        orderService.addShoppingCart(userId, bookId, bookName, price);
     }
 
     @RequestMapping("deleteShoppingCart")
@@ -58,16 +58,16 @@ public class OrderController {
 
     @RequestMapping("receive")
     @ResponseBody
-    public void receive(int id, int businessId, double price) {
-        logger.debug("id:" + id + ",businessId:" + businessId + ",price:" + price);
-        orderService.receive(id, businessId, price);
+    public void receive(int id, double price) {
+        logger.debug("id:" + id + ",price:" + price);
+        orderService.receive(id, price);
     }
 
     @RequestMapping("addBuy")
     @ResponseBody
-    public void addBuy(int businessId, int userId, int bookId, String bookName, double price) {
-        logger.debug("businessId:" + businessId + ",userId:" + userId + ",bookId:" + bookId + ",bookName:" + bookName + ",price:" + price);
-        orderService.addBuy(businessId, userId, bookId, bookName, price);
+    public void addBuy(int userId, int bookId, String bookName, double price) {
+        logger.debug("userId:" + userId + ",bookId:" + bookId + ",bookName:" + bookName + ",price:" + price);
+        orderService.addBuy(userId, bookId, bookName, price);
     }
 
     @RequestMapping("queryOrder")

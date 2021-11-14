@@ -45,6 +45,11 @@ public interface BookDao {
     List<Book> queryBookBySort3(@Param(value = "sort3") String sort3);
 
     /**
+     * 通过图书id查询商家id
+     */
+    int queryBusinessId(@Param(value = "id") int id);
+
+    /**
      * 商家查询该店图书信息
      */
     List<Book> businessQueryBook(@Param(value = "businessId") int businessId);

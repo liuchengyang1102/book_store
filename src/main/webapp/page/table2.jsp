@@ -61,7 +61,6 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 60, title: 'ID', sort: true},
-                {field: 'businessId', width: 80, title: '商家Id'},
                 {field: 'businessName', width: 120, title: '商家店名'},
                 {field: 'bookName', width: 120, title: '书名'},
                 {field: 'price', width: 80, title: '价格', sort: true},
@@ -103,24 +102,23 @@
                 $.ajax({
                     type: "post",
                     url: "<%=basePath%>receive",
-                    dataType: "json",
                     data: {
                         "id": data.id,
-                        "businessId": data.businessId,
                         "price": data.price
+                    }, success: function () {
+                        //执行重载
+                        table.reload('testReload', {
+                            page: {
+                                curr: 1//重新从第1页开始
+                            },
+                            where: {
+                                userId: <%=id%>,
+                                state: '待收货'
+                            }
+                        }, 'data');
+                        layer.msg('该订单已确认收货');
                     }
                 });
-                layer.msg('该订单已确认收货');
-                //执行重载
-                table.reload('testReload', {
-                    page: {
-                        curr: 1//重新从第1页开始
-                    },
-                    where: {
-                        userId: <%=id%>,
-                        state: '待收货'
-                    }
-                }, 'data');
             }
         });
 
