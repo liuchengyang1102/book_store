@@ -161,3 +161,15 @@ n
 >src/main/java/com/lcy/service/RegionalOperatorServiceImpl.java,b\c\bce4756130ba176ca98da2a61070289d54a175f4
 i
 9src/main/resources/com/lcy/dao/RegionalOperatorMapper.xml,c\d\cd2306b80fe793d6503f7df427cede8e8f169092
+a
+1src/main/resources/com/lcy/dao/BusinessMapper.xml,d\a\da9a2c33fb2198134100ff38f63db2d689237a41
+X
+(src/main/webapp/page/business-manage.jsp,d\6\d6c900ef39fd2354be0e685eb84966eadc190492
+]
+-src/main/resources/com/lcy/dao/BookMapper.xml,0\a\0af0b361c247c0a1e823c28a0e1feaf7d649d024
+Y
+)src/main/webapp/page/table/edit-price.jsp,1\c\1cb4eaad574fa25e2db18c9d7f76f429f361a181
+W
+'src/main/webapp/page/table/recharge.jsp,9\a\9a51c3b11cfcb410621a232c0d1ff6ca7956489e
+U
+%src/main/webapp/page/user-balance.jsp,d\d\dd70ae39dafa11b3f74d0c17de57d983d63f8119

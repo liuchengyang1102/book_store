@@ -15,7 +15,7 @@ public interface UserDao {
     public User userLogin(@Param(value = "username") String username, @Param(value = "password") String password);
 
     /**
-     * 商家注册
+     * 用户注册
      */
     public int addUser(@Param(value = "username") String username, @Param(value = "password") String password,
                        @Param(value = "name") String name);

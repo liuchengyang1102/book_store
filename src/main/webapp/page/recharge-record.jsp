@@ -17,7 +17,7 @@
 
 <html>
 <head>
-    <title>用户余额钱包</title>
+    <title>充值记录</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -35,9 +35,7 @@
 
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
-        <script type="text/html" id="currentTableBar">
-            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="recharge">充值</a>
-        </script>
+        <script type="text/html" id="currentTableBar"></script>
 
     </div>
 </div>
@@ -50,7 +48,7 @@
 
         table.render({
             elem: '#currentTableId',
-            url: '<%=basePath%>queryBalance',
+            url: '<%=basePath%>queryRechargeRecord',
             toolbar: '#toolbarDemo',
             defaultToolbar: ['filter', 'exports', 'print', {
                 title: '提示',
@@ -59,8 +57,9 @@
             }],
             cols: [[
                 {type: "checkbox", width: 50},
-                {field: 'balance', width: 140, title: '用户余额'},
-                {title: '操作', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
+                {field: 'amountOfMoney', width: 140, title: '充值金额'},
+                {field: 'time', width: 240, title: '充值时间'},
+                {title: '', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
             ]],
             limits: [10, 15, 20, 25, 50, 100],
             limit: 15,
@@ -75,7 +74,7 @@
                 curr: 1//重新从第1页开始
             },
             where: {
-                id: <%=id%>
+                userId: <%=id%>
             }
         }, 'data');
 
@@ -93,33 +92,6 @@
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
-            if (obj.event === 'recharge') {
-                var index = layer.open({
-                    title: '用户充值',
-                    type: 2,
-                    shade: 0.2,
-                    maxmin: true,
-                    shadeClose: true,
-                    area: ['25%', '35%'],
-                    content: '../page/table/recharge.jsp',
-                    btn: ['确认充值'],
-                    yes: function (index, layero) {
-                        var money = $(layero).find("iframe")[0].contentWindow.getInput();
-                        if (typeof (money) != 'undefined') {
-                            $.ajax({
-                                type: "post",
-                                url: "<%=basePath%>recharge",
-                                dataType: "json",
-                                data: {
-                                    "id":<%=id%>,
-                                    "money": money
-                                }
-                            });
-                            alert('充值成功！');
-                        }
-                    }
-                });
-            }
         });
 
     });

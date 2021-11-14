@@ -2,12 +2,15 @@ package com.lcy.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.lcy.dao.RechargeRecordDao;
 import com.lcy.dao.UserDao;
 import com.lcy.po.User;
 import com.lcy.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,6 +21,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;
+    @Autowired
+    private RechargeRecordDao rechargeRecordDao;
 
     @Override
     public Result<User> userLogin(String username, String password) {
@@ -42,6 +47,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void recharge(int id, int money) {
-        userDao.recharge(id,money);
+        userDao.recharge(id, money);
+        Date date = new Date();
+        SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        rechargeRecordDao.addRechargeRecord(id, money, dateFormat.format(date));
     }
 }
