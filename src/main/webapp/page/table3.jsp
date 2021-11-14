@@ -121,6 +121,7 @@
                                 "content": arr.content
                             }
                         });
+                        alert('添加评论成功！');
                     }
                 });
             }

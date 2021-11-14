@@ -30,6 +30,7 @@
 
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加图书 </button>
             </div>
         </script>
 
@@ -100,7 +101,29 @@
          * toolbar监听事件
          */
         table.on('toolbar(currentTableFilter)', function (obj) {
-
+            if (obj.event === 'add') {  // 监听添加操作
+                var index = layer.open({
+                    title: '添加图书',
+                    type: 2,
+                    shade: 0.2,
+                    maxmin: true,
+                    shadeClose: true,
+                    area: ['100%', '100%'],
+                    content: '../page/table/addBook.jsp',
+                    btn: ['添加图书'],
+                    yes: function (index, layero) {
+                        var arr = $(layero).find("iframe")[0].contentWindow.submitComment();
+                        $.ajax({
+                            type: "post",
+                            url: "<%=basePath%>addBook",
+                            dataType: "json",
+                            data: {
+                            }
+                        });
+                        alert('添加图书成功！');
+                    }
+                });
+            }
         });
 
         //监听表格复选框选择
@@ -119,7 +142,7 @@
                     shadeClose: true,
                     area: ['25%', '35%'],
                     content: '../page/table/edit-price.jsp',
-                    btn: ['确认充值'],
+                    btn: ['确认修改'],
                     yes: function (index, layero) {
                         var price = $(layero).find("iframe")[0].contentWindow.getInput();
                         if (typeof (price) != 'undefined') {
@@ -132,6 +155,7 @@
                                     "price": price
                                 }
                             });
+                            alert('修改价格成功！');
                         }
                     }
                 });
