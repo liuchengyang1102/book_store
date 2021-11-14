@@ -23,10 +23,11 @@ public class BookController {
 
     @RequestMapping("/queryBook")
     @ResponseBody
-    public Result<Book> queryBook(@RequestParam(defaultValue = "") String name, String author, String press,
+    public Result<Book> queryBook(@RequestParam(defaultValue = "") String name, String author, String press, String sort1, String sort2, String sort3,
                                   @RequestParam(defaultValue = "-1") double priceMin, @RequestParam(defaultValue = "-1") double priceMax,
                                   @RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit) {
-        logger.debug("name:" + name + ",author:" + author + ",press:" + press + ",priceMin:" + priceMin + ",priceMax:" + priceMax);
+        logger.debug("name:" + name + ",author:" + author + ",press:" + press + ",sort1:" + sort1 + ",sort2:" + sort2 +
+                ",sort3:" + sort3 + ",priceMin:" + priceMin + ",priceMax:" + priceMax);
         Result<Book> books = null;
         if (priceMin != -1 && priceMax != -1) {
             books = bookService.queryBookByPrice(priceMin, priceMax, page, limit);
@@ -34,6 +35,12 @@ public class BookController {
             books = bookService.queryBookByAuthor(author, page, limit);
         } else if (press != null) {
             books = bookService.queryBookByPress(press, page, limit);
+        } else if (sort1 != null) {
+            books = bookService.queryBookBySort1(sort1, page, limit);
+        } else if (sort2 != null) {
+            books = bookService.queryBookBySort2(sort2, page, limit);
+        } else if (sort3 != null) {
+            books = bookService.queryBookBySort3(sort3, page, limit);
         } else {
             books = bookService.queryBookByName(name, page, limit);
         }
@@ -59,6 +66,6 @@ public class BookController {
     @ResponseBody
     public void editPrice(@RequestParam(defaultValue = "-1") int id, double price) {
         logger.debug("id:" + id + ",price" + price);
-        bookService.editPrice(id,price);
+        bookService.editPrice(id, price);
     }
 }

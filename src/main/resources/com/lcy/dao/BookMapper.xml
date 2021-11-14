@@ -87,6 +87,66 @@
         and business.state = '营业中'
     </select>
 
+    <select id="queryBookBySort1" resultType="Book">
+        select book.id,
+        book.businessId,
+        business.name as "businessName",
+        book.number,
+        book.count,
+        book.name,
+        book.author,
+        book.press,
+        book.impression,
+        book.synopsis,
+        book.price,
+        book.ext
+        from book,business
+        where book.sort1 like '%${sort1}%'
+        and book.businessId=business.id
+        and book.count > 0
+        and business.state = '营业中'
+    </select>
+
+    <select id="queryBookBySort2" resultType="Book">
+        select book.id,
+        book.businessId,
+        business.name as "businessName",
+        book.number,
+        book.count,
+        book.name,
+        book.author,
+        book.press,
+        book.impression,
+        book.synopsis,
+        book.price,
+        book.ext
+        from book,business
+        where book.sort2 like '%${sort2}%'
+        and book.businessId=business.id
+        and book.count > 0
+        and business.state = '营业中'
+    </select>
+
+    <select id="queryBookBySort3" resultType="Book">
+        select book.id,
+        book.businessId,
+        business.name as "businessName",
+        book.number,
+        book.count,
+        book.name,
+        book.author,
+        book.press,
+        book.impression,
+        book.synopsis,
+        book.price,
+        book.ext
+        from book,business
+        where book.sort3 like '%${sort3}%'
+        and book.businessId=business.id
+        and book.count > 0
+        and business.state = '营业中'
+    </select>
+
     <select id="businessQueryBook" resultType="Book">
         select * from book where businessId = #{businessId}
     </select>

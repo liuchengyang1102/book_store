@@ -30,6 +30,21 @@ public interface BookDao {
     List<Book> queryBookByPrice(@Param(value = "priceMin") double priceMin, @Param(value = "priceMax") double priceMax);
 
     /**
+     * 通过一级分类查询图书信息
+     */
+    List<Book> queryBookBySort1(@Param(value = "sort1") String sort1);
+
+    /**
+     * 通过二级分类查询图书信息
+     */
+    List<Book> queryBookBySort2(@Param(value = "sort2") String sort2);
+
+    /**
+     * 通过三级分类查询图书信息
+     */
+    List<Book> queryBookBySort3(@Param(value = "sort3") String sort3);
+
+    /**
      * 商家查询该店图书信息
      */
     List<Book> businessQueryBook(@Param(value = "businessId") int businessId);

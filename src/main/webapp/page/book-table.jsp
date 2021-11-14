@@ -32,10 +32,130 @@
         #layui-inline2 {
             display: none;
         }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 16px;
+            background-color: #EDEDED;
+            font-style: inherit;
+            color: #757576;
+        }
+
+        .main {
+            width: 100%;
+            margin-left: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #757576;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            display: inline-block;
+            width: 240px;
+            height: 40px;
+            text-align: left;
+            line-height: 40px;
+        }
+
+        li a:hover {
+            color: red;
+        }
+
+        .frist {
+            opacity: 0;
+        }
+
+        .frist li {
+            float: none;
+            position: relative;
+        }
+
+        li a:hover {
+            color: red;
+            transition: all 0.5s;
+        }
+
+        :hover {
+            transition: all 2s;
+        }
+
+        .second {
+            opacity: 0;
+            margin: -40px 0 0 100px;
+            padding: 0px;
+            position: absolute;
+        }
+
+        .nav_one:hover .frist {
+            opacity: 1;
+            transition: all 2s;
+        }
+
+        .nav_two:hover .second {
+            opacity: 1;
+            transition: all 2s;
+        }
     </style>
 </head>
 <body>
 <div class="layuimini-container">
+    <div class="nav main" style="height: 160px">
+        <ul id="nav">
+            <li class="nav_one"><a href="#" class="a1">计算机类</a>
+                <ul class="frist">
+                    <li class="nav_two">
+                        <a href="#" class="a2">编程语言类</a>
+                        <ul class="second">
+                            <li><a href="#" class="a3">Java语言类</a></li>
+                            <li><a href="#" class="a3">C语言类</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav_one"><a href="#" class="a1">网络文学</a>
+                <ul class="frist">
+                    <li class="nav_two">
+                        <a href="#" class="a2">小说类</a>
+                        <ul class="second">
+                            <li><a href="#" class="a3">玄幻小说</a></li>
+                            <li><a href="#" class="a3">悬疑小说</a></li>
+                            <li><a href="#" class="a3">推理小说</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav_one"><a href="#" class="a1">教育书籍</a>
+                <ul class="frist">
+                    <li class="nav_two">
+                        <a href="#" class="a2">外语类</a>
+                        <ul class="second">
+                            <li><a href="#" class="a3">大学英语</a></li>
+                            <li><a href="#" class="a3">中学英语</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_two" class="a2">
+                        <a href="#">物理类</a>
+                        <ul class="second">
+                            <li><a href="#" class="a3">大学物理</a></li>
+                            <li><a href="#" class="a3">中学物理</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     <div class="layuimini-main">
 
         <div class="demoTable">
@@ -87,6 +207,9 @@
     var input = document.querySelector('.layui-input');
     var inline1 = document.querySelector('#layui-inline1');
     var inline2 = document.querySelector('#layui-inline2');
+    var sort1;
+    var sort2;
+    var sort3;
 
     function getSelectValue() {
         var myselect = document.getElementById("select");
@@ -123,6 +246,45 @@
         var $ = layui.jquery,
             form = layui.form,
             table = layui.table;
+
+        $('.a1').click(function () {
+            sort1 = $(this).text();
+            //执行重载
+            table.reload('testReload', {
+                page: {
+                    curr: 1//重新从第1页开始
+                },
+                where: {
+                    sort1: sort1
+                }
+            }, 'data');
+        });
+
+        $('.a2').click(function () {
+            sort2 = $(this).text();
+            //执行重载
+            table.reload('testReload', {
+                page: {
+                    curr: 1//重新从第1页开始
+                },
+                where: {
+                    sort2: sort2
+                }
+            }, 'data');
+        });
+
+        $('.a3').click(function () {
+            sort3 = $(this).text();
+            //执行重载
+            table.reload('testReload', {
+                page: {
+                    curr: 1//重新从第1页开始
+                },
+                where: {
+                    sort3: sort3
+                }
+            }, 'data');
+        });
 
         table.render({
             elem: '#currentTableId',

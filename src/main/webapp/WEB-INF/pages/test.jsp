@@ -1,25 +1,108 @@
-<%@ page import="com.lcy.util.Result" %>
-<%@ page import="com.lcy.po.User" %>
-<%@ page import="java.util.List" %><%--
-  Created by IntelliJ IDEA.
-  User: 刘呈洋
-  Date: 2021/10/13
-  Time: 13:48
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
-<%
-    User loginUser = (User) request.getSession().getAttribute("loginUser");
-    String name = loginUser.getName();
-%>
-
+<!DOCTYPE html>
 <html>
 <head>
-    <title>测试spring mvc</title>
+    <meta charset="utf-8" />
+    <title>三级导航菜单</title>
 </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-size: 16px;
+        background-color:#EDEDED ;
+        font-style: inherit;
+        color:#757576 ;
+    }
+    .main{
+        width: 1050px;
+        margin: 0 auto;
+    }
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }
+    a{
+        text-decoration: none;
+        outline: none;
+        color:#757576 ;
+    }
+    ul,ol{
+        list-style: none;
+    }
+    .clear{
+        clear: both;
+    }
+    .clearfix{
+        *zoom:1;
+    }
+    li{
+        float: left;
+        display: inline-block;
+        width: 120px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
+    li a:hover{
+        color: red;
+    }
+    #frist {
+        opacity: 0;
+    }
+    #frist li{
+        float: none;
+        position: relative;
+    }
+    li a:hover{
+        color: red;
+        transition: all 0.5s;
+    }
+    :hover{
+        transition: all 2s;
+    }
+    #second {
+        opacity: 0;
+        margin: -40px 0 0 80px;
+        padding: 0px;
+        position: absolute;
+    }
+    #nav_one:hover #frist{
+        opacity:1;
+        transition: all 2s;
+    }
+    #nav_two:hover #second{
+        opacity:1;
+        transition: all 2s;
+    }
+</style>
+
 <body>
-您好，<%=name%>
-测试人：刘呈洋
+<div class="nav main">
+    <ul id="nav">
+        <li id="nav_one"><a href="#">一级</a>
+            <ul id="frist">
+                <li id="nav_two" class="nav_two">
+                    <a href="#" >二级</a>
+                    <ul id="second">
+                        <li><a href="#">三级</a></li>
+                        <li><a href="#">三级</a></li>
+                        <li><a href="#">三级</a></li>
+                    </ul>
+                </li>
+                <li class="nav_two"><a href="#">二级</a></li>
+                <li class="nav_two"><a href="#">二级</a></li>
+            </ul>
+        </li>
+        <li><a href="#">一级</a></li>
+        <li><a href="#">一级</a></li>
+        <li><a href="#">一级</a></li>
+        <li><a href="#">一级</a></li>
+    </ul>
+</div>
 </body>
 </html>

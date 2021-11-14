@@ -60,6 +60,36 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public Result<Book> queryBookBySort1(String sort1, Integer page, Integer limit) {
+        //传入参数，当前页、每页条数
+        PageHelper.startPage(page, limit);
+        List<Book> books = bookDao.queryBookBySort1(sort1);
+        //通过包装获取分页的其它值信息
+        PageInfo<Book> pageInfo = new PageInfo<>(books);
+        return Result.bulid(0, pageInfo.getTotal(), books);
+    }
+
+    @Override
+    public Result<Book> queryBookBySort2(String sort2, Integer page, Integer limit) {
+        //传入参数，当前页、每页条数
+        PageHelper.startPage(page, limit);
+        List<Book> books = bookDao.queryBookBySort2(sort2);
+        //通过包装获取分页的其它值信息
+        PageInfo<Book> pageInfo = new PageInfo<>(books);
+        return Result.bulid(0, pageInfo.getTotal(), books);
+    }
+
+    @Override
+    public Result<Book> queryBookBySort3(String sort3, Integer page, Integer limit) {
+        //传入参数，当前页、每页条数
+        PageHelper.startPage(page, limit);
+        List<Book> books = bookDao.queryBookBySort3(sort3);
+        //通过包装获取分页的其它值信息
+        PageInfo<Book> pageInfo = new PageInfo<>(books);
+        return Result.bulid(0, pageInfo.getTotal(), books);
+    }
+
+    @Override
     public Result<Book> businessQueryBook(int businessId, Integer page, Integer limit) {
         //传入参数，当前页、每页条数
         PageHelper.startPage(page, limit);

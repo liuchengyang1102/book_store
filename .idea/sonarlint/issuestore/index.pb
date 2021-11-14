@@ -165,8 +165,6 @@ a
 1src/main/resources/com/lcy/dao/BusinessMapper.xml,d\a\da9a2c33fb2198134100ff38f63db2d689237a41
 X
 (src/main/webapp/page/business-manage.jsp,d\6\d6c900ef39fd2354be0e685eb84966eadc190492
-]
--src/main/resources/com/lcy/dao/BookMapper.xml,0\a\0af0b361c247c0a1e823c28a0e1feaf7d649d024
 Y
 )src/main/webapp/page/table/edit-price.jsp,1\c\1cb4eaad574fa25e2db18c9d7f76f429f361a181
 W
