@@ -1,0 +1,214 @@
+2021-11-15 13:01:21  [ RMI TCP Connection(5)-127.0.0.1:0 ] - [ INFO ]  MLog clients using log4j logging.
+2021-11-15 13:01:21  [ RMI TCP Connection(5)-127.0.0.1:71 ] - [ INFO ]  Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2021-11-15 13:01:21  [ RMI TCP Connection(5)-127.0.0.1:104 ] - [ DEBUG ]  MBean: com.mchange.v2.c3p0:type=PooledDataSource[1hgeffgal9fbtxwxhiqpx|688ff30a] registered.
+2021-11-15 13:01:26  [ http-nio-8080-exec-2:4695 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 13:01:27  [ http-nio-8080-exec-2:5443 ] - [ DEBUG ]  incremented pending_acquires: 1
+2021-11-15 13:01:27  [ http-nio-8080-exec-2:5445 ] - [ DEBUG ]  incremented pending_acquires: 2
+2021-11-15 13:01:27  [ http-nio-8080-exec-2:5447 ] - [ DEBUG ]  incremented pending_acquires: 3
+2021-11-15 13:01:27  [ http-nio-8080-exec-2:5449 ] - [ DEBUG ]  com.mchange.v2.resourcepool.BasicResourcePool@790ad770 config: [start -> 3; min -> 3; max -> 15; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; mox_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false]
+2021-11-15 13:01:27  [ http-nio-8080-exec-2:5450 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgeffgal9fbtxwxhiqpx|688ff30a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgeffgal9fbtxwxhiqpx|688ff30a, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/bookstore?serverTimezone=GMT, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2021-11-15 13:01:27  [ http-nio-8080-exec-2:5451 ] - [ DEBUG ]  acquire test -- pool size: 0; target_pool_size: 3; desired target? 1
+2021-11-15 13:01:27  [ http-nio-8080-exec-2:5451 ] - [ DEBUG ]  awaitAvailable(): [unknown]
+2021-11-15 13:01:27  [ http-nio-8080-exec-2:5452 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@790ad770 [managed: 0, unused: 0, excluded: 0]
+2021-11-15 13:01:28  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1:7413 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@40e264ff.acquireResource() returning. 
+2021-11-15 13:01:28  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2:7413 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@40e264ff.acquireResource() returning. 
+2021-11-15 13:01:28  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0:7413 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@40e264ff.acquireResource() returning. 
+2021-11-15 13:01:28  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1:7417 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@790ad770 [managed: 1, unused: 1, excluded: 0]
+2021-11-15 13:01:28  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1:7418 ] - [ DEBUG ]  decremented pending_acquires: 2
+2021-11-15 13:01:28  [ http-nio-8080-exec-2:7419 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@790ad770 [managed: 1, unused: 0, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@33df3715)
+2021-11-15 13:01:28  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0:7420 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@790ad770 [managed: 2, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@33df3715)
+2021-11-15 13:01:28  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0:7421 ] - [ DEBUG ]  decremented pending_acquires: 1
+2021-11-15 13:01:28  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2:7421 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@790ad770 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@33df3715)
+2021-11-15 13:01:28  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2:7421 ] - [ DEBUG ]  decremented pending_acquires: 0
+2021-11-15 13:01:29  [ http-nio-8080-exec-2:7683 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@790ad770 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@33df3715)
+2021-11-15 13:21:51  [ RMI TCP Connection(3)-127.0.0.1:0 ] - [ INFO ]  MLog clients using log4j logging.
+2021-11-15 13:21:52  [ RMI TCP Connection(3)-127.0.0.1:78 ] - [ INFO ]  Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2021-11-15 13:21:52  [ RMI TCP Connection(3)-127.0.0.1:110 ] - [ DEBUG ]  MBean: com.mchange.v2.c3p0:type=PooledDataSource[1hgeffgal9g27bi16kola3|440d0519] registered.
+2021-11-15 13:21:58  [ http-nio-8080-exec-2:6349 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 13:21:58  [ http-nio-8080-exec-2:6675 ] - [ DEBUG ]  incremented pending_acquires: 1
+2021-11-15 13:21:58  [ http-nio-8080-exec-2:6675 ] - [ DEBUG ]  incremented pending_acquires: 2
+2021-11-15 13:21:58  [ http-nio-8080-exec-2:6676 ] - [ DEBUG ]  incremented pending_acquires: 3
+2021-11-15 13:21:58  [ http-nio-8080-exec-2:6677 ] - [ DEBUG ]  com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 config: [start -> 3; min -> 3; max -> 15; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; mox_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false]
+2021-11-15 13:21:58  [ http-nio-8080-exec-2:6678 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgeffgal9g27bi16kola3|440d0519, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgeffgal9g27bi16kola3|440d0519, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/bookstore?serverTimezone=GMT, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2021-11-15 13:21:58  [ http-nio-8080-exec-2:6678 ] - [ DEBUG ]  acquire test -- pool size: 0; target_pool_size: 3; desired target? 1
+2021-11-15 13:21:58  [ http-nio-8080-exec-2:6679 ] - [ DEBUG ]  awaitAvailable(): [unknown]
+2021-11-15 13:21:58  [ http-nio-8080-exec-2:6679 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 0, unused: 0, excluded: 0]
+2021-11-15 13:21:59  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0:8006 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@644c784f.acquireResource() returning. 
+2021-11-15 13:21:59  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2:8006 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@644c784f.acquireResource() returning. 
+2021-11-15 13:21:59  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1:8006 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@644c784f.acquireResource() returning. 
+2021-11-15 13:21:59  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0:8011 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 1, unused: 1, excluded: 0]
+2021-11-15 13:21:59  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0:8014 ] - [ DEBUG ]  decremented pending_acquires: 2
+2021-11-15 13:21:59  [ http-nio-8080-exec-2:8014 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 1, unused: 0, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:21:59  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1:8016 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 2, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:21:59  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1:8016 ] - [ DEBUG ]  decremented pending_acquires: 1
+2021-11-15 13:21:59  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2:8017 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:21:59  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2:8017 ] - [ DEBUG ]  decremented pending_acquires: 0
+2021-11-15 13:22:00  [ http-nio-8080-exec-2:8299 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:22:00  [ http-nio-8080-exec-2:8300 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@1f695178: close() called more than once.
+2021-11-15 13:28:42  [ http-nio-8080-exec-4:410845 ] - [ DEBUG ]  接口是：queryBusiness，入参是——area:null
+2021-11-15 13:28:42  [ http-nio-8080-exec-4:410852 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:28:42  [ http-nio-8080-exec-3:410853 ] - [ DEBUG ]  接口是：queryBusiness，入参是——area:未登录
+2021-11-15 13:28:42  [ http-nio-8080-exec-3:410856 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:28:42  [ http-nio-8080-exec-4:410857 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:28:42  [ http-nio-8080-exec-4:410859 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@63e77afa: close() called more than once.
+2021-11-15 13:28:42  [ http-nio-8080-exec-3:410861 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:28:42  [ http-nio-8080-exec-3:410861 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@209d4972: close() called more than once.
+2021-11-15 13:32:50  [ http-nio-8080-exec-3:658719 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 13:32:50  [ http-nio-8080-exec-3:658721 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:32:50  [ http-nio-8080-exec-3:658730 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:32:50  [ http-nio-8080-exec-3:658730 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@293ef548: close() called more than once.
+2021-11-15 13:33:29  [ http-nio-8080-exec-4:697247 ] - [ DEBUG ]  接口是：businessQueryBook，入参是——businessId:-1
+2021-11-15 13:33:29  [ http-nio-8080-exec-4:697248 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:33:29  [ http-nio-8080-exec-4:697249 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:33:29  [ http-nio-8080-exec-3:697251 ] - [ DEBUG ]  接口是：businessQueryBook，入参是——businessId:0
+2021-11-15 13:33:29  [ http-nio-8080-exec-3:697254 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:33:29  [ http-nio-8080-exec-3:697256 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:33:29  [ http-nio-8080-exec-3:697257 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@344ffa3e: close() called more than once.
+2021-11-15 13:33:54  [ http-nio-8080-exec-9:722741 ] - [ DEBUG ]  接口是：businessQueryOrder，入参是——businessId:-1
+2021-11-15 13:33:54  [ http-nio-8080-exec-9:722745 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:33:54  [ http-nio-8080-exec-9:722748 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:33:54  [ http-nio-8080-exec-9:722748 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@62af21bb: close() called more than once.
+2021-11-15 13:33:54  [ http-nio-8080-exec-10:722748 ] - [ DEBUG ]  接口是：businessQueryOrder，入参是——businessId:0
+2021-11-15 13:33:54  [ http-nio-8080-exec-10:722755 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:33:54  [ http-nio-8080-exec-10:722758 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:36:30  [ http-nio-8080-exec-4:878242 ] - [ DEBUG ]  接口是：businessQueryOrderAll，入参是——businessId:-1
+2021-11-15 13:36:30  [ http-nio-8080-exec-4:878245 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:36:30  [ http-nio-8080-exec-4:878248 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:36:30  [ http-nio-8080-exec-3:878249 ] - [ DEBUG ]  接口是：businessQueryOrderAll，入参是——businessId:0
+2021-11-15 13:36:30  [ http-nio-8080-exec-3:878251 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:36:30  [ http-nio-8080-exec-3:878256 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:36:33  [ http-nio-8080-exec-5:881348 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 13:36:33  [ http-nio-8080-exec-5:881350 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:36:33  [ http-nio-8080-exec-5:881360 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:36:33  [ http-nio-8080-exec-5:881361 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@277278b9: close() called more than once.
+2021-11-15 13:46:54  [ http-nio-8080-exec-8:1502776 ] - [ DEBUG ]  接口是：queryOrder，入参是——userId:-1
+2021-11-15 13:46:54  [ http-nio-8080-exec-8:1502778 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:54  [ http-nio-8080-exec-8:1502781 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:54  [ http-nio-8080-exec-9:1502787 ] - [ DEBUG ]  接口是：queryOrder，入参是——userId:0
+2021-11-15 13:46:54  [ http-nio-8080-exec-9:1502788 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:54  [ http-nio-8080-exec-9:1502794 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:54  [ http-nio-8080-exec-9:1502795 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@43cc77e6: close() called more than once.
+2021-11-15 13:46:56  [ http-nio-8080-exec-2:1505002 ] - [ DEBUG ]  接口是：queryOrder，入参是——userId:-1
+2021-11-15 13:46:56  [ http-nio-8080-exec-2:1505003 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:56  [ http-nio-8080-exec-2:1505005 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:56  [ http-nio-8080-exec-2:1505005 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@64cb1919: close() called more than once.
+2021-11-15 13:46:56  [ http-nio-8080-exec-1:1505011 ] - [ DEBUG ]  接口是：queryOrder，入参是——userId:0
+2021-11-15 13:46:56  [ http-nio-8080-exec-1:1505013 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:56  [ http-nio-8080-exec-1:1505015 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:56  [ http-nio-8080-exec-1:1505016 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@71f4edb7: close() called more than once.
+2021-11-15 13:46:57  [ http-nio-8080-exec-4:1505400 ] - [ DEBUG ]  接口是：queryOrder，入参是——userId:-1
+2021-11-15 13:46:57  [ http-nio-8080-exec-4:1505402 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:57  [ http-nio-8080-exec-4:1505406 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:57  [ http-nio-8080-exec-3:1505409 ] - [ DEBUG ]  接口是：queryOrder，入参是——userId:0
+2021-11-15 13:46:57  [ http-nio-8080-exec-3:1505411 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:57  [ http-nio-8080-exec-3:1505414 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:57  [ http-nio-8080-exec-3:1505415 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@406026f1: close() called more than once.
+2021-11-15 13:46:57  [ http-nio-8080-exec-7:1505686 ] - [ DEBUG ]  接口是：queryOrder，入参是——userId:-1
+2021-11-15 13:46:57  [ http-nio-8080-exec-7:1505687 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:57  [ http-nio-8080-exec-7:1505689 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:57  [ http-nio-8080-exec-7:1505689 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@1c778409: close() called more than once.
+2021-11-15 13:46:57  [ http-nio-8080-exec-8:1505694 ] - [ DEBUG ]  接口是：queryOrder，入参是——userId:0
+2021-11-15 13:46:57  [ http-nio-8080-exec-8:1505696 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:57  [ http-nio-8080-exec-8:1505700 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:46:57  [ http-nio-8080-exec-8:1505700 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@18c2761d: close() called more than once.
+2021-11-15 13:48:33  [ http-nio-8080-exec-1:1601853 ] - [ DEBUG ]  接口是：queryBalance，入参是——id:0
+2021-11-15 13:48:33  [ http-nio-8080-exec-1:1601854 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:48:33  [ http-nio-8080-exec-5:1601854 ] - [ DEBUG ]  接口是：queryBalance，入参是——id:0
+2021-11-15 13:48:33  [ http-nio-8080-exec-5:1601856 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:48:33  [ http-nio-8080-exec-1:1601857 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:48:33  [ http-nio-8080-exec-1:1601862 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@1fd74e26: close() called more than once.
+2021-11-15 13:48:33  [ http-nio-8080-exec-5:1601863 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 13:48:33  [ http-nio-8080-exec-5:1601864 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@5db68287: close() called more than once.
+2021-11-15 14:02:22  [ http-nio-8080-exec-4:2430167 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:02:22  [ http-nio-8080-exec-4:2430170 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:02:22  [ http-nio-8080-exec-4:2430181 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:02:22  [ http-nio-8080-exec-4:2430181 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@5385e1cd: close() called more than once.
+2021-11-15 14:02:26  [ http-nio-8080-exec-7:2434337 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:02:26  [ http-nio-8080-exec-7:2434340 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:02:26  [ http-nio-8080-exec-7:2434346 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:02:26  [ http-nio-8080-exec-7:2434346 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@443a3ee0: close() called more than once.
+2021-11-15 14:04:00  [ http-nio-8080-exec-6:2528351 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:04:00  [ http-nio-8080-exec-6:2528354 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:04:00  [ http-nio-8080-exec-6:2528361 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:04:00  [ http-nio-8080-exec-6:2528362 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@522e2a7: close() called more than once.
+2021-11-15 14:15:01  [ http-nio-8080-exec-9:3189654 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:15:01  [ http-nio-8080-exec-9:3189656 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:15:01  [ http-nio-8080-exec-9:3189667 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:15:01  [ http-nio-8080-exec-9:3189667 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@2e754ece: close() called more than once.
+2021-11-15 14:15:15  [ http-nio-8080-exec-6:3203707 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:15:15  [ http-nio-8080-exec-6:3203708 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:15:15  [ http-nio-8080-exec-6:3203715 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:15:15  [ http-nio-8080-exec-6:3203716 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@345aa570: close() called more than once.
+2021-11-15 14:26:16  [ http-nio-8080-exec-6:3864108 ] - [ DEBUG ]  接口是：businessQueryBook，入参是——businessId:-1
+2021-11-15 14:26:16  [ http-nio-8080-exec-6:3864109 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:26:16  [ http-nio-8080-exec-6:3864111 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:26:16  [ http-nio-8080-exec-7:3864116 ] - [ DEBUG ]  接口是：businessQueryBook，入参是——businessId:0
+2021-11-15 14:26:16  [ http-nio-8080-exec-7:3864117 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:26:16  [ http-nio-8080-exec-7:3864120 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:26:16  [ http-nio-8080-exec-7:3864120 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@148a827f: close() called more than once.
+2021-11-15 14:26:31  [ http-nio-8080-exec-9:3879367 ] - [ DEBUG ]  接口是：businessLogin，入参是——username:liucy,password:1102
+2021-11-15 14:26:31  [ http-nio-8080-exec-9:3879367 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:26:31  [ http-nio-8080-exec-9:3879367 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:26:31  [ http-nio-8080-exec-9:3879367 ] - [ DEBUG ]  businessResult:1
+2021-11-15 14:26:34  [ http-nio-8080-exec-8:3882714 ] - [ DEBUG ]  接口是：businessQueryBook，入参是——businessId:-1
+2021-11-15 14:26:34  [ http-nio-8080-exec-8:3882715 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:26:34  [ http-nio-8080-exec-8:3882717 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:26:34  [ http-nio-8080-exec-8:3882717 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@2b6ba88f: close() called more than once.
+2021-11-15 14:26:34  [ http-nio-8080-exec-9:3882721 ] - [ DEBUG ]  接口是：businessQueryBook，入参是——businessId:1
+2021-11-15 14:26:34  [ http-nio-8080-exec-9:3882722 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:26:34  [ http-nio-8080-exec-9:3882726 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:50  [ http-nio-8080-exec-3:4138088 ] - [ DEBUG ]  接口是：queryState，入参是——id:-1
+2021-11-15 14:30:50  [ http-nio-8080-exec-3:4138090 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:50  [ http-nio-8080-exec-3:4138091 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:50  [ http-nio-8080-exec-3:4138092 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@247f254c: close() called more than once.
+2021-11-15 14:30:50  [ http-nio-8080-exec-4:4138095 ] - [ DEBUG ]  接口是：queryState，入参是——id:1
+2021-11-15 14:30:50  [ http-nio-8080-exec-4:4138099 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:50  [ http-nio-8080-exec-4:4138105 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:53  [ http-nio-8080-exec-6:4141386 ] - [ DEBUG ]  接口是：businessManage，入参是——state:营业中,id:1
+2021-11-15 14:30:53  [ http-nio-8080-exec-6:4141386 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:53  [ http-nio-8080-exec-6:4141386 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:57  [ http-nio-8080-exec-7:4145468 ] - [ DEBUG ]  接口是：businessManage，入参是——state:休息中,id:1
+2021-11-15 14:30:57  [ http-nio-8080-exec-7:4145468 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:57  [ http-nio-8080-exec-7:4145474 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:57  [ http-nio-8080-exec-8:4145486 ] - [ DEBUG ]  接口是：queryState，入参是——id:1
+2021-11-15 14:30:57  [ http-nio-8080-exec-8:4145487 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:57  [ http-nio-8080-exec-8:4145491 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:30:57  [ http-nio-8080-exec-8:4145492 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@6d330d1: close() called more than once.
+2021-11-15 14:31:10  [ http-nio-8080-exec-9:4158099 ] - [ DEBUG ]  接口是：businessManage，入参是——state:营业中,id:1
+2021-11-15 14:31:10  [ http-nio-8080-exec-9:4158099 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:31:10  [ http-nio-8080-exec-9:4158123 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:31:10  [ http-nio-8080-exec-10:4158130 ] - [ DEBUG ]  接口是：queryState，入参是——id:1
+2021-11-15 14:31:10  [ http-nio-8080-exec-10:4158130 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:31:10  [ http-nio-8080-exec-10:4158134 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:31:10  [ http-nio-8080-exec-10:4158135 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@7e5cb29a: close() called more than once.
+2021-11-15 14:32:34  [ http-nio-8080-exec-1:4242339 ] - [ DEBUG ]  接口是：queryState，入参是——id:1
+2021-11-15 14:32:34  [ http-nio-8080-exec-1:4242340 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:32:34  [ http-nio-8080-exec-1:4242344 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:32:34  [ http-nio-8080-exec-1:4242344 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@3f7f8db9: close() called more than once.
+2021-11-15 14:32:37  [ http-nio-8080-exec-5:4245601 ] - [ DEBUG ]  接口是：queryState，入参是——id:1
+2021-11-15 14:32:37  [ http-nio-8080-exec-5:4245602 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:32:37  [ http-nio-8080-exec-5:4245606 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:32:37  [ http-nio-8080-exec-5:4245607 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@6d9793a7: close() called more than once.
+2021-11-15 14:32:42  [ http-nio-8080-exec-3:4250487 ] - [ DEBUG ]  接口是：queryState，入参是——id:1
+2021-11-15 14:32:42  [ http-nio-8080-exec-3:4250492 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:32:42  [ http-nio-8080-exec-3:4250497 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:32:51  [ http-nio-8080-exec-1:4259646 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:32:51  [ http-nio-8080-exec-1:4259647 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:32:51  [ http-nio-8080-exec-1:4259653 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:33:24  [ http-nio-8080-exec-3:4292054 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:33:24  [ http-nio-8080-exec-3:4292057 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:33:24  [ http-nio-8080-exec-3:4292063 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:33:24  [ http-nio-8080-exec-3:4292064 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@7dfb65b: close() called more than once.
+2021-11-15 14:33:28  [ http-nio-8080-exec-4:4296402 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:33:28  [ http-nio-8080-exec-4:4296405 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:33:28  [ http-nio-8080-exec-4:4296410 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:33:31  [ http-nio-8080-exec-6:4299369 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:33:31  [ http-nio-8080-exec-6:4299372 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:33:31  [ http-nio-8080-exec-6:4299377 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:33:31  [ http-nio-8080-exec-6:4299378 ] - [ DEBUG ]  com.mchange.v2.c3p0.impl.NewProxyConnection@2b88b9b8: close() called more than once.
+2021-11-15 14:33:50  [ http-nio-8080-exec-8:4318555 ] - [ DEBUG ]  接口是：queryBook，入参是——name:,author:null,press:null,sort1:null,sort2:null,sort3:null,priceMin:-1.0,priceMax:-1.0
+2021-11-15 14:33:50  [ http-nio-8080-exec-8:4318557 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 14:33:50  [ http-nio-8080-exec-8:4318561 ] - [ DEBUG ]  trace com.mchange.v2.resourcepool.BasicResourcePool@41f555a8 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@731aac84)
+2021-11-15 15:00:22  [ RMI TCP Connection(2)-127.0.0.1:0 ] - [ INFO ]  MLog clients using log4j logging.
+2021-11-15 15:00:22  [ RMI TCP Connection(2)-127.0.0.1:78 ] - [ INFO ]  Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2021-11-15 15:00:22  [ RMI TCP Connection(2)-127.0.0.1:109 ] - [ DEBUG ]  MBean: com.mchange.v2.c3p0:type=PooledDataSource[1hgeffgal9jkw2t1xpxqka|50519842] registered.
