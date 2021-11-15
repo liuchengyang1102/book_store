@@ -124,24 +124,28 @@
                 }, 'data');
                 layer.msg('审核成功，该商家审核通过，已可正常登录');
             } else if (obj.event === 'failed') {
-                $.ajax({
-                    type: "post",
-                    url: "<%=basePath%>failed",
-                    dataType: "json",
-                    data: {
-                        "id": data.id
-                    }
+                layer.confirm('确定审核不通过吗？', function (index) {
+                    $.ajax({
+                        type: "post",
+                        url: "<%=basePath%>failed",
+                        dataType: "json",
+                        data: {
+                            "id": data.id
+                        }
+                    });
+                    //执行重载
+                    table.reload('testReload', {
+                        page: {
+                            curr: 1//重新从第1页开始
+                        },
+                        where: {
+                            area: "<%=area%>"
+                        }
+                    }, 'data');
+                    layer.msg('审核成功，该商家审核不通过，已删除');
+                    obj.del();
+                    layer.close(index);
                 });
-                //执行重载
-                table.reload('testReload', {
-                    page: {
-                        curr: 1//重新从第1页开始
-                    },
-                    where: {
-                        area: "<%=area%>"
-                    }
-                }, 'data');
-                layer.msg('审核成功，该商家审核不通过，已删除');
             }
         });
 

@@ -69,6 +69,15 @@
             line-height: 40px;
         }
 
+        .li3{
+            float: left;
+            display: inline-block;
+            width: 240px;
+            height: 30px;
+            text-align: left;
+            line-height: 30px;
+        }
+
         li a:hover {
             color: red;
         }
@@ -107,7 +116,6 @@
             opacity: 1;
             transition: all 2s;
         }
-
     </style>
 </head>
 <body>
@@ -119,8 +127,8 @@
                     <li class="nav_two">
                         <a href="#" class="a2">编程语言类</a>
                         <ul class="second">
-                            <li><a href="#" class="a3">Java语言类</a></li>
-                            <li><a href="#" class="a3">C语言类</a></li>
+                            <li class="li3"><a href="#" class="a3">Java语言类</a></li>
+                            <li class="li3"><a href="#" class="a3">C语言类</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -130,9 +138,9 @@
                     <li class="nav_two">
                         <a href="#" class="a2">小说类</a>
                         <ul class="second">
-                            <li><a href="#" class="a3">玄幻小说</a></li>
-                            <li><a href="#" class="a3">悬疑小说</a></li>
-                            <li><a href="#" class="a3">推理小说</a></li>
+                            <li class="li3"><a href="#" class="a3">玄幻小说</a></li>
+                            <li class="li3"><a href="#" class="a3">悬疑小说</a></li>
+                            <li class="li3"><a href="#" class="a3">推理小说</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -142,15 +150,15 @@
                     <li class="nav_two">
                         <a href="#" class="a2">外语类</a>
                         <ul class="second">
-                            <li><a href="#" class="a3">大学英语</a></li>
-                            <li><a href="#" class="a3">中学英语</a></li>
+                            <li class="li3"><a href="#" class="a3">大学英语</a></li>
+                            <li class="li3"><a href="#" class="a3">中学英语</a></li>
                         </ul>
                     </li>
                     <li class="nav_two" class="a2">
                         <a href="#">物理类</a>
                         <ul class="second">
-                            <li><a href="#" class="a3">大学物理</a></li>
-                            <li><a href="#" class="a3">中学物理</a></li>
+                            <li class="li3"><a href="#" class="a3">大学物理</a></li>
+                            <li class="li3"><a href="#" class="a3">中学物理</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -423,7 +431,7 @@
                             "price": data.price
                         }
                     });
-                    layer.msg('购买成功，请前往订单列表完成付款');
+                    layer.msg('已加入订单，请尽快前往付款');
                 }
             }
         });

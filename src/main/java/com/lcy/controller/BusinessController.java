@@ -3,8 +3,7 @@ package com.lcy.controller;
 import com.lcy.po.Business;
 import com.lcy.service.BusinessService;
 import com.lcy.util.Result;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
@@ -24,7 +23,7 @@ import java.util.UUID;
  */
 @Controller
 public class BusinessController {
-    private final static Log logger = LogFactory.getLog(BusinessController.class);
+    private final static Logger logger = Logger.getLogger(BusinessController.class);
     private final String filePathDir = "D:\\JAVA\\IDEA\\java_code\\ssm_code\\book_store\\src\\main\\webapp\\images\\businessLog\\";
 
     @Autowired
@@ -43,7 +42,7 @@ public class BusinessController {
     @RequestMapping("businessLogin")
     @ResponseBody
     public Result<Business> businessLogin(String username, String password, HttpServletRequest request) {
-        logger.debug("username:" + username + ",password:" + password);
+        logger.debug("接口是：businessLogin，入参是——" + "username:" + username + ",password:" + password);
         Result<Business> businessResult = businessService.businessLogin(username, password);
         logger.debug("businessResult:" + businessResult.getTotal());
         if (businessResult != null) {
@@ -82,7 +81,7 @@ public class BusinessController {
     @ResponseBody
     public int addBusiness(String userName, String password, String name, String address, String type,
                            double registeredCapital, String logPicture) {
-        logger.debug("userName:" + userName + ",password:" + password + ",name:" + name + ",address:" + address
+        logger.debug("接口是：addBusiness，入参是——" + "userName:" + userName + ",password:" + password + ",name:" + name + ",address:" + address
                 + ",type:" + type + ",registeredCapital:" + registeredCapital + ",logPicture:" + logPicture);
         return businessService.addBusiness(userName, password, name, address, type, registeredCapital, logPicture);
     }
@@ -91,21 +90,21 @@ public class BusinessController {
     @ResponseBody
     public Result<Business> queryBusiness(String area, @RequestParam(defaultValue = "1") Integer page,
                                           @RequestParam(defaultValue = "15") Integer limit) {
-        logger.debug("area:" + area);
+        logger.debug("接口是：queryBusiness，入参是——" + "area:" + area);
         return businessService.queryBusiness(area, page, limit);
     }
 
     @RequestMapping("/pass")
     @ResponseBody
     public void pass(int id) {
-        logger.debug("id:" + id);
+        logger.debug("接口是：pass，入参是——" + "id:" + id);
         businessService.pass(id);
     }
 
     @RequestMapping("/failed")
     @ResponseBody
     public void failed(int id) {
-        logger.debug("id:" + id);
+        logger.debug("接口是：failed，入参是——" + "id:" + id);
         businessService.failed(id);
     }
 
@@ -113,14 +112,14 @@ public class BusinessController {
     @ResponseBody
     public Result<Business> queryState(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit,
                                        @RequestParam(defaultValue = "-1") int id) {
-        logger.debug("id:" + id);
+        logger.debug("接口是：queryState，入参是——" + "id:" + id);
         return businessService.queryState(id, page, limit);
     }
 
     @RequestMapping("/businessManage")
     @ResponseBody
     public int businessManage(String state, int id) {
-        logger.debug("state:" + state + ",id:" + id);
+        logger.debug("接口是：businessManage，入参是——" + "state:" + state + ",id:" + id);
         return businessService.businessManage(state, id);
     }
 }

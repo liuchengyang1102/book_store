@@ -3,8 +3,7 @@ package com.lcy.controller;
 import com.lcy.po.Book;
 import com.lcy.service.BookService;
 import com.lcy.util.Result;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
@@ -23,7 +22,7 @@ import java.util.UUID;
  */
 @Controller
 public class BookController {
-    private final static Log logger = LogFactory.getLog(BookController.class);
+    private final static Logger logger = Logger.getLogger(BookController.class);
     private final String filePathDir = "D:\\JAVA\\IDEA\\java_code\\ssm_code\\book_store\\src\\main\\webapp\\images\\bookImages\\";
 
     @Autowired
@@ -34,7 +33,7 @@ public class BookController {
     public Result<Book> queryBook(@RequestParam(defaultValue = "") String name, String author, String press, String sort1, String sort2, String sort3,
                                   @RequestParam(defaultValue = "-1") double priceMin, @RequestParam(defaultValue = "-1") double priceMax,
                                   @RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "15") Integer limit) {
-        logger.debug("name:" + name + ",author:" + author + ",press:" + press + ",sort1:" + sort1 + ",sort2:" + sort2 +
+        logger.debug("接口是：queryBook，入参是——" + "name:" + name + ",author:" + author + ",press:" + press + ",sort1:" + sort1 + ",sort2:" + sort2 +
                 ",sort3:" + sort3 + ",priceMin:" + priceMin + ",priceMax:" + priceMax);
         Result<Book> books = null;
         if (priceMin != -1 && priceMax != -1) {
@@ -59,21 +58,21 @@ public class BookController {
     @ResponseBody
     public Result<Book> businessQueryBook(@RequestParam(defaultValue = "-1") int businessId, @RequestParam(defaultValue = "1") Integer page,
                                           @RequestParam(defaultValue = "15") Integer limit) {
-        logger.debug("businessId:" + businessId);
+        logger.debug("接口是：businessQueryBook，入参是——" + "businessId:" + businessId);
         return bookService.businessQueryBook(businessId, page, limit);
     }
 
     @RequestMapping("/deleteBook")
     @ResponseBody
     public void deleteBook(@RequestParam(defaultValue = "-1") int id) {
-        logger.debug("id:" + id);
+        logger.debug("接口是：deleteBook，入参是——" + "businessId:" + "id:" + id);
         bookService.deleteBook(id);
     }
 
     @RequestMapping("/editPrice")
     @ResponseBody
     public void editPrice(@RequestParam(defaultValue = "-1") int id, double price) {
-        logger.debug("id:" + id + ",price" + price);
+        logger.debug("接口是：editPrice，入参是——" + "id:" + id + ",price" + price);
         bookService.editPrice(id, price);
     }
 
@@ -106,7 +105,7 @@ public class BookController {
     @ResponseBody
     public void addBook(int businessId, int number, int count, String name, String author, String press, int impression,
                         String synopsis, double price, String sort1, String sort2, String sort3, String ext) {
-        logger.debug("businessId:" + businessId + ",number:" + number + ",count:" + count + ",name:" + name + ",author:" + author
+        logger.debug("接口是：addBook，入参是——" + "businessId:" + businessId + ",number:" + number + ",count:" + count + ",name:" + name + ",author:" + author
                 + ",press:" + press + ",impression:" + impression + ",synopsis:" + synopsis + ",price:" + price + ",sort1:" + sort1
                 + ",sort2:" + sort2 + ",sort3:" + sort3 + ",ext:" + ext);
         bookService.addBook(businessId, number, count, name, author, press, impression, synopsis, price, sort1, sort2, sort3, ext);

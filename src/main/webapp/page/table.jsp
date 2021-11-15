@@ -128,7 +128,7 @@
                         "id": data.id
                     }
                 });
-                layer.msg('购买成功，请前往订单列表完成付款');
+                layer.msg('已加入订单，请尽快前往付款');
                 //执行重载
                 table.reload('testReload', {
                     page: {
