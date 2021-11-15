@@ -166,4 +166,10 @@
     <update id="editPrice">
         update book set price = #{price} where id = #{id}
     </update>
+
+    <insert id="addBook" parameterType="Book">
+        insert into book (`businessId`, `number`, `count`, `name`, `author`, `press`, `impression`, `synopsis`, `price`,
+         `sort1`, `sort2`, `sort3`, `ext`) values (#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},
+         #{param8},#{param9},#{param10},#{param11},#{param12},#{param13})
+    </insert>
 </mapper>

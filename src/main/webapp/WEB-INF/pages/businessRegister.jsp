@@ -99,7 +99,7 @@
 <div>
     <label>注册资金：</label>
     <div>
-        <input type="text" name="registeredCapital" required lay-verify="required" placeholder="注册资金"
+        <input type="number" name="registeredCapital" required lay-verify="required" placeholder="注册资金"
                autocomplete="off" class="registeredCapital" maxlength="10">
     </div>
 </div>

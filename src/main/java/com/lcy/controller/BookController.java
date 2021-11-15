@@ -7,9 +7,16 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.UUID;
 
 /**
  * @author 刘呈洋
@@ -17,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class BookController {
     private final static Log logger = LogFactory.getLog(BookController.class);
+    private final String filePathDir = "D:\\JAVA\\IDEA\\java_code\\ssm_code\\book_store\\src\\main\\webapp\\images\\bookImages\\";
 
     @Autowired
     private BookService bookService;
@@ -67,5 +75,40 @@ public class BookController {
     public void editPrice(@RequestParam(defaultValue = "-1") int id, double price) {
         logger.debug("id:" + id + ",price" + price);
         bookService.editPrice(id, price);
+    }
+
+    @RequestMapping("uploadImage2")
+    @ResponseBody
+    public String uploadImage(@RequestParam("file") MultipartFile file) throws IOException {
+        // 旧的文件名称
+        String oldFileName = file.getOriginalFilename();
+        //获取文件扩展名
+        String extname = oldFileName.substring(file.getOriginalFilename().lastIndexOf("."));
+
+        //防止重名
+        String newFlieName = UUID.randomUUID().toString() + extname;
+        //返回是整个文件的大小
+        String savePath = filePathDir + newFlieName;
+        File file1 = new File(savePath);
+        if (!file1.exists()) {
+            file1.createNewFile();
+        }
+        Integer n = FileCopyUtils.copy(file.getInputStream(), new FileOutputStream(new File(savePath)));
+        long size = file.getSize();
+        if (n != size) {
+            return "文件上传失败! ";
+        } else {
+            return newFlieName;
+        }
+    }
+
+    @RequestMapping("addBook")
+    @ResponseBody
+    public void addBook(int businessId, int number, int count, String name, String author, String press, int impression,
+                        String synopsis, double price, String sort1, String sort2, String sort3, String ext) {
+        logger.debug("businessId:" + businessId + ",number:" + number + ",count:" + count + ",name:" + name + ",author:" + author
+                + ",press:" + press + ",impression:" + impression + ",synopsis:" + synopsis + ",price:" + price + ",sort1:" + sort1
+                + ",sort2:" + sort2 + ",sort3:" + sort3 + ",ext:" + ext);
+        bookService.addBook(businessId, number, count, name, author, press, impression, synopsis, price, sort1, sort2, sort3, ext);
     }
 }

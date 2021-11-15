@@ -108,4 +108,10 @@ public class BookServiceImpl implements BookService {
     public void editPrice(int id, double price) {
         bookDao.editPrice(id, price);
     }
+
+    @Override
+    public void addBook(int businessId, int number, int count, String name, String author, String press, int impression,
+                        String synopsis, double price, String sort1, String sort2, String sort3, String ext) {
+        bookDao.addBook(businessId, number, count, name, author, press, impression, synopsis, price, sort1, sort2, sort3, ext);
+    }
 }

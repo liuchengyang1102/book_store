@@ -30,7 +30,7 @@
 
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加图书 </button>
+                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加图书</button>
             </div>
         </script>
 
@@ -102,27 +102,44 @@
          */
         table.on('toolbar(currentTableFilter)', function (obj) {
             if (obj.event === 'add') {  // 监听添加操作
-                var index = layer.open({
-                    title: '添加图书',
-                    type: 2,
-                    shade: 0.2,
-                    maxmin: true,
-                    shadeClose: true,
-                    area: ['100%', '100%'],
-                    content: '../page/table/addBook.jsp',
-                    btn: ['添加图书'],
-                    yes: function (index, layero) {
-                        var arr = $(layero).find("iframe")[0].contentWindow.submitComment();
-                        $.ajax({
-                            type: "post",
-                            url: "<%=basePath%>addBook",
-                            dataType: "json",
-                            data: {
-                            }
-                        });
-                        alert('添加图书成功！');
-                    }
-                });
+                var isLogin =<%=id%>;
+                if (isLogin == '0') {
+                    layer.msg('尚未登陆，无法添加图书');
+                } else {
+                    var index = layer.open({
+                        title: '添加图书',
+                        type: 2,
+                        shade: 0.2,
+                        maxmin: true,
+                        shadeClose: true,
+                        area: ['100%', '100%'],
+                        content: '../page/table/addBook.jsp',
+                        btn: ['添加图书'],
+                        yes: function (index, layero) {
+                            var arr = $(layero).find("iframe")[0].contentWindow.submitBook();
+                            $.ajax({
+                                type: "post",
+                                url: "<%=basePath%>addBook",
+                                data: {
+                                    "businessId": <%=id%>,
+                                    "number": arr.number,
+                                    "count": arr.count,
+                                    "name": arr.name,
+                                    "author": arr.author,
+                                    "press": arr.press,
+                                    "impression": arr.impression,
+                                    "synopsis": arr.synopsis,
+                                    "price": arr.price,
+                                    "sort1": arr.sort1,
+                                    "sort2": arr.sort2,
+                                    "sort3": arr.sort3,
+                                    "ext": arr.logPicture
+                                }
+                            });
+                            alert('添加图书成功！');
+                        }
+                    });
+                }
             }
         });
 

@@ -1,13 +1,13 @@
 
-jWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ8Î¨„²Ë/
-JWeb:BoldAndItalicTagsCheckJ"Replace this <i> tag by <em>.(ùàÖÖ8Î¨„²Ë/
-IWeb:BoldAndItalicTagsCheckx"Replace this <i> tag by <em>.(â´Æg8Î¨„²Ë/
-OWeb:BoldAndItalicTagsCheck7"Replace this <i> tag by <em>.(˜Ï”ºøÿÿÿÿ8Î¨„²Ë/
-IWeb:BoldAndItalicTagsCheckM"Replace this <i> tag by <em>.(¢’‡l8Î¨„²Ë/
-JWeb:BoldAndItalicTagsCheckP"Replace this <i> tag by <em>.(éİ‡•8Î¨„²Ë/
-a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ8Î¨„²Ë/
-OWeb:BoldAndItalicTagsCheckA"Replace this <i> tag by <em>.(ˆã–†ùÿÿÿÿ8Î¨„²Ë/
-z%Web:ItemTagNotWithinContainerTagCheck‚"<Surround this <li> item tag by a <ul> or <ol> container one.(…ÂŸıÿÿÿÿ8Î¨„²Ë/
-JWeb:BoldAndItalicTagsChecke"Replace this <i> tag by <em>.(˜ª¬¿8Î¨„²Ë/
-z%Web:ItemTagNotWithinContainerTagCheck"<Surround this <li> item tag by a <ul> or <ol> container one.(²åæüÿÿÿÿ8Î¨„²Ë/
-u%Web:ItemTagNotWithinContainerTagCheckƒ"<Surround this <li> item tag by a <ul> or <ol> container one.(èÃ¬ù8Î¨„²Ë/
+jWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ8Î¨„²Ë/
+u%Web:ItemTagNotWithinContainerTagCheck„"<Surround this <li> item tag by a <ul> or <ol> container one.(èÃ¬ù8Î¨„²Ë/
+JWeb:BoldAndItalicTagsCheckH"Replace this <i> tag by <em>.(ùàÖÖ8Î¨„²Ë/
+JWeb:BoldAndItalicTagsCheckf"Replace this <i> tag by <em>.(˜ª¬¿8Î¨„²Ë/
+a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ8Î¨„²Ë/
+IWeb:BoldAndItalicTagsChecky"Replace this <i> tag by <em>.(â´Æg8Î¨„²Ë/
+z%Web:ItemTagNotWithinContainerTagCheckƒ"<Surround this <li> item tag by a <ul> or <ol> container one.(…ÂŸıÿÿÿÿ8Î¨„²Ë/
+OWeb:BoldAndItalicTagsCheck?"Replace this <i> tag by <em>.(ˆã–†ùÿÿÿÿ8Î¨„²Ë/
+OWeb:BoldAndItalicTagsCheck5"Replace this <i> tag by <em>.(˜Ï”ºøÿÿÿÿ8Î¨„²Ë/
+IWeb:BoldAndItalicTagsCheckK"Replace this <i> tag by <em>.(¢’‡l8Î¨„²Ë/
+z%Web:ItemTagNotWithinContainerTagCheck‚"<Surround this <li> item tag by a <ul> or <ol> container one.(²åæüÿÿÿÿ8Î¨„²Ë/
+JWeb:BoldAndItalicTagsCheckN"Replace this <i> tag by <em>.(éİ‡•8Î¨„²Ë/

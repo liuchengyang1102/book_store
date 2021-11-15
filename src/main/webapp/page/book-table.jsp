@@ -107,6 +107,7 @@
             opacity: 1;
             transition: all 2s;
         }
+
     </style>
 </head>
 <body>

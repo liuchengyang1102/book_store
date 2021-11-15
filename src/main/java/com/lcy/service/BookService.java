@@ -57,4 +57,10 @@ public interface BookService {
      * 修改图书价格
      */
     public void editPrice(int id, double price);
+
+    /**
+     * 添加图书
+     */
+    public void addBook(int businessId, int number, int count, String name, String author, String press, int impression,
+                        String synopsis, double price, String sort1, String sort2, String sort3, String ext);
 }
