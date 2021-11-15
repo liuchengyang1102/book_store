@@ -179,11 +179,7 @@ h
 8src/main/java/com/lcy/service/RechargeRecordService.java,6\3\63b8ea7ce447340bd6e6817e8945da5591560cac
 l
 <src/main/java/com/lcy/service/RechargeRecordServiceImpl.java,3\5\35d3a764bde625455bbf133334b731372617b353
-g
-7src/main/resources/com/lcy/dao/RechargeRecordMapper.xml,f\7\f7fbf1b074001286c976247d3fcab31ee919e4fc
 X
 (src/main/webapp/page/recharge-record.jsp,0\9\093d2a43721524bb15199a4eafc07b97f1e8d3ab
-^
-.src/main/resources/com/lcy/dao/OrderMapper.xml,d\6\d6d53a55c5be75dfe0740212d71673ea3f16a7e9
 V
 &src/main/webapp/page/table/addBook.jsp,8\5\857a6e9590885467663dab4c8c5e326728afe419
